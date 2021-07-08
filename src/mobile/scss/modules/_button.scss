@@ -1,0 +1,165 @@
+/* button */
+.btn {
+    display:inline-block;
+    padding:0 14px;
+    border:1px solid transparent;
+    border-radius:$border-radius;
+    background:transparent;
+    font-size:16px;
+    line-height:38px;
+    vertical-align:top;
+    cursor:pointer;
+    transition:$btn-transition;
+    white-space:nowrap;
+    text-align:center;
+    span {
+        display:inline-block;
+        vertical-align:top;
+    }
+    &.rounded {
+        border-radius:20px;
+    }
+    &.no-round {
+        border-radius:0 !important;
+    }
+    // style
+    @each $color, $value, $ratio in $colors {
+        &.btn-#{$color} {
+            background-color:$value;
+            border-color:$value;
+            @if $ratio == 'dark' {
+                color:$white;
+            } @else if $ratio == 'bright' {
+                color:$cont;
+            }
+            &:hover, 
+            &:active {
+                @if $ratio == 'dark' {
+                    background-color:tint-color($value, 15%);
+                    border-color:tint-color($value, 15%);
+                } @else if $ratio == 'bright' {
+                    background-color:shade-color($value, 10%);
+                    border-color:shade-color($value, 10%);
+                }
+            }
+        }
+        &.btn-border-#{$color} {
+            border-color:$value;
+            color:$value;
+            @include pc {
+                &:hover, 
+                &:active {
+                    background-color:rgba($value, .1);
+                }
+            }
+        }
+    }
+    // size
+    @each $size, $fontsize, $lineheight, $pd in $btn-sizes {
+        &.btn-#{$size} {
+            padding:0 $pd;
+            font-size:$fontsize;
+            line-height:$lineheight;
+            @if $size == 'lg' {
+                font-weight:500;
+            } @else if $size == 'md' {
+                min-width:120px;
+                font-weight:500;
+            }
+            &.rounded {
+                border-radius:($lineheight / 2 + 1);
+            }
+        }
+    }
+    &.full {
+        display:block;
+        width:100%;
+    }
+    &:disabled {
+        border-color:#bbb;
+        background:#bbb;
+        color:#fff;
+        &:hover,
+        &:active {
+            border-color:#bbb;
+            background:#bbb;
+            color:#fff;
+        }
+    }
+}
+.btn-group {
+    display:flex;
+    margin-top:70px;
+    justify-content:center;
+    &.high {
+        margin-top:120px;
+    }
+    > * {
+        min-width:230px;
+        margin-left:20px;
+        &:first-child {
+            margin-left:0;
+        }
+    }
+}
+
+/* text link */
+@each $color, $value, $ratio in $colors {
+    .link-#{$color} {
+        display:inline-block;
+        vertical-align:middle;
+        color:$value;
+        font-size:inherit;
+        transition:$btn-transition;
+        vertical-align:top;
+        @include skew;
+        @include pc {
+            &:hover, 
+            &:active {
+                text-decoration:underline;
+                @if $ratio == 'dark' {
+                    color:tint-color($value, 15%);
+                } @else if $ratio == 'bright' {
+                    color:shade-color($value, 10%);
+                }
+            }
+        }
+    }
+}
+
+.btn-talk {
+    position:relative;
+    display:block;
+    width:64px;
+    height:58px;
+    padding-top:14px;
+    padding-right:14px;
+    background:url('/images/icon/icon-talk.png') 0 bottom no-repeat;
+    .count {
+        position:absolute;
+        top:0;
+        right:0;
+        height:25px;
+        min-width:25px;
+        padding:0 5px;
+        border-radius:13px;
+        background:$point;
+        color:#fff;
+        font-size:16px;
+        line-height:24px;
+        font-weight:500;
+        text-align:center;
+    }
+    &.sm {
+        width:48px;
+        height:44px;
+        margin:0 auto;
+        background-size:auto 30px;
+        .count {
+            min-width:22px;
+            height:22px;
+            font-size:14px;
+            line-height:21px;
+        }
+    }
+}

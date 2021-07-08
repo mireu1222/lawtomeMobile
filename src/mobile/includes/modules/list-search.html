@@ -1,0 +1,217 @@
+<div class="search-wrap">
+    <h3 class="h3-title"><i class="bi bi-search me-1"></i>검색</h3>
+    <table class="table row-table">
+        <colgroup>
+            <col style="width:15%">
+            <col>
+            <col style="width:15%">
+            <col>
+        </colgroup>
+        <tbody>
+            @@if(context.category){
+                <tr>
+                    <th scope="row">구분</th>
+                    <td colspan="3">
+                        <div class="btn-group" role="group" aria-label="업무 카테고리 선택">
+                            <input type="radio" class="btn-check" id="category01" name="category-select" checked><label for="category01" class="btn btn-outline-secondary">전체</label>
+                            <input type="radio" class="btn-check" id="category02" name="category-select"><label for="category02" class="btn btn-outline-secondary">복대리</label>
+                            <input type="radio" class="btn-check" id="category03" name="category-select"><label for="category03" class="btn btn-outline-secondary">기록등사</label>
+                            <input type="radio" class="btn-check" id="category04" name="category-select"><label for="category04" class="btn btn-outline-secondary">조사참여</label>
+                            <input type="radio" class="btn-check" id="category05" name="category-select"><label for="category05" class="btn btn-outline-secondary">접견</label>
+                            <input type="radio" class="btn-check" id="category06" name="category-select"><label for="category06" class="btn btn-outline-secondary">서면작성</label>
+                            <input type="radio" class="btn-check" id="category07" name="category-select"><label for="category07" class="btn btn-outline-secondary">계약서</label>
+                            <input type="radio" class="btn-check" id="category08" name="category-select"><label for="category08" class="btn btn-outline-secondary">증명서발급</label>
+                            <input type="radio" class="btn-check" id="category09" name="category-select"><label for="category09" class="btn btn-outline-secondary">기타</label>
+                        </div>
+                    </td>
+                </tr>
+            }
+            @@if(context.datepic){
+                <tr>
+                    <th scope="row">기간</th>
+                    <td colspan="3">
+                        <div class="d-flex align-items-center">
+                            <div class="datepicker">
+                                <input type="text" class="form-control" value="2021-05-13">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                            <span class="bar">~</span>
+                            <div class="datepicker">
+                                <input type="text" class="form-control">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+            @@if(context.period){
+                <tr>
+                    <th scope="row">기간</th>
+                    <td colspan="3">
+                        <div class="d-flex align-items-center">
+                            @@if(!context.period.option){
+                                <select class="form-select w-auto" aria-label="기간 기준 선택">
+                                    <option value="">등록일</option>
+                                    <option value="">마감일</option>
+                                </select>
+                            }
+                            @@if(context.period.option){
+                                <select class="form-select w-auto" aria-label="기간 기준 선택">
+                                    @@for(var i=0; i < period.option.length; i++){
+                                        <option value="">`+period.option[i]+`</option>
+                                    }
+                                </select>
+                            }
+                            <div class="datepicker">
+                                <input type="text" class="form-control" value="2021-05-13">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                            <span class="bar">~</span>
+                            <div class="datepicker">
+                                <input type="text" class="form-control">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="기간 선택">
+                                <input type="radio" class="btn-check" id="period01" name="period-select"><label for="period01" class="btn btn-outline-secondary">오늘</label>
+                                <input type="radio" class="btn-check" id="period02" name="period-select"><label for="period02" class="btn btn-outline-secondary">어제</label>
+                                <input type="radio" class="btn-check" id="period03" name="period-select"><label for="period03" class="btn btn-outline-secondary">3일</label>
+                                <input type="radio" class="btn-check" id="period04" name="period-select"><label for="period04" class="btn btn-outline-secondary">7일</label>
+                                <input type="radio" class="btn-check" id="period05" name="period-select"><label for="period05" class="btn btn-outline-secondary">15일</label>
+                                <input type="radio" class="btn-check" id="period06" name="period-select"><label for="period06" class="btn btn-outline-secondary">1개월</label>
+                                <input type="radio" class="btn-check" id="period07" name="period-select"><label for="period07" class="btn btn-outline-secondary">3개월</label>
+                                <input type="radio" class="btn-check" id="period08" name="period-select"><label for="period08" class="btn btn-outline-secondary">6개월</label>
+                                <input type="radio" class="btn-check" id="period09" name="period-select"><label for="period09" class="btn btn-outline-secondary">전체</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+            @@if(context.select){
+                <tr>
+                    <th scope="row">@@select.th</th>
+                    <td colspan="3">
+                        @@if(context.select.full){
+                        <select class="form-select" aria-label="@@select.th 선택">
+                        }
+                        @@if(!context.select.full){
+                        <select class="form-select w-25" aria-label="@@select.th 선택">
+                        }
+                            @@for(var i=0; i < select.option.length; i++){
+                                <option value="">`+select.option[i]+`</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+            }
+            @@if(context.periodEdit){
+                <tr>
+                    <th scope="row">@@periodEdit.th</th>
+                    <td colspan="3">
+                        <div class="d-flex align-items-center">
+                            @@if(context.periodEdit.option){
+                                <select class="form-select w-auto" aria-label="기간 기준 선택">
+                                    @@for(var i=0; i < periodEdit.option.length; i++){
+                                        <option value="">`+periodEdit.option[i]+`</option>
+                                    }
+                                </select>
+                            }
+                            <div class="datepicker">
+                                <input type="text" class="form-control" value="2021-05-13">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                            <span class="bar">~</span>
+                            <div class="datepicker">
+                                <input type="text" class="form-control">
+                                <i class="bi bi-calendar2-check"></i>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="기간 선택">
+                                <input type="radio" class="btn-check" id="period01" name="period-select"><label for="period01" class="btn btn-outline-secondary">오늘</label>
+                                <input type="radio" class="btn-check" id="period02" name="period-select"><label for="period02" class="btn btn-outline-secondary">어제</label>
+                                <input type="radio" class="btn-check" id="period03" name="period-select"><label for="period03" class="btn btn-outline-secondary">3일</label>
+                                <input type="radio" class="btn-check" id="period04" name="period-select"><label for="period04" class="btn btn-outline-secondary">7일</label>
+                                <input type="radio" class="btn-check" id="period05" name="period-select"><label for="period05" class="btn btn-outline-secondary">15일</label>
+                                <input type="radio" class="btn-check" id="period06" name="period-select"><label for="period06" class="btn btn-outline-secondary">1개월</label>
+                                <input type="radio" class="btn-check" id="period07" name="period-select"><label for="period07" class="btn btn-outline-secondary">3개월</label>
+                                <input type="radio" class="btn-check" id="period08" name="period-select"><label for="period08" class="btn btn-outline-secondary">6개월</label>
+                                <input type="radio" class="btn-check" id="period09" name="period-select"><label for="period09" class="btn btn-outline-secondary">전체</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+            @@if(context.checkbox){
+                <tr>
+                    <th scope="row">@@checkbox.th</th>
+                    <td colspan="3"@@if(checkbox.all){ data-toggle="allChk"}>
+                        @@if(checkbox.all) {
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input chk-all" type="checkbox" id="@@checkbox.id-all" value="" name="@@checkbox.id">
+                                <label class="form-check-label" for="@@checkbox.id-all">전체</label>
+                            </div>
+                        }
+                        @@for(var k=0; k < checkbox.input.length; k++){
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="@@checkbox.id`+[k]+`" value="" name="@@checkbox.id">
+                                <label class="form-check-label" for="@@checkbox.id`+[k]+`">`+checkbox.input[k]+`</label>
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+            @@if(context.checkbox2){
+                <tr>
+                    <th scope="row">@@checkbox2.th</th>
+                    <td colspan="3"@@if(checkbox2.all){ data-toggle="allChk"}>
+                        @@if(checkbox2.all) {
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input chk-all" type="checkbox" id="@@checkbox2.id-all" value="" name="@@checkbox2.id">
+                                <label class="form-check-label" for="@@checkbox2.id-all">전체</label>
+                            </div>
+                        }
+                        @@for(var k=0; k < checkbox2.input.length; k++){
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="@@checkbox2.id`+[k]+`" value="" name="@@checkbox2.id">
+                                <label class="form-check-label" for="@@checkbox2.id`+[k]+`">`+checkbox2.input[k]+`</label>
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+            @@if(context.input){
+                <tr>
+                    <th scope="row">@@input.th1</th>
+                    <td>
+                        <input type="text" class="form-control" aria-label="@@input.th1 입력">
+                    </td>
+                    <th scope="row">@@input.th2</th>
+                    <td>
+                        <input type="text" class="form-control" aria-label="@@input.th2 입력">
+                    </td>
+                </tr>
+            }
+            @@if(context.inputnext){
+                <tr>
+                    <th scope="row">@@inputnext.th1</th>
+                    <td>
+                        <input type="text" class="form-control" aria-label="@@inputnext.th1 입력">
+                    </td>
+                    <th scope="row">@@inputnext.th2</th>
+                    <td>
+                        <input type="text" class="form-control" aria-label="@@inputnext.th2 입력">
+                    </td>
+                </tr>
+            }
+            @@if(context.input2){
+                <tr>
+                    <th scope="row">@@input2</th>
+                    <td colspan="3">
+                        <input type="text" class="form-control" aria-label="@@input2 입력">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="btn-wrap mt-4 d-flex justify-content-center">
+        <button type="submit" class="btn btn-dark">검색</button>
+    </div>
+</div>

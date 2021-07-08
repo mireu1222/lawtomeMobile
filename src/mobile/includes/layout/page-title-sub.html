@@ -1,0 +1,18 @@
+<!-- page title -->
+<div class="page-title d-flex justify-content-between align-items-end">
+    <h2 class="title">@@title</h2>
+    <nav class="breadcrumb-wrap" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+            <li class="breadcrumb-item"><i class="bi bi-house me-1"></i>Home</li>
+            @@if(context.cate01){<li class="breadcrumb-item">팀매칭 접수</li>}
+            @@if(context.cate02){<li class="breadcrumb-item">팀매칭 관리</li>}
+            @@if(context.cate03){<li class="breadcrumb-item">회원관리</li>}
+            @@if(context.cate04){<li class="breadcrumb-item">현황/통계</li>}
+            @@if(context.cate05){<li class="breadcrumb-item">사이트관리</li>}
+            @@if(context.cate06){<li class="breadcrumb-item">시스템관리</li>}
+            @@if(context.prev){<li class="breadcrumb-item">@@prev</li>}
+            <li class="breadcrumb-item active" aria-current="page">@@title</li>
+        </ol>
+    </nav>
+</div>
+<!-- // page title -->

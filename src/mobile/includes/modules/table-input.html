@@ -1,0 +1,295 @@
+@@if(context.th){
+<tr>
+    <th scope="row">@@th</th>
+    <td>
+        @@if(context.datepic){
+            <div class="datepicker w-25">
+                <input type="text" class="form-control" value="" aria-label="날짜 선택">
+                <i class="bi bi-calendar2-check"></i>
+            </div>
+        }
+        @@if(context.period){
+            <div class="d-flex align-items-center">
+                <div class="datepicker">
+                    <input type="text" class="form-control" value="" aria-label="시작 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <span>~</span>
+                <div class="datepicker">
+                    <input type="text" class="form-control" value="" aria-label="종료 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <div class="btn-group" role="group" aria-label="기간 선택">
+                    <input type="radio" class="btn-check" id="period01" name="period-select"><label for="period01" class="btn btn-outline-secondary">7일</label>
+                    <input type="radio" class="btn-check" id="period02" name="period-select"><label for="period02" class="btn btn-outline-secondary">15일</label>
+                    <input type="radio" class="btn-check" id="period03" name="period-select"><label for="period03" class="btn btn-outline-secondary">1개월</label>
+                    <input type="radio" class="btn-check" id="period04" name="period-select"><label for="period04" class="btn btn-outline-secondary">3개월</label>
+                </div>
+            </div>
+        }
+        @@if(context.period2){
+            <div class="d-flex align-items-center">
+                <div class="datepicker">
+                    <input type="text" class="form-control" value="" aria-label="시작 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <span>~</span>
+                <div class="datepicker">
+                    <input type="text" class="form-control" value="" aria-label="종료 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <div class="btn-group" role="group" aria-label="기간 선택">
+                    <input type="radio" class="btn-check" id="period01" name="period-select"><label for="period01" class="btn btn-outline-secondary">오늘</label>
+                    <input type="radio" class="btn-check" id="period02" name="period-select"><label for="period02" class="btn btn-outline-secondary">어제</label>
+                    <input type="radio" class="btn-check" id="period03" name="period-select"><label for="period03" class="btn btn-outline-secondary">3일</label>
+                    <input type="radio" class="btn-check" id="period04" name="period-select"><label for="period04" class="btn btn-outline-secondary">7일</label>
+                    <input type="radio" class="btn-check" id="period05" name="period-select"><label for="period05" class="btn btn-outline-secondary">15일</label>
+                    <input type="radio" class="btn-check" id="period06" name="period-select"><label for="period06" class="btn btn-outline-secondary">1개월</label>
+                    <input type="radio" class="btn-check" id="period07" name="period-select"><label for="period07" class="btn btn-outline-secondary">3개월</label>
+                    <input type="radio" class="btn-check" id="period08" name="period-select"><label for="period08" class="btn btn-outline-secondary">6개월</label>
+                    <input type="radio" class="btn-check" id="period09" name="period-select"><label for="period09" class="btn btn-outline-secondary">전체</label>
+                </div>
+            </div>
+        }
+        @@if(context.period3){
+            <div class="d-flex align-items-center">
+                <div class="datepicker w-auto">
+                    <input type="text" class="form-control" value="" aria-label="시작 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <select class="form-select w-auto" aria-label="시작 날짜의 시간 선택">
+                    <option value="">07:00</option>
+                    <option value="">08:00</option>
+                </select>
+                @@if(!context.period3.startOnly){
+                <span>~</span>
+                <div class="datepicker w-auto">
+                    <input type="text" class="form-control" value="" aria-label="종료 날짜 선택">
+                    <i class="bi bi-calendar2-check"></i>
+                </div>
+                <select class="form-select w-auto" aria-label="종료 날짜의 시간 선택">
+                    <option value="">07:00</option>
+                    <option value="">08:00</option>
+                </select>
+                }
+            </div>
+        }
+        @@if(context.radio){
+            @@for(var i=0; i < radio.list.length; i++) {
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="@@radio.name`+[i+1]+`" name="@@radio.name">
+                    <label for="@@radio.name`+[i+1]+`" class="form-check-label">`+radio.list[i]+`</label>
+                </div>
+            }
+            @@if(context.inputAdd){
+                <div class="input-group d-inline-flex w-50">
+                    <span class="input-group-text">@@inputAdd</span>
+                    <input type="text" class="form-control" aria-label="@@inputAdd 입력" placeholder="@@inputAdd 입력">
+                </div>
+            }
+        }
+        @@if(context.radioinput){
+            <div class="d-flex align-items-center">
+                @@for(var i=0; i < radioinput.set.length; i++){
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="@@radioinput.name`+[i+1]+`" name="@@radioinput.name">
+                        <label for="@@radioinput.name`+[i+1]+`">`+radioinput.set[i]+`</label>
+                    </div>
+                    <input type="text" class="form-control w-auto me-4" aria-label="상세 입력">
+                }
+                @@if(context.radioinput.only){
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="@@radioinput.only.id" name="@@radioinput.name">
+                        <label for="@@radioinput.only.id">@@radioinput.only.label</label>
+                    </div>
+                }
+            </div>
+        }
+        @@if(context.checkbox){
+            @@for(var i=0; i < checkbox.list.length; i++) {
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="@@checkbox.name`+[i+1]+`" name="@@checkbox.name">
+                    <label for="@@checkbox.name`+[i+1]+`" class="form-check-label">`+checkbox.list[i]+`</label>
+                </div>
+            }
+            @@if(context.inputAdd){
+                <div class="input-group d-inline-flex w-50">
+                    <span class="input-group-text">@@inputAdd</span>
+                    <input type="text" class="form-control" aria-label="@@inputAdd 입력" placeholder="@@inputAdd 입력">
+                </div>
+            }
+        }
+        @@if(context.switch){
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="@@switch.id">
+                <label class="form-check-label" for="@@switch.id">@@switch.label</label>
+            </div>
+            @@if(context.switch.alert) {
+                <p class="text-danger mt-1">@@switch.alert</p>
+            }
+        }
+        @@if(context.select){
+            <select class="form-select w-25" aria-label="@@th 선택">
+                @@for(var i=0; i < select.option.length; i++){
+                    <option value="">`+select.option[i]+`</option>
+                }
+            </select>
+        }
+        @@if(context.textarea){
+            <textarea class="form-control@@if(context.big){ big}" aria-label="@@th 입력">@@if(context.textarea.cont){@@textarea.cont}</textarea>
+            @@if(context.textarea.alert){
+                <p class="text-danger mt-1">@@textarea.alert</p>
+            }
+        }
+        @@if(context.text){
+            @@text
+        }
+        @@if(context.used) {
+            <a href="" class="btn btn-sm btn-point2 ms-3"><i class="bi bi-list-check me-1"></i>이용내역</a>
+        }
+        @@if(context.button) {
+            <button type="button" class="btn btn-sm btn-@@button.color">@@if(context.button.icon){@@button.icon}@@button.tit</button>
+        }
+        @@if(context.input) {
+            @@if(context.input.btn || context.input.text){
+                <div class="d-flex align-items-center">
+            }
+            <input type="text" class="form-control@@if(context.input.text){ w-auto}" aria-label="@@th 입력"@@if(context.input.placeholder){ placeholder="@@input.placeholder"}>
+            @@if(context.input.btn){
+                    <button type="button" class="btn btn-dark">@@input.btn</button>
+                </div>
+            }
+            @@if(context.input.text){
+                <p>@@input.text</p>
+            </div>
+        }
+        }
+        @@if(context.inputgroup){
+            <div class="input-group">
+                <span class="input-group-text w-25" id="@@inputgroup.id">@@inputgroup.text</span>
+                <input type="text" class="form-control" aria-describedby="@@inputgroup.id" aria-label="@@inputgroup.text 텍스트 입력">
+            </div>
+        }
+        @@if(context.inputgroup2){
+            <div class="input-group mt-2">
+                <span class="input-group-text w-25" id="@@inputgroup2.id">@@inputgroup2.text</span>
+                <input type="text" class="form-control" aria-describedby="@@inputgroup2.id" aria-label="@@inputgroup2.text 텍스트 입력">
+            </div>
+        }
+        @@if(context.password) {
+            <input type="password" class="form-control" aria-label="@@th 입력"@@if(context.password.placeholder){ placeholder="@@password.placeholder"}>
+        }
+        @@if(context.inputPrice) {
+            <div class="d-flex align-items-center">
+                <input type="text" class="form-control w-25" aria-label="@@th 입력" value="@@inputPrice">
+                <p>원</p>
+                @@if(context.inputMore){
+                <input type="text" class="form-control w-25 ms-4" aria-label="기타 항목 입력" value="@@inputMore">
+                }
+            </div>
+        }
+    </td>
+</tr>
+}
+@@if(context.file){
+<tr>
+    @@if(context.file.title){
+        <th scope="row">
+            @@file.title
+            @@if(context.file.chk){
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" value="" id="@@file.id" name="@@file.id">
+                    <label class="form-check-label" for="@@file.id">노출</label>
+                </div>
+            }
+        </th>
+    }
+    @@if(!context.file.title){
+        <th scope="row">첨부파일</th>
+    }
+    <td>
+        @@if(!context.file.multi){
+        <input class="form-control" type="file">
+        }
+        @@if(context.file.multi){
+        <div class="multi-file-wrap" data-max-count="5">
+            <div class="d-flex align-items-center file-wrap">
+                <input class="form-control" type="file" id="file-upload0" name="file-upload">
+                <button type="button" class="btn btn-dark" data-toggle="row-add">추가</button>
+            </div>
+        </div>
+        }
+        @@if(context.file.alert){
+        <p class="text-danger mt-1">@@file.alert</p>
+        }
+    </td>
+</tr>
+}
+@@if(context.size){
+<tr>
+    <th scope="row">@@size.title</th>
+    <td>
+        <div class="d-flex align-items-center">
+            <span>@@size.type1 :</span>
+            <input type="text" class="form-control w-auto" aria-label="@@size.type1 입력">
+            <span>px</span>
+            <span class="ms-5">@@size.type2 :</span>
+            <input type="text" class="form-control w-auto" aria-label="@@size.type2 입력">
+            <span>px</span>
+        </div>
+    </td>
+</tr>
+}
+@@if(context.dayNtime){
+<tr>
+    <th scope="row">@@dayNtime</th>
+    <td>
+        <div class="d-flex align-items-center">
+            <div class="datepicker w-auto">
+                <input type="text" class="form-control" value="" aria-label="날짜 선택">
+                <i class="bi bi-calendar2-check"></i>
+            </div>
+            @@if(!context.endOnly){
+            <select class="form-select w-auto" aria-label="시작 시간 선택">
+                <option value="">09:00</option>
+            </select>
+            <span>~</span>
+            }
+            <select class="form-select w-auto" aria-label="종료 시간 선택">
+                <option value="">09:00</option>
+            </select>
+        </div>
+    </td>
+</tr>
+}
+@@if(context.case){
+<tr>
+    <th scope="row">사건</th>
+    <td>
+        <div class="d-flex align-items-center">
+            <p>사건번호</p>
+            <input type="text" class="form-control w-25">
+            <p class="ms-5">사건명</p>
+            <input type="text" class="form-control w-25">
+        </div>
+    </td>
+</tr>
+}
+@@if(context.case2){
+<tr>
+    <th scope="row">사건</th>
+    <td>
+        <div class="d-flex align-items-center">
+            <input class="form-check-input mt-0" type="radio" id="case01-1" value="" name="case01">
+            <p>사건번호</p>
+            <input type="text" class="form-control w-25">
+            <p class="ms-3">사건명</p>
+            <input type="text" class="form-control w-25">
+            <div class="form-check form-check-inline ms-5">
+                <input type="radio" class="form-check-input" id="case01-2" name="case01">
+                <label for="case01-2" class="form-check-label">없음</label>
+            </div>
+        </div>
+    </td>
+</tr>
+}

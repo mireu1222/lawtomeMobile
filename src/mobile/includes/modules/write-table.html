@@ -1,0 +1,1820 @@
+<!-- table -->
+@@if(context.title){
+<h3 class="h3-title"><i class="bi bi-list me-1"></i>@@title</h3>
+}
+@@if(context.titleMix){
+<div class="d-flex align-items-end mb-2">
+    <h3 class="h3-title me-auto mb-0"><i class="bi bi-pin-angle me-1"></i>@@titleMix</h3>
+    @@if(context.mixtype1){
+        <button type="button" class="btn btn-sm btn-danger">매칭 취소</button>
+        <button type="button" class="btn btn-sm btn-success ms-1" data-toggle="modal" data-target="#modify-modal">매칭 변경</button>
+    }
+    @@if(context.mixtype2){
+        <button type="button" class="btn btn-sm btn-secondary">취소</button>
+        <button type="button" class="btn btn-sm btn-dark ms-1">발송하기</button>
+    }
+    @@if(context.mixtype3){
+        <button type="button" class="btn btn-sm btn-danger">삭제</button>
+    }
+    @@if(context.mixtype4){
+        <button type="button" class="btn btn-sm btn-secondary">취소</button>
+        <button type="button" class="btn btn-sm btn-dark ms-1">저장</button>
+    }
+</div>
+}
+<table class="table row-table">
+    <colgroup>
+        @@if(!context.modal && !context.sub1003 && !context.sub1004 && !context.sub1005a && !context.sub1005){
+        <col style="width:15%">
+        <col>
+        }
+        @@if(context.modal || context.sub1004 || context.sub1005a || context.sub1005){
+            <col style="width:25%">
+            <col>
+        }
+        @@if(context.sub1003){
+            <col style="width:35%">
+            <col>
+        }
+    </colgroup>
+    @@if(context.sub0101edit){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category" checked>
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+                {
+                    th : '법원선택',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+                {
+                    dayNtime : '업무일시'
+                },
+                {
+                    case : true
+                }, 
+                {
+                    th : '당사자',
+                    radioinput : {
+                        name : 'opt01',
+                        set : [
+                            '원고', '피고', '기타'
+                        ]
+                    }
+                },
+                {
+                    th : '진행구분', 
+                    radio : {
+                        name : 'opt02',
+                        list : [
+                            '속행', '종결', '선고청취'
+                        ]
+                    }
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit2){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category" checked>
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row">보관처</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="opt00-1" name="opt00">
+                            <label for="opt00-1">검찰청</label>
+                        </div>
+                        <select class="form-select w-auto me-4" aria-label="보관처 검찰청 선택">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="opt00-2" name="opt00">
+                            <label for="opt00-2">법원</label>
+                        </div>
+                        <select class="form-select w-auto me-4" aria-label="보관처 법원 선택">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    dayNtime : '업무기한',
+                    endOnly : true
+                },
+                {
+                    th : '복사방법',
+                    radio : {
+                        name : 'copy',
+                        list : [
+                            '종이복사', '스캔'
+                        ]
+                    }
+                }, 
+                {
+                    th : '등사구분',
+                    radio : {
+                        name : 'copytype',
+                        list : [
+                            '전체', '일부'
+                        ]
+                    }
+                }, 
+                {
+                    case : true,
+                },
+                {
+                    th : '당사자',
+                    radioinput : {
+                        name : 'opt01',
+                        set : [
+                            '피고인', '기타 관계인'
+                        ]
+                    }
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+            ])
+            <tr>
+                <th scope="row">대행비용</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control w-auto">
+                        <p>원</p>
+                        <p class="ms-5">기준페이지</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>쪽</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">추가비용</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p>추가 1쪽당</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>원(복사비 포함)</p>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '등사물전달',
+                    radioinput : {
+                        name : 'comm',
+                        set : [
+                            '우편', '이메일(스캔)'
+                        ]
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit3){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category" checked>
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row">조사처</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="opt00-1" name="opt00">
+                            <label for="opt00-1">검찰청</label>
+                        </div>
+                        <select class="form-select w-auto me-4" aria-label="보관처 검찰청 선택">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="opt00-2" name="opt00">
+                            <label for="opt00-2">경찰청</label>
+                        </div>
+                        <input type="text" class="form-control w-auto" aria-label="경찰청 입력">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="opt00-3" name="opt00">
+                            <label for="opt00-3">기타</label>
+                        </div>
+                        <input type="text" class="form-control w-auto" aria-label="기타 입력">
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    dayNtime : '업무일시'
+                },
+                {
+                    case : true
+                }, 
+                {
+                    th : '당사자',
+                    radioinput : {
+                        name : 'opt01',
+                        set : [
+                            '원고', '수뢰인'
+                        ]
+                    }
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit4){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category" checked>
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+                {
+                    th : '접견장소',
+                    radioinput : {
+                        name : 'opt00',
+                        set : [
+                            '경찰서', '구치소', '교도소', '기타'
+                        ]
+                    }
+                },
+                {
+                    dayNtime : '업무일시'
+                },
+                {
+                    case : true
+                }, 
+                {
+                    th : '당사자',
+                    radioinput : {
+                        name : 'opt01',
+                        set : [
+                            '피의자', '피고인'
+                        ]
+                    }
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit5){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category" checked>
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+                {
+                    th : '서면종류', 
+                    radio : {
+                        name : 'kinds',
+                        list : [
+                            '소장', '고소장', '내용증명', '의견서', '답변서', '준비서명', '변론요지서', '가압류신청서',
+                            '가처분신청서', '내용증명', '기타'
+                        ]
+                    }
+                },
+                {
+                    dayNtime : '업무기한',
+                    endOnly : true
+                },
+                {
+                    th : '업무진행',
+                    input : true,
+                },
+                {
+                    th : '당사자',
+                    input : true,
+                },
+                {
+                    case2 : true,
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit6){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category" checked>
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row">서면종류</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-1" name="kinds">
+                        <label for="kinds-1" class="form-check-label">국문계약서 검토</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-2" name="kinds">
+                        <label for="kinds-2" class="form-check-label">영문계약서 검토</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-3" name="kinds">
+                        <label for="kinds-3" class="form-check-label">국문계약서 작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-4" name="kinds">
+                        <label for="kinds-4" class="form-check-label">영문계약서 작성</label>
+                    </div>
+                    <div class="form-check form-check-inline me-1">
+                        <input type="radio" class="form-check-input" id="kinds-5" name="kinds">
+                        <label for="kinds-5" class="form-check-label">기타</label>
+                    </div>
+                    <input type="text" class="form-control d-inline-block w-auto">
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    dayNtime : '업무기한',
+                    endOnly : true
+                },
+                {
+                    th : '업무진행',
+                    input : true,
+                },
+                {
+                    th : '당사자',
+                    input : true,
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit7){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category" checked>
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category">
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row">증명서종류</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-1" name="kinds">
+                        <label for="kinds-1" class="form-check-label">판결문</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="kinds-2" name="kinds">
+                        <label for="kinds-2" class="form-check-label">집행문</label>
+                    </div>
+                    <div class="form-check form-check-inline me-1">
+                        <input type="radio" class="form-check-input" id="kinds-3" name="kinds">
+                        <label for="kinds-3" class="form-check-label">기타</label>
+                    </div>
+                    <input type="text" class="form-control d-inline-block w-auto">
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    dayNtime : '업무기한',
+                    endOnly : true
+                },
+                {
+                    th : '업무진행',
+                    input : true,
+                },
+                {
+                    case2 : true,
+                },
+                {
+                    th : '당사자',
+                    input : true,
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0101edit8){
+        <tbody>
+            <tr>
+                <th scope="row">업무구분</th>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate01" name="category">
+                        <label for="cate01" class="form-check-label">복대리</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate02" name="category">
+                        <label for="cate02" class="form-check-label">기록등사</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate03" name="category">
+                        <label for="cate03" class="form-check-label">조사참여</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate04" name="category">
+                        <label for="cate04" class="form-check-label">접견</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate05" name="category">
+                        <label for="cate05" class="form-check-label">서면작성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate06" name="category">
+                        <label for="cate06" class="form-check-label">계약서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate07" name="category">
+                        <label for="cate07" class="form-check-label">증명서 발급</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cate08" name="category" checked>
+                        <label for="cate08" class="form-check-label">기타</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '업무지역',
+                    select : {
+                        option : [
+                            '선택'
+                        ]
+                    }
+                },
+                {
+                    th : '대행업무', 
+                    radio : {
+                        name : 'worktype',
+                        list : [
+                            '기타1', '기타2', '기타'
+                        ]
+                    }
+                },
+                {
+                    dayNtime : '업무기한',
+                    endOnly : true
+                },
+                {
+                    th : '업무진행',
+                    input : true,
+                },
+                {
+                    case2 : true,
+                },
+                {
+                    th : '당사자',
+                    input : true,
+                },
+                {
+                    th : '업무내용',
+                    textarea : {
+                        alert : '※ 업무내용을 자세히 넣어 주세요!'
+                    },
+                },
+                {
+                    th : '대행비용',
+                    input : {
+                        text : '원'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0601modal){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '유료상품명',
+                    input : {
+                        btn : '중복체크'
+                    }
+                },
+                {
+                    th : '유료상품가격',
+                    input : true,
+                }, 
+                {
+                    th : '유료상품 상태',
+                    radio : {
+                        name : 'product-state',
+                        list : [
+                            '활성', '비활성'
+                        ]
+                    }
+                },
+                {
+                    th : '적용기간',
+                    checkbox : {
+                        name : 'product-period',
+                        list : [
+                            '1개월', '3개월(5%할인)', '6개월(10%할인)', '12개월(20%할인)'
+                        ]
+                    }
+                }, 
+                {
+                    th : '할인금액',
+                    text : '000,000원'
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0603){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '쿠폰이름',
+                    input : true,
+                },
+                {
+                    th : '쿠폰설명',
+                    input : true,
+                }
+            ])
+            <tr>
+                <th scope="row">혜택구분</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <select class="form-select w-auto" aria-label="혜택 구분 선택">
+                            <option value="">할인율</option>
+                        </select>
+                        <input type="text" class="form-control w-auto">
+                        <p>%<span class="text-danger">(절사는 100원 단위)</span></p>
+                        <p class="ms-5">최대할인 금액</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>원</p>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '사용기간(시작일/종료일)',
+                    period : true,
+                }
+            ])
+            <tr>
+                <th scope="row">대량쿠폰 발행</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="chk-on">
+                            <label class="form-check-label" for="chk-on">발행</label>
+                        </div>
+                        <input type="text" class="form-control w-auto ms-5">
+                        <p>개<span class="text-danger">(최대 발급 가능 수량은 1,000개 입니다.)</span></p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    }
+    @@if(context.sub0801){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목 <span class=text-danger>*</span>',
+                    input : true
+                },
+                {
+                    th : '게시기간 <span class=text-danger>*</span>',
+                    period2 : true
+                },
+                {
+                    size : {
+                        title : '사이즈 <span class=text-danger>*</span>',
+                        type1 : '가로',
+                        type2 : '세로'
+                    }
+                },
+                {
+                    size : {
+                        title : '위치 <span class=text-danger>*</span>',
+                        type1 : 'Top',
+                        type2 : 'Left'
+                    }
+                },
+                {
+                    th : '링크URL',
+                    input : true
+                },
+                {
+                    th : '링크TITLE',
+                    input : true
+                },
+                {
+                    th : '링크타겟',
+                    select : {
+                        option : [
+                            '타겟을 선택해 주세요'
+                        ]
+                    }
+                },
+                {
+                    file : {
+                        title : '이미지파일',
+                        multi : true,
+                    }
+                },
+                {
+                    th : '이미지 설명(alt)',
+                    input : true
+                }, {
+                    th : '사용여부',
+                    switch : {
+                        id : 'use',
+                        label : '사용'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0802){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목',
+                    input : true
+                },
+            ])
+            <tr>
+                <th scope="row">노출적용</th>
+                <td>
+                    <div class="form-check form-check-inline form-switch" data-toggle="collapse" data-target="#period" aria-expanded="true" aria-controls="period">
+                        <input class="form-check-input" type="checkbox" id="period-on">
+                        <label class="form-check-label" for="period-on">즉시 노출</label>
+                      </div>
+                </td>
+            </tr>
+            <tr id="period" class="collapse show">
+                <th scope="row">게시기간</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="datepicker">
+                            <input type="text" class="form-control" value="" aria-label="시작 날짜 선택">
+                            <i class="bi bi-calendar2-check"></i>
+                        </div>
+                        <span>~</span>
+                        <div class="datepicker">
+                            <input type="text" class="form-control" value="" aria-label="종료 날짜 선택">
+                            <i class="bi bi-calendar2-check"></i>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="기간 선택">
+                            <input type="radio" class="btn-check" id="period01" name="period-select"><label for="period01" class="btn btn-outline-secondary">오늘</label>
+                            <input type="radio" class="btn-check" id="period02" name="period-select"><label for="period02" class="btn btn-outline-secondary">어제</label>
+                            <input type="radio" class="btn-check" id="period03" name="period-select"><label for="period03" class="btn btn-outline-secondary">3일</label>
+                            <input type="radio" class="btn-check" id="period04" name="period-select"><label for="period04" class="btn btn-outline-secondary">7일</label>
+                            <input type="radio" class="btn-check" id="period05" name="period-select"><label for="period05" class="btn btn-outline-secondary">15일</label>
+                            <input type="radio" class="btn-check" id="period06" name="period-select"><label for="period06" class="btn btn-outline-secondary">1개월</label>
+                            <input type="radio" class="btn-check" id="period07" name="period-select"><label for="period07" class="btn btn-outline-secondary">3개월</label>
+                            <input type="radio" class="btn-check" id="period08" name="period-select"><label for="period08" class="btn btn-outline-secondary">6개월</label>
+                            <input type="radio" class="btn-check" id="period09" name="period-select"><label for="period09" class="btn btn-outline-secondary">전체</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '링크URL',
+                    input : true
+                },
+                {
+                    th : '링크TITLE',
+                    input : true
+                },
+                {
+                    th : '링크타겟',
+                    select : {
+                        option : [
+                            '타겟을 선택해 주세요'
+                        ]
+                    }
+                },
+                {
+                    file : {
+                        title : '이미지파일',
+                        multi : true
+                    }
+                },
+                {
+                    th : '이미지설명(alt)',
+                    input : true
+                },
+                {
+                    th : '사용여부',
+                    switch : {
+                        id : 'use',
+                        label : '사용'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0901){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목',
+                    input : true
+                }, 
+                {
+                    th : '작성자',
+                    text : '관리자'
+                }, 
+                {
+                    th : '내용',
+                    textarea : true,
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0902){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목',
+                    input : true
+                }, 
+                {
+                    th : '등록일',
+                    input : {
+                        placeholder : '날짜시간입력(예 : 202101010930)'
+                    }
+                }, 
+                {
+                    th : '작성자',
+                    input : true
+                }, 
+                {
+                    th : '내용',
+                    textarea : true,
+                },
+                {
+                    file : {
+                        title : '타이틀이미지',
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0903){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '분야',
+                    select : {
+                        option : [
+                            '분야 선택'
+                        ]
+                    }
+                },
+                {
+                    th : '제목',
+                    input : true
+                }, 
+                {
+                    th : '작성일',
+                    text : '2021-00-00'
+                }, 
+                {
+                    th : '작성자',
+                    text : '관리자'
+                }, 
+                {
+                    th : '질문',
+                    input : true,
+                },
+                {
+                    th : '내용',
+                    textarea : true,
+                },
+                {
+                    file : true
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub090401){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '답변자',
+                    text : '관리자'
+                },
+                {
+                    th : '답변일',
+                    text : '2021-00-00'
+                }, 
+                {
+                    th : '결과통보방식',
+                    checkbox : {
+                        name : 'reply',
+                        list : [
+                            'SMS', 'e-mail'
+                        ]
+                    } 
+                },
+                {
+                    th : '답변',
+                    textarea : true,
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub090402){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '문의하기 도배방지키 설정',
+                    switch : {
+                        id : 'use-on',
+                        label : '사용',
+                        alert : '※ 문의하기 메일 발송시 도배방지키 입력 및 체크여부를 설정합니다.'
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row">문의하기 SMS관련 설정</th>
+                <td>
+                    <div class="message-box mb-4">
+                        가우로(LawToMe) %담당자%님. %문의자이름%님께서 [%회사명%] 정보에 문의사항을 접수 하였습니다.
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="msg01" name="msg">
+                        <label for="msg01" class="form-check-label">SMS 발송</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="msg02" name="msg">
+                        <label for="msg02" class="form-check-label">카카오 알림톡 발송</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="msg03" name="msg">
+                        <label for="msg03" class="form-check-label">발송안함</label>
+                    </div>
+                    <div class="mt-4">
+                        카카오 알림톡 관련 기능 들어가는 영역
+                    </div>
+                    <p class="text-danger mt-1">※ 사용가능 추출태그 - %사이트이름% , %문의자이름% 카카오 알림톡 발송시 템플릿 코드를 반드시 입력하세요.</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">개인정보 보호정책 설정</th>
+                <td>
+                    <textarea class="form-control"></textarea>
+                </td>
+            </tr>
+        </tbody>
+    }
+    @@if(context.sub090501){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '이벤트제목',
+                    input : true
+                }, {
+                   th : '작성자',
+                   text : '운영자' 
+                }, {
+                    th : '작성일',
+                    text : '2021-00-00'
+                }, {
+                    file : {
+                        title : '탑 이미지',
+                        chk : true,
+                        id : 'img1on',
+                        multi : true,
+                    }
+                }, {
+                    file : {
+                        title : '목록 이미지',
+                        chk : true,
+                        id : 'img2on',
+                    }
+                }, {
+                    th : '이벤트기간',
+                    period3 : true
+                }, {
+                    th : '이벤트발표일',
+                    period3 : {
+                        startOnly : true
+                    }
+                }, {
+                    file : {
+                        title : 'html첨부'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub090501a){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '이벤트제목',
+                    text : '이벤트 제목 노출'
+                }, {
+                    th : '작성자',
+                    text : '관리자'
+                }, {
+                    th : '작성일',
+                    text : '2021-00-00'
+                }, {
+                    th : '탑 이미지',
+                    text : '<img src=/webadmin/images/img-banner01.png alt=등록한이미지노출>'
+                }, {
+                    th : '목록 이미지',
+                    text : '<img src=/webadmin/images/img-banner01.png alt=등록한이미지노출>'
+                }, {
+                    th : '이벤트기간',
+                    text : '2021-00-00 00:00 ~ 2021-00-00 00:00'
+                }, {
+                    th : '이벤트발표일',
+                    text : '2021-00-00 00:00'
+                }, {
+                    th : 'html첨부',
+                    text : '첨부파일명.html'
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub0906){
+        <tbody data-evt="tg-toggle-wrap">
+            <tr>
+                <th scope="row">구분</th>
+                <td>
+                    <div class="btn-group" role="group" aria-label="게시글 타입 선택">
+                        <input type="radio" class="btn-check" id="type1" name="type" checked>
+                        <label for="type1" class="btn btn-outline-dark" data-toggle="tg-toggle" data-target="" aria-expanded="true">텍스트 타입</label>
+                        <input type="radio" class="btn-check" id="type2" name="type">
+                        <label for="type2" class="btn btn-outline-dark" data-toggle="tg-toggle" data-target="#tr-type1" aria-expanded="false">이미지 타입</label>
+                        <input type="radio" class="btn-check" id="type3" name="type">
+                        <label for="type3" class="btn btn-outline-dark" data-toggle="tg-toggle" data-target="#tr-type2, #tr-type3" aria-expanded="false">동영상 타입</label>
+                    </div>
+                </td>
+            </tr>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목',
+                    input : true
+                },
+                {
+                    th : '내용',
+                    textarea : {
+                        cont : '에디터가 들어감'
+                    }
+                },
+                {
+                    file : {
+                        alert : '* 파일크기 : 5MB 이하',
+                        multi : true,
+                    }
+                },
+            ])
+            <tr id="tr-type1" class="toggle-tg">
+                <th scope="row">썸네일 이미지</th>
+                <td>
+                    <input class="form-control" type="file">
+                    <p class="text-danger mt-1">* 이미지 사이즈 : </p>
+                </td>
+            </tr>
+            <tr id="tr-type2" class="toggle-tg">
+                <th scope="row">동영상 주소</th>
+                <td>
+                    <input type="text" class="form-control" aria-label="동영상 주소 입력">
+                </td>
+            </tr>
+            <tr id="tr-type3" class="toggle-tg">
+                <th scope="row">동영상 썸네일 이미지</th>
+                <td>
+                    <input class="form-control" type="file">
+                    <p class="text-danger mt-1">* 이미지 사이즈 : </p>
+                </td>
+            </tr>
+        </tbody>
+    }
+    @@if(context.sub0907){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '제목',
+                    input : true
+                }, 
+                {
+                    th : '작성자',
+                    text : '관리자'
+                }, 
+                {
+                    th : '내용',
+                    textarea : true,
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub1001){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '성명',
+                    input : true,
+                }, {
+                    th : '아이디',
+                    input : true,
+                }, {
+                    th : '비밀번호',
+                    password : true,
+                }, {
+                    th : '비밀번호 확인',
+                    password : true,
+                }, {
+                    th : '이메일',
+                    input : true,
+                }, {
+                    th : '휴대폰 번호',
+                    input : true,
+                }
+            ])
+            <tr>
+                <th scope="row">권한설정</th>
+                <td>
+                    <ul class="list-group">
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set01',
+                                allBlock : {
+                                    label : '01. 대행업무관리'
+                                },
+                                list : [
+                                    '대행업무 등록현황', '대행업무 지원관리', '대행업무 찜 관리', '대행업무 요청관리',
+                                    '대행업무 완료관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set02',
+                                allBlock : {
+                                    label : '02. 변호사관리'
+                                },
+                                list : [
+                                    '변호사 등록현황', '업무요청관리', '변호사 찜 관리', '변호사별 대행업무'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set03',
+                                allBlock : {
+                                    label : '03. 회원관리'
+                                },
+                                list : [
+                                    '회원목록', '휴먼회원', '탈퇴회원', '휴먼회원설정', '회원비밀번호 변경', '가우로톡 관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set04',
+                                allBlock : {
+                                    label : '04. 업무수행관리'
+                                },
+                                list : [
+                                    '대행업무진행관리', '대행업무완료관리', '세금계산서신청내역', '현금영수증신청내역'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set05',
+                                allBlock : {
+                                    label : '05. 정산관리'
+                                },
+                                list : [
+                                    '정산현황내역', '결제내역관리', '적립금관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set06',
+                                allBlock : {
+                                    label : '06. 유료상품관리'
+                                },
+                                list : [
+                                    '유료상품 관리', '유료상품 결제내역', '쿠폰관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set07',
+                                allBlock : {
+                                    label : '07. 현황/통계'
+                                },
+                                list : [
+                                    '회원통계', '매출통계', '업무대행통계', '결제/광고통계', '가우로톡통계', '접속통계'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set08',
+                                allBlock : {
+                                    label : '08. 사이트관리'
+                                },
+                                list : [
+                                    '팝업관리', '메인배너관리', '메인중간배너관리', '하단배너관리', 
+                                    '푸터배너관리', '서브배너관리', '퀵배너관리', '모바일관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set09',
+                                allBlock : {
+                                    label : '09. 게시판관리'
+                                },
+                                list : [
+                                    '공지사항관리', '뉴스관리', '자주찾는질문관리', '1:1문의관리',
+                                    '이벤트관리', '홍보자료관리', '정보게시판관리'
+                                ]
+                            })
+                        </li>
+                        <li class="list-group-item py-3" data-toggle="allChk">
+                            @@include('./modules/input-inline-list.html', {
+                                checkbox : true,
+                                name : 'set10',
+                                allBlock : {
+                                    label : '10. 시스템(설정)관리'
+                                },
+                                list : [
+                                    '내부사용자', '비밀번호변경', '각종 메시지 설정', '온라인 지원 설정', '적립금 설정', '알림 설정'
+                                ]
+                            })
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    }
+    @@if(context.sub1001a){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '회원 상태',
+                    radio : {
+                        name : 'member-state',
+                        list : [
+                            '정상회원', '회원정지'
+                        ],
+                    },
+                    inputAdd : '정지사유'
+                },
+                {
+                    th : '비밀번호 초기화',
+                    button : {
+                        color : 'danger',
+                        tit : '초기화'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub1002){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '성명',
+                    text : '홍길동',
+                }, {
+                    th : '아이디',
+                    text : 'gildong2'
+                }, {
+                    th : '변경할 비밀번호',
+                    password : {
+                        placeholder : '띄어쓰기 없는 영문 대소문자, 숫자포함 6∼15자 사용가능'
+                    }
+                }, {
+                    th : '변경할 비밀번호 확인',
+                    password : {
+                        placeholder : '비밀번호를 동일하게 재입력'
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub1003){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '대행업무 지원 요청이 있을 경우 알림창 메세지',
+                    textarea : {
+                        alert : '※ {{요청건수}} : 대행업무지원요청건수로 변환되어서 메세지가 출석됩니다.'
+                    },
+                },
+                {
+                    th : '변호사 지원 요청이 있을 경우 알림창 메세지',
+                    textarea : {
+                        alert : '※ {{요청건수}} : 대행업무지원요청건수로 변환되어서 메세지가 출석됩니다.'
+                    },
+                },
+                {
+                    th : '대행업무 요청이 있을 경우 알림창 메세지',
+                    textarea : {
+                        alert : '※ {{요청건수}} : 대행업무지원요청건수로 변환되어서 메세지가 출석됩니다.'
+                    },
+                },
+                {
+                    th : '유료옵션을 사용중인 이력서일 경우 내이력서 리스트에 출력될 메세지',
+                    inputgroup : {
+                        text : '사용중',
+                        id : 'on-use',
+                    },
+                    inputgroup2 : {
+                        text : '사용하지 않을 때',
+                        id : 'on-unuse',
+                    },
+                },
+                {
+                    th : '이력서의 제목이 없을 경우 출력될 메세지',
+                    input : true
+                }, 
+                {
+                    th : '프로필이 등록되지 않았을 경우 출력될 메세지',
+                    textarea : true
+                },
+                {
+                    th : '대행업무가 등록되지 않을 경우 출력될 메세지',
+                    textarea : true
+                },
+                {
+                    th : '변호사 회원 프로필이 등록되지 않았을 경우 출력될 메세지',
+                    textarea : true
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub1004){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '대행업무 지원 취소 여부 설정',
+                    radio : {
+                        name : 'cancel',
+                        list : [
+                            '취소가능', '취소불가'
+                        ]
+                    }
+                },
+                {
+                    th : '변호사 지원 취소 여부 설정',
+                    radio : {
+                        name : 'cancel2',
+                        list : [
+                            '취소가능', '취소불가'
+                        ]
+                    }
+                },
+                {
+                    th : '대행업무 지원 확인/미확인 텍스트 설정',
+                    inputgroup : {
+                        text : '확인전',
+                        id : 'text1', 
+                    },
+                    inputgroup2 : {
+                        text : '확인후',
+                        id : 'text2', 
+                    }
+                }
+            ])
+        </tbody>
+    }
+    @@if(context.sub1005){
+        <tbody>
+            @@loop('./modules/table-input.html', [
+                {
+                    th : '사용여부',
+                    radio : {
+                        name : 'canuse',
+                        list : [
+                            '사용함', '사용안함'
+                        ]
+                    }
+                },
+            ])
+            <tr>
+                <th scope="row" rowspan="3">적립금액 설정</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p>유료상품결제 금액의</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>%를 적립</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p>변호사 파견 수수료(가우로 수익)의</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>%를 적립</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p>변호사 거래 수수료(가우로 수익)의</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>%를 적립</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">지급일</th>
+                <td>
+                    <p class="mb-1">유료상품결제 및 수수료 수익 발생후 지급</p>
+                    @@include('./modules/input-inline-list.html', {
+                        radio : true,
+                        name : 'after',
+                        list : [
+                            '즉시', '당일', '익일', '2일 후', '3일 후', '4일 후', '5일 후', '6일 후', '7일 후'
+                        ]
+                    })
+                </td>
+            </tr>
+        </tbody>
+    }
+    @@if(context.sub1005a){
+        <tbody>
+            <tr>
+                <th scope="row">적립금 사용 기준 금액 설정</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control w-auto">
+                        <p>원 이상 적립금 보유시 사용가능</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">적립금 사용 최대치 설정</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input mt-0" type="radio" id="max01" value="" name="max">
+                        <p>보유 적립금의</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>원 이하만 사용가능</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <input class="form-check-input mt-0" type="radio" id="max02" value="" name="max">
+                        <p>총 결제 금액의</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>% 이하만 사용가능</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">적립금 사용 가능 상품 금액 설정</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control w-auto">
+                        <p>원 이상 상품 구매시 사용가능</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">적립금, 쿠폰 포함 결제시 지급 여부</th>
+                <td>
+                    @@include('./modules/input-inline-list.html', {
+                        radio : true,
+                        name : 'option1',
+                        list : [
+                            '미지급', '지급'
+                        ]
+                    })
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">회원가입시 기본적립금 설정</th>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p>신규회원 가입시</p>
+                        <input type="text" class="form-control w-auto">
+                        <p>원 적립</p>
+                    </div>
+                    <p class="text-danger mt-1">※ 0원으로 설정시 회원가입시 적립금이 지급되지 않습니다.</p>
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
+<!-- // table -->
+@@if(context.button){
+<!-- submit button -->
+<div class="btn-wrap d-flex justify-content-center mt-4">
+    @@if(context.btntype === 'save'){
+    <a href="@@prev.html" class="btn btn-gray">취소</a>
+    <button type="submit" class="btn btn-dark ms-2">저장</button>
+    }
+    @@if(context.btntype === 'save2'){
+    <button type="button" class="btn btn-gray">취소</button>
+    <button type="submit" class="btn btn-dark ms-2">저장</button>
+    }
+    @@if(context.btntype === 'save3'){
+    <a href="@@prev.html" class="btn btn-gray">목록</a>
+    <button type="submit" class="btn btn-dark ms-2">저장</button>
+    }
+    @@if(context.btntype === 'reset'){
+    <input type="reset" class="btn btn-gray" value="취소">
+    <button type="submit" class="btn btn-primary">저장</button>
+    }
+    @@if(context.btntype === 'modify'){
+    <a href="@@prev.html" class="btn btn-gray">목록</a>
+    <button type="submit" class="btn btn-dark ms-2">수정</button>
+    }
+    @@if(context.btntype === 'modify2'){
+    <a href="@@prev.html" class="btn btn-gray">목록</a>
+    <a href="@@link.html" class="btn btn-dark ms-2">수정</a>
+    }
+    @@if(context.btntype === 'list'){
+    <a href="@@prev.html" class="btn btn-gray">목록</a>
+    }
+    @@if(context.btntype === 'triple'){
+    <a href="@@prev.html" class="btn btn-gray me-auto">목록</a>
+    <button type="button" class="btn btn-dark">수정</button>
+    <button type="button" class="btn btn-danger ms-1">삭제</button>
+    }
+</div>
+<!-- // submit button -->
+}

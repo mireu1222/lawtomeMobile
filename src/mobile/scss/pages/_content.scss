@@ -1,0 +1,191 @@
+.work-info-wrap {
+    display:flex;
+    padding:0 40px;
+    text-align:left;
+    .infos {
+        max-width:840px;
+        .top {
+            display:flex;
+            align-items:center;
+            margin-bottom:20px;
+            p {
+                font-size:18px;
+                font-weight:500;
+                .count {
+                    margin-left:20px;
+                    color:$cont;
+                    font-weight:400;
+                    em {
+                        margin-right:10px;
+                        color:$basic;
+                        font-weight:500;
+                    }
+                }
+            }
+            .flag-wrap {
+                margin-left:20px;
+                font-size:0;
+                .flag {
+                    margin-right:7px;
+                }
+            }
+        }
+        .title {
+            a {
+                display:inline-block;
+                vertical-align:top;
+                font-size:22px;
+                line-height:30px;
+                font-weight:500;
+                word-break:keep-all;
+                span {
+                    margin-right:5px;
+                    color:$point;
+                }
+            }
+            p {
+                font-size:22px;
+                line-height:30px;
+                font-weight:500;
+                word-break:keep-all;
+                span {
+                    margin-right:5px;
+                    color:$point;
+                }
+            }
+        }
+        .condition-list {
+            margin-top:30px;
+            font-size:0;
+            white-space:nowrap;
+            li {
+                display:inline-block;
+                vertical-align:top;
+                font-size:18px;
+                line-height:20px;
+                &::before {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:20px;
+                    height:20px;
+                    margin-right:10px;
+                }
+                &.type1 {
+                    &::before {
+                        background:url('/images/icon/icon-won.png') center no-repeat;
+                    }
+                }
+                &.type2 {
+                    &::before {
+                        background:url('/images/icon/icon-time.png') center no-repeat;
+                    }
+                }
+                em {
+                    font-weight:500;
+                }
+                &::after {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:1px;
+                    height:20px;
+                    margin:0 30px;
+                    background:$border;
+                }
+                &:last-child::after {
+                    display:none;
+                }
+            }
+        }
+        .cont {
+            margin-top:10px;
+            color:$cont;
+            @include font;
+            &.type2 {
+                @include textEllipsis;
+            }
+            span {
+                &::after {
+                    content:':';
+                    margin:0 4px;
+                }
+            }
+        }
+    }
+    .controls {
+        display:flex;
+        flex-direction:column;
+        margin-left:auto;
+        text-align:right;
+        .vol-count {
+            display:block;
+            font-size:18px;
+            line-height:22px;
+            em {
+                margin-right:4px;
+                color:$point;
+                font-weight:500;
+            }
+            a {
+                display:inline-block;
+                vertical-align:top;
+                margin-right:4px;
+                color:$point;
+                font-weight:500;
+                &:hover {
+                    text-decoration:underline;
+                }
+            }
+            &::before {
+                content:' ';
+                display:inline-block;
+                vertical-align:top;
+                width:22px;
+                height:22px;
+                margin-right:6px;
+                background:url('/images/icon/icon-vol.png') center no-repeat;
+            }
+        }
+        .btn-talk {
+            margin-top:30px;
+            margin-left:auto;
+        }
+        .btn.btn-md {
+            width:200px;
+            margin-top:auto;
+            margin-left:auto;
+        }
+    }
+    &.card-type {
+        display:block;
+        width:610px;
+        margin:0 auto 40px;
+        padding:40px 50px;
+        border:1px solid $border;
+        &:last-child {
+            margin-bottom:0;
+        }
+        .infos {
+            max-width:none;
+            .title {
+                p span {
+                    display:block;
+                    margin-bottom:4px;
+                }
+            }
+            .cont {
+                margin-top:15px;
+                padding:20px;
+                background:$disabled;
+                span {
+                    display:block;
+                    font-weight:500;
+                    &::after {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}

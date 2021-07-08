@@ -1,0 +1,29 @@
+@@if(context.double){
+<!-- alert -->
+<div id="@@id-alert" class="modal alert fade" tabindex="-1" aria-labelledby="@@id-alert-tit" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p id="@@id-alert-tit" class="message">@@msg1</p>
+                <div class="d-flex justify-content-center alert-btn">
+                    <button type="button" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-point" data-target="#@@id-alert2" data-toggle="modal" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="@@id-alert2" class="modal alert fade" tabindex="-1" aria-labelledby="@@id-alert2-tit" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p id="@@id-alert2-tit" class="message">@@msg2</p>
+                <div class="d-flex justify-content-center alert-btn">
+                    <button type="button" class="btn btn-point" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // alert -->
+}

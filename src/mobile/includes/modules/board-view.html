@@ -1,0 +1,105 @@
+<!-- table -->
+<table class="table row-table board"@@if(context.chktype){ data-toggle="allChk"}>
+    <colgroup>
+        <col style="width:15%">
+        <col>
+        <col style="width:15%">
+        <col>
+    </colgroup>
+    <thead>
+        @@if(context.faq){
+            <tr>
+                <th scope="row">분야</th>
+                <td colspan="3">회원관련</td>
+            </tr>
+            <tr>
+                <th scope="row">작성일</th>
+                <td>2021-06-10</td>
+                <th scope="row">작성자</th>
+                <td>관리자</td>
+            </tr>
+            <tr>
+                <th scope="row">질문</th>
+                <td colspan="3">질문 제목이 들어감</td>
+            </tr>
+            <tr>
+                <th scope="row">답변</th>
+                <td colspan="3" class="px-4 py-4">
+                    <div class="board-cont">
+                        <p>등록한 내용을 불러옴.</p>
+                    </div>
+                    <!-- 첨부파일 리스트(첨부파일 없으면 DOM 전체 삭제) -->
+                    <ul class="list-group mt-4">
+                        <li class="list-group-item"><a href="" class="link-dark"><i class="bi bi-paperclip"></i>첨부파일명.jpg</a></li>
+                    </ul>
+                    <!-- // 첨부파일 리스트 -->
+                </td>
+            </tr>
+        }
+        @@if(context.qna){
+            <tr>
+                <th scope="row">이름</th>
+                <td>홍길동</td>
+                <th scope="row">등록일</th>
+                <td>2021-06-01 14:00</td>
+            </tr>
+            <tr>
+                <th scope="row">연락처</th>
+                <td>010-1234-1234</td>
+                <th scope="row">이메일</th>
+                <td>hong1234@naver.com</td>
+            </tr>
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">제목이 들어감</td>
+            </tr>
+            <tr>
+                <th scope="row">내용</th>
+                <td colspan="3" class="px-4 py-4">
+                    <div class="board-cont">
+                        <p>등록한 내용을 불러옴.</p>
+                    </div>
+                    <!-- 첨부파일 리스트(첨부파일 없으면 DOM 전체 삭제) -->
+                    <ul class="list-group mt-4">
+                        <li class="list-group-item"><a href="" class="link-dark"><i class="bi bi-paperclip"></i>첨부파일명.jpg</a></li>
+                    </ul>
+                    <!-- // 첨부파일 리스트 -->
+                </td>
+            </tr>
+        }
+        @@if(!context.faq && !context.qna){
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">게시글 제목이 들어감</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자</th>
+                <td>관리자</td>
+                <th scope="row">조회수</th>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="px-4 py-4">
+                    <div class="board-cont">
+                        <p>등록한 내용을 불러옴.</p>
+                    </div>
+                    <!-- 첨부파일 리스트(첨부파일 없으면 DOM 전체 삭제) -->
+                    <ul class="list-group mt-4">
+                        <li class="list-group-item"><a href="" class="link-dark"><i class="bi bi-paperclip"></i>첨부파일명.jpg</a></li>
+                    </ul>
+                    <!-- // 첨부파일 리스트 -->
+                </td>
+            </tr>
+        }
+    </thead>
+</table>
+<!-- // table -->
+@@if(!context.qna){
+<!-- submit button -->
+<div class="btn-wrap d-flex justify-content-center mt-4">
+    <a href="@@prev.html" class="btn btn-gray me-auto">목록</a>
+    <button type="button" class="btn btn-dark me-1">수정</button>
+    <button type="button" class="btn btn-danger">삭제</button>
+</div>
+<!-- // submit button -->
+}

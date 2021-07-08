@@ -1,0 +1,28 @@
+@@if(context.checkbox) {
+    @@if(context.allBlock){
+    <div class="form-check pb-2 mb-2 border-bottom">
+        <input type="checkbox" class="form-check-input chk-all" id="@@name-all" name="@@name">
+        <label for="@@name-all" class="form-check-label fw-bold">@@allBlock.label</label>
+    </div>
+    }
+    @@if(context.all){
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input chk-all" id="@@name-all" name="@@name">
+        <label for="@@name-all" class="form-check-label">전체</label>
+    </div>
+    }
+    @@for(var i=0; i < list.length; i++) {
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="@@name`+[i+1]+`" name="@@name">
+        <label for="@@name`+[i+1]+`" class="form-check-label">`+list[i]+`</label>
+    </div>
+    }
+}
+@@if(context.radio){
+    @@for(var i=0; i < list.length; i++) {
+    <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="@@name`+[i+1]+`" name="@@name">
+        <label for="@@name`+[i+1]+`" class="form-check-label">`+list[i]+`</label>
+    </div>
+    }
+}

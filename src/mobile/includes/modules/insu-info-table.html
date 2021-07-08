@@ -1,0 +1,28 @@
+<div class="table-loop">
+    <table class="table row-table">
+        <colgroup>
+            <col style="width:20%">
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">타이틀</th>
+                <td>
+                    <input type="text" class="form-control form-control-sm" title="타이틀 입력">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">설명</th>
+                <td>
+                    <textarea type="text" class="form-control form-control-sm" title="타이틀 입력" rows="5"></textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-wrap d-flex justify-content-end mt-2 gap-1">
+        <button type="button" class="btn btn-sm btn-outline-primary">추가</button>
+        @@if(!context.first){
+        <button type="button" class="btn btn-sm btn-outline-danger">삭제</button>
+        }
+    </div>
+</div>

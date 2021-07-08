@@ -1,0 +1,58 @@
+<!-- filter -->
+<div class="filter-wrap d-flex align-items-center mb-2">
+    @@if(!context.noTotal){
+    <div class="input-group input-group-sm w-auto">
+        <p class="input-group-text">TOTAL : <strong class="text-point ms-1">99</strong></p>
+        <select class="form-select" aria-label="노출되는 리스트 갯수 선택">
+            <option value="">10개 보기</option>
+            <option value="">20개 보기</option>
+            <option value="">30개 보기</option>
+            <option value="">40개 보기</option>
+            <option value="">50개 보기</option>
+            <option value="">100개 보기</option>
+        </select>
+    </div>
+    }
+    <div class="buttons d-flex ms-auto">
+        @@if(context.state){
+        <div class="input-group input-group-sm w-auto">
+            <p class="input-group-text">선택한 이력서의 상태를 모두</p>
+            <select class="form-select form-select-sm" aria-label="이력서 상태 선택">
+                <option value="">대행업무지원</option>
+                <option value="">1차 합격</option>
+                <option value="">대행업무요청</option>
+                <option value="">미팅 요청</option>
+            </select>
+            <button type="button" class="btn btn-sm btn-point">변경</button>
+        </div>
+        }
+        @@if(context.stateEdit){
+            <div class="input-group input-group-sm w-auto">
+                <p class="input-group-text">@@stateEdit.title</p>
+                <select class="form-select form-select-sm" aria-label="변경할 옵션 선택">
+                    @@for(var j=0; j < stateEdit.option.length; j++){
+                        <option value="">`+stateEdit.option[j]+`</option>
+                    }
+                </select>
+                <button type="button" class="btn btn-sm btn-point">변경</button>
+            </div>
+            }
+        @@if(context.delete){
+        <button type="button" class="btn btn-sm btn-danger"><i class="bi bi-check2-square me-1"></i>선택삭제</button>    
+        }
+        @@if(context.write){
+        <a href="@@write.page.html" class="btn btn-sm btn-danger"><i class="bi bi-pencil-square me-1"></i>@@write.name</a>
+        }
+        @@if(context.modal){
+        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#@@modal.target">@@modal.name</button>
+        }
+        @@if(context.excel){
+        <button type="button" class="btn btn-sm btn-secondary"><i class="bi bi-download me-1"></i>엑셀다운로드</button>
+        }
+        @@if(context.message){
+            <a href="" class="btn btn-sm btn-secondary"><i class="bi bi-mailbox me-1"></i>선택 메일 발송</a>
+            <a href="" class="btn btn-sm btn-secondary"><i class="bi bi-envelope me-1"></i>선택 SMS 발송</a>
+        }
+    </div>
+</div>
+<!-- // filter -->

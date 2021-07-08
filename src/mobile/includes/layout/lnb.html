@@ -1,0 +1,37 @@
+<div id="lnb">
+    <ul class="nav flex-column mb-auto">
+        @@if(context.cate01){
+            <li class="nav-item"><a class="nav-link@@if(context.cate01==='01'){ active" aria-current="page}" href="/webadmin/page/sub_01.html">팀매칭 접수현황</a></li>
+        }
+        @@if(context.cate02){
+            <li class="nav-item"><a class="nav-link@@if(context.cate02==='01'){ active" aria-current="page}" href="/webadmin/page/sub_02_01.html">팀매칭 요청내역</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate02==='02'){ active" aria-current="page}" href="/webadmin/page/sub_02_02.html">팀매칭 완료내역</a></li>
+        }
+        @@if(context.cate03){
+            <li class="nav-item"><a class="nav-link@@if(context.cate03==='01'){ active" aria-current="page}" href="/webadmin/page/sub_03_01.html">회원목록</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate03==='02'){ active" aria-current="page}" href="/webadmin/page/sub_03_02.html">탈퇴회원</a></li>
+        }
+        @@if(context.cate04){
+            <li class="nav-item"><a class="nav-link@@if(context.cate04==='01'){ active" aria-current="page}" href="/webadmin/page/sub_04_01.html">회원 통계</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate04==='02'){ active" aria-current="page}" href="/webadmin/page/sub_04_02.html">팀매칭 등록 통계</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate04==='03'){ active" aria-current="page}" href="/webadmin/page/sub_04_03.html">팀매칭 접수 통계</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate04==='04'){ active" aria-current="page}" href="/webadmin/page/sub_04_04.html">접속 통계</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate04==='05'){ active" aria-current="page}" href="/webadmin/page/sub_04_05.html">메시지 통계</a></li>
+        }
+        @@if(context.cate05){
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='01'){ active" aria-current="page}" href="/webadmin/page/sub_05_01.html">공지사항관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='02'){ active" aria-current="page}" href="/webadmin/page/sub_05_02.html">뉴스/언론관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='03'){ active" aria-current="page}" href="/webadmin/page/sub_05_03.html">자주찾는질문관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='04'){ active" aria-current="page}" href="/webadmin/page/sub_05_04.html">1:1문의관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='05'){ active" aria-current="page}" href="/webadmin/page/sub_05_05.html">이벤트관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='06'){ active" aria-current="page}" href="/webadmin/page/sub_05_06.html">홍보자료관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='07'){ active" aria-current="page}" href="/webadmin/page/sub_05_07.html">팝업관리</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate05==='08'){ active" aria-current="page}" href="/webadmin/page/sub_05_08.html">배너관리</a></li>
+        }
+        @@if(context.cate06){
+            <li class="nav-item"><a class="nav-link@@if(context.cate06==='01'){ active" aria-current="page}" href="/webadmin/page/sub_06_01.html">내부사용자</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate06==='02'){ active" aria-current="page}" href="/webadmin/page/sub_06_02.html">비밀번호변경</a></li>
+            <li class="nav-item"><a class="nav-link@@if(context.cate06==='03'){ active" aria-current="page}" href="/webadmin/page/sub_06_03.html">지역 및 골프장 설정</a></li>
+        }
+    </ul>
+</div>

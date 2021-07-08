@@ -1,0 +1,24 @@
+<!-- page title -->
+<div class="page-title d-flex justify-content-between align-items-end">
+    @@if(!context.exTitle){<h2 class="title">@@title</h2>}
+    @@if(context.exTitle){<h2 class="title">@@prev</h2>}
+    <nav class="breadcrumb-wrap" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+            <li class="breadcrumb-item"><i class="bi bi-house me-1"></i>Home</li>
+            @@if(context.cate01){<li class="breadcrumb-item">대행업무관리</li>}
+            @@if(context.cate02){<li class="breadcrumb-item">변호사관리</li>}
+            @@if(context.cate03){<li class="breadcrumb-item">회원관리</li>}
+            @@if(context.cate04){<li class="breadcrumb-item">업무수행관리</li>}
+            @@if(context.cate05){<li class="breadcrumb-item">정산관리</li>}
+            @@if(context.cate06){<li class="breadcrumb-item">유료상품관리</li>}
+            @@if(context.cate07){<li class="breadcrumb-item">현황/통계</li>}
+            @@if(context.cate08){<li class="breadcrumb-item">사이트관리</li>}
+            @@if(context.cate09){<li class="breadcrumb-item">게시판관리</li>}
+            @@if(context.cate10){<li class="breadcrumb-item">시스템(설정)관리</li>}
+            @@if(context.prev){<li class="breadcrumb-item">@@prev</li>}
+            @@if(context.prev2){<li class="breadcrumb-item">@@prev2</li>}
+            <li class="breadcrumb-item active" aria-current="page">@@title</li>
+        </ol>
+    </nav>
+</div>
+<!-- // page title -->

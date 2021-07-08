@@ -1,0 +1,31 @@
+<!-- modal -->
+<div id="@@id-modal" class="modal fade@@if(context.size){ @@size}" tabindex="-1" aria-labelledby="@@id-modal-tit" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="@@id-modal-tit">@@title</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="닫기"></button>
+            </div>
+            <div class="modal-body">
+                @@if(context.sub0601){
+                    <section class="sect">
+                        @@include('./modules/write-table.html', {
+                            modal : true,
+                            sub0601modal : true
+                        })
+                    </section>
+                }
+            </div>
+            <div class="modal-footer">
+                @@if(!context.onebtn){
+                <button type="button" class="btn btn-gray" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-dark">@@btn</button>
+                }
+                @@if(context.onebtn){
+                <button type="button" class="btn btn-gray" data-dismiss="modal">확인</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // modal -->

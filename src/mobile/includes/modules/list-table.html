@@ -1,0 +1,2625 @@
+<!-- table -->
+@@if(context.title){
+    <h3 class="h3-title"><i class="bi bi-list me-1"></i>@@title</h3>
+}
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center col-table"@@if(context.chktype){ data-toggle="allChk"}>
+        @@if(context.sub0101){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">지원자</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td><a href="" class="link-dark">takkon21</a></td>
+                    <td><a href="" class="link-dark">탁권님</a></td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>999명</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_01_01_edit.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                            <a href="sub_01_01_list.html" class="btn btn-sm btn-outline-secondary ms-1">지원내역</a>
+                            <a href="" class="btn btn-sm btn-outline-secondary ms-1">대행업무요청</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td><a href="" class="link-dark">takkon21</a></td>
+                    <td><a href="" class="link-dark">탁권님</a></td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-secondary me-2">마감</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>999명</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_01_01_edit.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                            <a href="sub_01_01_list.html" class="btn btn-sm btn-outline-secondary ms-1">지원내역</a>
+                            <a href="" class="btn btn-sm btn-outline-secondary ms-1">대행업무요청</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0101list){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">지원일</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 임하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <select class="form-select" aria-label="이력서 상태 선택">
+                                <option value="">대행업무지원</option>
+                                <option value="">1차 합격</option>
+                                <option value="">대행업무요청</option>
+                                <option value="">미팅 요청</option>
+                            </select>
+                            <button type="button" class="btn btn-outline-point">변경</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0102){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">업무명</th>
+                    <th scope="col">업무마감일</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">지원일</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td><a href="" class="link-dark" target="_blank">서울지방법원 대리출석 6월 17일 10시</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해 임하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="" class="btn btn-sm btn-outline-danger">취소신청</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td><a href="" class="link-dark" target="_blank">서울지방법원 대리출석 6월 17일 10시</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해 임하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td class="text-danger">취소불가</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0103){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">찜한 회원</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>대행업무에 최선을 다해서 임하겠습니다.
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_01_03_view.html" class="link-dark">보기</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-secondary me-2">마감</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_01_03_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0103view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">찜한 일시</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해 임하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0104){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">요청한 대행업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>대행업무에 최선을 다해서 임하겠습니다.
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_01_04_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0104view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">요청일</th>
+                    <th scope="col">확인일시</th>
+                    <th scope="col">수락여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-point">수락</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">거절</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0105){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">예약한 대행업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-success me-2">완료</span>대행업무에 최선을 다해서 임하겠습니다.
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_01_05_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0105view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">완료일</th>
+                    <th scope="col">대행업무 여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">최소</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-success">완료</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0201){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">최근접속일</th>
+                    <th scope="col">등록일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td><a href="sub_02_01_view.html" class="link-dark">gildong2</a></td>
+                    <td><a href="sub_02_01_view.html" class="link-dark">홍길동</a></td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0202){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">요청일</th>
+                    <th scope="col">확인일시</th>
+                    <th scope="col">수락여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-point">수락</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">거절</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0203){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">최근접속일</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">찜한 회원</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                    <td><a href="sub_02_03_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0203view1){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">최근접속일</th>
+                    <th scope="col">등록일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>takkon21</td>
+                    <td>탁권님</td>
+                    <td>takkon21@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0203view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">찜한 일시</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 임하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0204){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">예약한 대행업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_02_04_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0301){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">최근접속일</th>
+                    <th scope="col">가입일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>변호사</td>
+                    <td><a href="sub_03_01_view.html" class="link-dark">gildong2</a></td>
+                    <td><a href="sub_03_01_view.html" class="link-dark">홍길동</a></td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>회원</td>
+                    <td><a href="sub_03_01_view.html" class="link-dark">gildong2</a></td>
+                    <td><a href="sub_03_01_view.html" class="link-dark">홍길동</a></td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0302){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">휴면시작일</th>
+                    <th scope="col">가입일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>변호사</td>
+                    <td><a href="" class="link-dark">gildong2</a></td>
+                    <td><a href="" class="link-dark">홍길동</a></td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00(경과 000일)</td>
+                    <td>2021-00-00</td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>회원</td>
+                    <td><a href="" class="link-dark">gildong2</a></td>
+                    <td><a href="" class="link-dark">홍길동</a></td>
+                    <td>gildong2@naver.com</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00(경과 000일)</td>
+                    <td>2021-00-00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0303){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">탈퇴일</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">탈퇴사유</th>
+                    <th scope="col">고객의견</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td class="text-start">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" checked disabled>
+                                고객서비스(문의 대응, 상담 등)불만
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" disabled>
+                                서비스 불만
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" disabled>
+                                결제불만
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" checked disabled>
+                                개인 정보유출 우려
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" disabled>
+                                유료상품 불만
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" disabled>
+                                기능 불만
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" disabled>
+                                방문 빈도가 낮음
+                            </li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0306){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">최종로그인</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">가우로톡 관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>010-0000-0000</td>
+                    <td>gildong2@naver.com</td>
+                    <td>
+                        <a href="sub_03_06_edit.html" class="btn btn-sm btn-outline-point">관리</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0401){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">요청한 대행업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_04_01_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0401view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">요청일</th>
+                    <th scope="col">확인일시</th>
+                    <th scope="col">수락여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-point">수락</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">거절</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0402){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">대행업무명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">마감일</th>
+                    <th scope="col">예약한 대행업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td class="text-start">
+                        <a href="" class="link-dark" target="_blank">
+                            <span class="badge bg-point me-2">진행중</span>전주지방법원 임실군법원 대리 출석
+                        </a>
+                    </td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_04_02_view.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0402view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">변호사명</th>
+                    <th scope="col">프로필</th>
+                    <th scope="col">완료일</th>
+                    <th scope="col">대행업무 여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">최소</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>복대리</td>
+                    <td>gildong2</td>
+                    <td>홍길동(41)</td>
+                    <td><a href="" class="link-dark" target="_blank">대행업무에 최선을 다해서 입하겠습니다.</a></td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-success">완료</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0403){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">신청일자</th>
+                    <th scope="col">처리일자</th>
+                    <th scope="col">신청자ID</th>
+                    <th scope="col">신청자명</th>
+                    <th scope="col">발급금액</th>
+                    <th scope="col">발행상태</th>
+                    <th scope="col">사업자등록증</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>000,000원</td>
+                    <td><span class="badge bg-point">발행</span></td>
+                    <td><a href="" class="link-dark"><i class="bi bi-download me-1"></i>파일 다운로드</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>000,000원</td>
+                    <td><span class="badge bg-secondary">미발행</span></td>
+                    <td><a href="" class="link-dark"><i class="bi bi-download me-1"></i>파일 다운로드</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0404){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">신청일자</th>
+                    <th scope="col">처리일자</th>
+                    <th scope="col">신청자ID</th>
+                    <th scope="col">신청자명</th>
+                    <th scope="col">발급금액</th>
+                    <th scope="col">발행상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>000,000원</td>
+                    <td><span class="badge bg-point">발행</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>000,000원</td>
+                    <td><span class="badge bg-secondary">미발행</span></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub050101){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">수입(업무대행입금) 총액</th>
+                    <th scope="col">지출(업무대행비) 총액</th>
+                    <th scope="col">수수료 총액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00,000,000원</td>
+                    <td>0,000,000원</td>
+                    <td>0,000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub050101a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">일시</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">금액(부가세포함)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>복대리</td>
+                    <td>대전지방법원 대리 출석</td>
+                    <td>000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0502){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">카드결제 총액</th>
+                    <th scope="col">휴대폰결제 총액</th>
+                    <th scope="col">현금결제 총액</th>
+                    <th scope="col">결제금액 총액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0502a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">일시</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">회원ID</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">결제수단</th>
+                    <th scope="col">금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 0000</td>
+                    <td>탁권님</td>
+                    <td>takkon</td>
+                    <td>복대리 업무대행 결제</td>
+                    <td>현금</td>
+                    <td>000,000원</td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 0000</td>
+                    <td>탁권님</td>
+                    <td>takkon</td>
+                    <td>복대리 업무대행 결제</td>
+                    <td>카드</td>
+                    <td>000,000원</td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 0000</td>
+                    <td>탁권님</td>
+                    <td>takkon</td>
+                    <td>복대리 업무대행 결제</td>
+                    <td>휴대폰</td>
+                    <td>000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0503){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">총 적립금</th>
+                    <th scope="col">사용 적립금</th>
+                    <th scope="col">소멸 적립금</th>
+                    <th scope="col">미사용 적립금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                    <td>00,000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0503a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">결제일시</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">회원ID</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">결제금액</th>
+                    <th scope="col">적립/사용</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>변호사</td>
+                    <td>2021-00-00 00:00</td>
+                    <td class="text-point">적립</td>
+                    <td><a href="sub_05_03_view.html" class="link-dark">탁권님</a></td>
+                    <td><a href="sub_05_03_view.html" class="link-dark">abcd</a></td>
+                    <td>업무대행 결제</td>
+                    <td>000,000원</td>
+                    <td class="text-point">+0,000</td>
+                    <td>관리</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>변호사</td>
+                    <td>2021-00-00 00:00</td>
+                    <td class="text-danger">사용</td>
+                    <td><a href="sub_05_03_view.html" class="link-dark">탁권님</a></td>
+                    <td><a href="sub_05_03_view.html" class="link-dark">abcd</a></td>
+                    <td>업무대행 결제</td>
+                    <td>000,000원</td>
+                    <td class="text-danger">-0,000</td>
+                    <td>관리</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0503view){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">적용일자</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">적립금액</th>
+                    <th scope="col">사용적립금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>업무대행 결제</td>
+                    <td class="text-danger">사용</td>
+                    <td></td>
+                    <td class="text-danger">-00,000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>업무대행 결제</td>
+                    <td class="text-point">적립</td>
+                    <td class="text-point">+00,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td>업무대행 결제</td>
+                    <td class="text-danger">소멸</td>
+                    <td></td>
+                    <td class="text-danger">-00,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0601){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">유료상품명</th>
+                    <th scope="col">유료상품가격</th>
+                    <th scope="col">적용기간</th>
+                    <th scope="col">할인율</th>
+                    <th scope="col">할인(실결제)금액</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>상위노출 1개월</td>
+                    <td>00,000원</td>
+                    <td>1개월</td>
+                    <td>00%</td>
+                    <td>00,000원</td>
+                    <td><span class="badge bg-success">활성</span></td>
+                    <td>2021-00-00</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#edit-modal">수정</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger ms-1">삭제</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>상위노출 1개월</td>
+                    <td>00,000원</td>
+                    <td>1개월</td>
+                    <td>00%</td>
+                    <td>00,000원</td>
+                    <td><span class="badge bg-secondary">비활성</span></td>
+                    <td>2021-00-00</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#edit-modal">수정</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger ms-1">삭제</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0602){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">일시</th>
+                    <th scope="col">회원명</th>
+                    <th scope="col">회원ID</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">결제수단</th>
+                    <th scope="col">금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_06_02_view.html" class="link-dark">홍길동</a></td>
+                    <td><a href="sub_06_02_view.html" class="link-dark">gildong2</a></td>
+                    <td>탑 변호사 노출 이용권</td>
+                    <td>현금</td>
+                    <td>000,000원</td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><a href="sub_06_02_view.html" class="link-dark">홍길동</a></td>
+                    <td><a href="sub_06_02_view.html" class="link-dark">gildong2</a></td>
+                    <td>탑 변호사 노출 이용권</td>
+                    <td>카드</td>
+                    <td>000,000원</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0603){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">쿠폰번호</th>
+                    <th scope="col">쿠폰명</th>
+                    <th scope="col">혜택구분</th>
+                    <th scope="col">혜택</th>
+                    <th scope="col">사용기간</th>
+                    <th scope="col">발행일</th>
+                    <th scope="col">발급수</th>
+                    <th scope="col">사용수</th>
+                    <th scope="col">미사용</th>
+                    <th scope="col">삭제</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>20210000000</td>
+                    <td>수수료 5% 할인 쿠폰</td>
+                    <td>할인율</td>
+                    <td>5% 할인</td>
+                    <td>2021-00-00 00:00 ~ 2021-00-00 00:00</td>
+                    <td>2021-00-00</td>
+                    <td>00</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_06_03_write.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                            <a href="" class="btn btn-sm btn-outline-secondary ms-1">조회</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0701){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" rowspan="2">번호</th>
+                    <th scope="col" rowspan="2">날짜</th>
+                    <th scope="colgroup" colspan="3">회원 구분</th>
+                    <th scope="colgroup" colspan="3">신규 회원</th>
+                    <th scope="colgroup" colspan="3">변호사 성별 구성</th>
+                    <th scope="colgroup" colspan="7">변호사 연령 구성</th>
+                </tr>
+                <tr>
+                    <th scope="col">변호사</th>
+                    <th scope="col">일반</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">변호사</th>
+                    <th scope="col">일반</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">남</th>
+                    <th scope="col">여</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">20대</th>
+                    <th scope="col">30대</th>
+                    <th scope="col">40대</th>
+                    <th scope="col">50대</th>
+                    <th scope="col">60대</th>
+                    <th scope="col">70대 이상</th>
+                    <th scope="col">합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td class="table-active">999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td class="table-active">999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td class="table-active">999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td class="table-active">999</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070102){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">1월</th>
+                    <th scope="col">2월</th>
+                    <th scope="col">3월</th>
+                    <th scope="col">4월</th>
+                    <th scope="col">5월</th>
+                    <th scope="col">6월</th>
+                    <th scope="col">7월</th>
+                    <th scope="col">8월</th>
+                    <th scope="col">9월</th>
+                    <th scope="col">10월</th>
+                    <th scope="col">11월</th>
+                    <th scope="col">12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">회원구분</th>
+                    <th scope="row">변호사</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">신규회원</th>
+                    <th scope="row">변호사</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">변호사 성별 구성</th>
+                    <th scope="row">남</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">여</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="7">변호사 연령 구성</th>
+                    <th scope="row">20대</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">30대</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">40대</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">50대</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">60대</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">70대 이상</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070201){
+            <thead class="table-light">
+                <tr>
+                    <th scope="colgroup" colspan="4">업무대행 매출</th>
+                    <th scope="col" rowspan="2">업무대행 금액</th>
+                    <th scope="col" rowspan="2">수수료 수익</th>
+                    <th scope="col" rowspan="2">출금한 금액</th>
+                </tr>
+                <tr>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070201a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" rowspan="2">번호</th>
+                    <th scope="col" rowspan="2">날짜</th>
+                    <th scope="colgroup" colspan="4">업무대행 매출</th>
+                    <th scope="col" rowspan="2">업무대행 금액</th>
+                    <th scope="col" rowspan="2">수수료 수익</th>
+                    <th scope="col" rowspan="2">출금한 금액</th>
+                </tr>
+                <tr>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td class="table-active">00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070202){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">1월</th>
+                    <th scope="col">2월</th>
+                    <th scope="col">3월</th>
+                    <th scope="col">4월</th>
+                    <th scope="col">5월</th>
+                    <th scope="col">6월</th>
+                    <th scope="col">7월</th>
+                    <th scope="col">8월</th>
+                    <th scope="col">9월</th>
+                    <th scope="col">10월</th>
+                    <th scope="col">11월</th>
+                    <th scope="col">12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="4">업무대행결제</th>
+                    <th scope="row">카드</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">핸드폰</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">현금</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">업무대행 금액</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">수수료 수익</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">출금한 금액</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070301){
+            <thead class="table-light">
+                <tr>
+                    <th scope="colgroup" colspan="3">의뢰건수</th>
+                    <th scope="colgroup" colspan="6">분야별 건수</th>
+                    <th scope="col" rowspan="2">합계</th>
+                </tr>
+                <tr>
+                    <th scope="col">변호사</th>
+                    <th scope="col">일반</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">복대리</th>
+                    <th scope="col">기록등사</th>
+                    <th scope="col">조사참여</th>
+                    <th scope="col">구치소접견</th>
+                    <th scope="col">서면작성</th>
+                    <th scope="col">계약서검토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td class="table-active">000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070301a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" rowspan="2">번호</th>
+                    <th scope="col" rowspan="2">날짜</th>
+                    <th scope="colgroup" colspan="3">의뢰건수</th> 
+                    <th scope="colgroup" colspan="6">분야별 건수</th> 
+                    <th scope="col" rowspan="2">합계</th>
+                </tr>
+                <tr>
+                    <th scope="col">변호사</th>
+                    <th scope="col">일반</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">복대리</th>
+                    <th scope="col">기록등사</th>
+                    <th scope="col">조사참여</th>
+                    <th scope="col">구치소접견</th>
+                    <th scope="col">서면작성</th>
+                    <th scope="col">계약서검토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>000</td>
+                    <td>2021-00-00</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070302){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">1월</th>
+                    <th scope="col">2월</th>
+                    <th scope="col">3월</th>
+                    <th scope="col">4월</th>
+                    <th scope="col">5월</th>
+                    <th scope="col">6월</th>
+                    <th scope="col">7월</th>
+                    <th scope="col">8월</th>
+                    <th scope="col">9월</th>
+                    <th scope="col">10월</th>
+                    <th scope="col">11월</th>
+                    <th scope="col">12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">의뢰건수</th>
+                    <th scope="row">변호사</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="7">분야별 건수</th>
+                    <th scope="row">복대리</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">기록등사</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">조사참여</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">구치소접견</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">서면작성</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr>
+                    <th scope="row">계약서검토</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070401){
+            <thead class="table-light">
+                <tr>
+                    <th scope="colgroup" colspan="4">업무대행 결제</th>
+                    <th scope="colgroup" colspan="4">광고집행 결제</th>
+                    <th scope="col" rowspan="2">총합계</th>
+                </tr>
+                <tr>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td class="table-active">00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td class="table-active">00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070401a){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" rowspan="2">번호</th>
+                    <th scope="col" rowspan="2">날짜</th>
+                    <th scope="colgroup" colspan="4">업무대행 결제</th>
+                    <th scope="colgroup" colspan="4">광고집행 결제</th>
+                    <th scope="col" rowspan="2">총합계</th>
+                </tr>
+                <tr>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                    <th scope="col">카드</th>
+                    <th scope="col">핸드폰</th>
+                    <th scope="col">현금</th>
+                    <th scope="col">합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td>2021-00-00</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub070402){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">1월</th>
+                    <th scope="col">2월</th>
+                    <th scope="col">3월</th>
+                    <th scope="col">4월</th>
+                    <th scope="col">5월</th>
+                    <th scope="col">6월</th>
+                    <th scope="col">7월</th>
+                    <th scope="col">8월</th>
+                    <th scope="col">9월</th>
+                    <th scope="col">10월</th>
+                    <th scope="col">11월</th>
+                    <th scope="col">12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="4">업무대행 결제</th>
+                    <th scope="row">카드</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">핸드폰</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">현금</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="4">광고집행 결제</th>
+                    <th scope="row">카드</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">핸드폰</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">현금</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr class="table-active">
+                    <th scope="row">합계</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+                <tr class="bg-gray">
+                    <th scope="row" colspan="2">총 합계</th>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                    <td>00,000,000</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0705){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">총 가우로톡 메시지수</th>
+                    <th scope="col">최소 가우로톡 메시지수</th>
+                    <th scope="col">최대 가우로톡 메시지수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="fs-5">
+                            <strong class="text-point">000,000</strong>건
+                        </p>
+                    </td>
+                    <td>
+                        <p class="fs-5">
+                            <strong class="text-point">000,000</strong>건
+                        </p>
+                        <p>2021-00-00</p>
+                    </td>
+                    <td>
+                        <p class="fs-5">
+                            <strong class="text-point">000,000</strong>건
+                        </p>
+                        <p>2021-00-00</p>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0801){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">시작일</th>
+                    <th scope="col">종료일</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">사용여부</th>
+                    <th scope="col">미리보기</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="sub_08_01_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-point">진행중</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use01" checked>
+                            <label class="form-check-label" for="use01">사용</label>
+                        </div>
+                    </td>
+                    <td><a href="" class="link-dark" target="_blank">미리보기</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="sub_08_01_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-success">대기중</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use02">
+                            <label class="form-check-label" for="use02">사용</label>
+                        </div>
+                    </td>
+                    <td><a href="" class="link-dark" target="_blank">미리보기</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="sub_08_01_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-secondary">종료</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use03">
+                            <label class="form-check-label" for="use03">사용</label>
+                        </div>
+                    </td>
+                    <td><a href="" class="link-dark" target="_blank">미리보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0802){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">시작일</th>
+                    <th scope="col">종료일</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">사용여부</th>
+                    <th scope="col">등록일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="@@edit_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-point">진행중</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use01" checked>
+                            <label class="form-check-label" for="use01">사용</label>
+                        </div>
+                    </td>
+                    <td>2021-00-00</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="@@edit_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-success">대기중</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use02">
+                            <label class="form-check-label" for="use02">사용</label>
+                        </div>
+                    </td>
+                    <td>2021-00-00</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list03" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="@@edit_edit.html" class="link-dark">제목이 들어감. 클릭 시 수정페이지로</a></td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-secondary">종료</span></td>
+                    <td>
+                        <div class="form-check form-check-inline form-switch">
+                            <input class="form-check-input" type="checkbox" id="use03">
+                            <label class="form-check-label" for="use03">사용</label>
+                        </div>
+                    </td>
+                    <td>2021-00-00</td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub090401){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">성명</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">접수일</th>
+                    <th scope="col">처리상태</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td><a href="sub_09_04_01_view.html" class="link-dark">제목이 들어감</a></td>
+                    <td>홍길동</td>
+                    <td>gildong2</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-secondary">접수확인</span></td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td><a href="sub_09_04_01_view.html" class="link-dark">제목이 들어감</a></td>
+                    <td>홍길동</td>
+                    <td>gildong2</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-success">접수중</span></td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td><a href="sub_09_04_01_view.html" class="link-dark">제목이 들어감</a></td>
+                    <td>홍길동</td>
+                    <td>gildong2</td>
+                    <td>010-0000-0000</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-point">답변완료</span></td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub090501){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">이벤트 제목</th>
+                    <th scope="col">이벤트 기간</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">진행상태</th>
+                    <th scope="col">조회수</th>
+                    <th scope="col">신청자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="sub_09_05_01_view.html" class="link-dark">제목이 들어감</a></td>
+                    <td>2021-00-00 ~ 2021-00-00</td>
+                    <td>관리자</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-success">진행중</span></td>
+                    <td>999</td>
+                    <td><a href="sub_09_05_02.html" class="link-dark">보기</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td><a href="sub_09_05_01_view.html" class="link-dark">제목이 들어감</a></td>
+                    <td>2021-00-00 ~ 2021-00-00</td>
+                    <td>관리자</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-secondary">마감</span></td>
+                    <td>999</td>
+                    <td><a href="sub_09_05_02.html" class="link-dark">보기</a></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub090502){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">성명</th>
+                    <th scope="col">휴대폰번호</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">당첨여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>010-0000-0000</td>
+                    <td>gildong2@naver.com</td>
+                    <td>2021-00-00</td>
+                    <td><span class="badge bg-point">당첨</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list02" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>010-0000-0000</td>
+                    <td>gildong2@naver.com</td>
+                    <td>2021-00-00</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub0906){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">조회수</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>999</td>
+                    <td><i class="bi bi-file-richtext me-1"></i>이미지 자료</td>
+                    <td>게시글 제목이 들어감</td>
+                    <td>2021-00-00</td>
+                    <td>999</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_09_06_write.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td><i class="bi bi-file-play me-1"></i>동영상 자료</td>
+                    <td>게시글 제목이 들어감</td>
+                    <td>2021-00-00</td>
+                    <td>999</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_09_06_write.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>999</td>
+                    <td><i class="bi bi-file-text me-1"></i>텍스트 자료</td>
+                    <td>게시글 제목이 들어감</td>
+                    <td>2021-00-00</td>
+                    <td>999</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_09_06_write.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+        @@if(context.sub1001){
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox" class="form-check-input chk-all" id="chk-all" name="chk-list" aria-label="전체선택"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">성명</th>
+                    <th scope="col">부서</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">최종로그인</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">유효권한</th>
+                    <th scope="col">관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>관리팀</td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-success">정상</span></td>
+                    <td>[11]가지 메뉴</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_10_01_edit.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="chk-list01" name="chk-list" aria-label="리스트 선택"></td>
+                    <td>999</td>
+                    <td>gildong2</td>
+                    <td>홍길동</td>
+                    <td>관리팀</td>
+                    <td>2021-00-00</td>
+                    <td>2021-00-00 00:00</td>
+                    <td><span class="badge bg-danger">정지</span></td>
+                    <td>[11]가지 메뉴</td>
+                    <td>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="sub_10_01_edit.html" class="btn btn-sm btn-outline-danger">수정</a>
+                            <a href="" class="btn btn-sm btn-outline-danger ms-1">삭제</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>
+<!-- // table -->
