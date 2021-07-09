@@ -1,19 +1,461 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    @@include('./layout/head.html')
+    @@include('./layout/head.html', {
+        main : true,
+    })
 </head>
 <body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
     <!-- body -->
     <div id="wrap">
-        @@include('./layout/header.html')
+        <!-- header -->
+        @@include('./layout/header.html', {
+            main : true,
+        })
+        <!-- // header -->
 
-        <!-- main -->
-        <div id="main" class="main">
-
+        <!-- container -->
+        <div id="container" class="container main">
+            <!-- visual -->
+            <div class="main-visual">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/mobile/images/img/img-visual01.jpg" alt="">
+                            <p class="text">
+                                <em>로투미</em>는<br>변호사의 유휴 업무&middot;시간<br>중개 플랫폼입니다.1
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/mobile/images/img/img-visual01.jpg" alt="">
+                            <p class="text">
+                                <em>로투미</em>는<br>변호사의 유휴 업무&middot;시간<br>중개 플랫폼입니다.2
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/mobile/images/img/img-visual01.jpg" alt="">
+                            <p class="text">
+                                <em>로투미</em>는<br>변호사의 유휴 업무&middot;시간<br>중개 플랫폼입니다.3
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <span class="paging"></span>
+                    <button type="button" class="btn-play-control pause"><span class="blind">일시정지</span></button>
+                </div>
+            </div>
+            <ul class="btn-lists">
+                <li><a href="" class="btn-go"><span>공유업무 무료등록</span></a></li>
+                <li><a href="" class="btn-go"><span>업무 찾기</span></a></li>
+            </ul>
+            <!-- // visual -->
+            <!-- section01 -->
+            <section class="sect01">
+                <h2 class="sect-title"><em>분야별</em>로 공유업무 찾기</h2>
+                <div class="category-lists">
+                    <ul>
+                        <li><a href="" class="cate1">복대리</a></li>
+                        <li><a href="" class="cate2">기록등사</a></li>
+                        <li><a href="" class="cate3">조사참여</a></li>
+                        <li><a href="" class="cate4">접견</a></li>
+                        <li><a href="" class="cate5">서면작성</a></li>
+                        <li><a href="" class="cate6">계약서</a></li>
+                        <li><a href="" class="cate7">증명서 발급</a></li>
+                        <li><a href="" class="cate8">기일, 선고 성취</a></li>
+                        <li><a href="" class="cate9">법률문서 번역</a></li>
+                        <li><a href="" class="cate10">기타</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section01 -->
+            <!-- section02 -->
+            <section class="sect02">
+                <h2 class="sect-title">변호사 유휴 업무&middot;시간 공유 플랫폼</h2>
+                <ul class="count-lists">
+                    <li>
+                        <dl>
+                            <dt>등록된 업무</dt>
+                            <dd><em>3,800</em>개</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>업무등록 금액</dt>
+                            <dd><em>100,000,000</em>원</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>변호사&amp;법률사무소</dt>
+                            <dd><em>1,750</em>명</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+            <!-- // section02 -->
+            <!-- section03 -->
+            <section class="sect03">
+                <h2 class="sect-title"><em>공유할 업무</em>등록 및 지원</h2>
+                <div class="border-tabs">
+                    <ul class="tabs">
+                        <li class="active"><a href="">복대리</a></li>
+                        <li><a href="">기록등사</a></li>
+                        <li><a href="">조사참여</a></li>
+                        <li><a href="">접견</a></li>
+                        <li><a href="">서면작성</a></li>
+                        <li><a href="">계약서</a></li>
+                        <li><a href="">증명서 발급</a></li>
+                        <li><a href="">기일, 선고 성취</a></li>
+                        <li><a href="">법률문서 번역</a></li>
+                        <li><a href="">기타</a></li>
+                    </ul>
+                </div>
+                <div class="button-tabs">
+                    <ul class="tabs">
+                        <li class="active"><a href="">서울</a></li>
+                        <li><a href="">경기</a></li>
+                        <li><a href="">인천</a></li>
+                        <li><a href="">광주</a></li>
+                        <li><a href="">부산</a></li>
+                        <li><a href="">대전</a></li>
+                        <li><a href="">충청도</a></li>
+                        <li><a href="">전라도</a></li>
+                        <li><a href="">경상도</a></li>
+                        <li><a href="">강원도</a></li>
+                        <li><a href="">제주도</a></li>
+                    </ul>
+                </div>
+                <div class="worklist-wrap">
+                    <ul class="lists">
+                        @@loop('./modules/work-loop.html', [
+                            {
+                                new : true,
+                                city : '01',
+                                id : 'work01',
+                                checked : true,
+                                work : '01',
+                                page : '',
+                                title : '서울남부지방법원',
+                            }, 
+                            {
+                                new : true,
+                                city : '02',
+                                id : 'work02',
+                                work : '02',
+                                page : '',
+                                title : '서울동부지방법원 총무과/법원경비 관리대',
+                            },
+                            {
+                                new : true,
+                                city : '03',
+                                id : 'work03',
+                                work : '03',
+                                page : '',
+                                title : '서울동부지방법원 총무과/법원경비 관리대',
+                            }
+                        ])
+                    </ul>
+                </div>
+                <button type="button" class="btn-more"><span>다른 프로젝트 보기</span></button>
+            </section>
+            <!-- // section03 -->
+            <!-- section04 -->
+            <section class="sect04">
+                <h2 class="sect-title line">로투미의<br><em>빠르고 편리하고 안전한 프로세스</em></h2>
+                <ol class="process-lists">
+                    <li>
+                        <div class="inner">
+                            <h3 class="tit"><span>01</span>변호사 공유업무 등록</h3>
+                            <img src="/mobile/images/img/img-process01.png" alt="" aria-hidden="true">
+                            <div class="cont">
+                                <p class="eyebrow">변호사 공유업무 등록</p>
+                                <p class="title">변호사 공유업무를 분야별로 등록하세요!</p>
+                                <p class="desc">공유할 업무를 등록해 주시면 회원(변호사, 법률사무소)이 업무에 지원하게 됩니다.</p>
+                                <ul class="bullet-list dot-type">
+                                    <li>공유할 업무는 구체적으로 등록해 주시면 정확한 처리가 이뤄집니다.</li>
+                                    <li>공유할 비용은 업무 난이도와 긴급도에 따라 적절하게 제시해 주시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <h3 class="tit"><span>02</span>업무 지원자 확인</h3>
+                            <img src="/mobile/images/img/img-process02.png" alt="" aria-hidden="true">
+                            <div class="cont">
+                                <p class="eyebrow">업무 지원자 확인</p>
+                                <p class="title">업무 지원자를 확인하세요!</p>
+                                <p class="desc">컨텐츠 수급 필요</p>
+                                <ul class="bullet-list dot-type">
+                                    <li>컨텐츠 수급 필요</li>
+                                    <li>컨텐츠 수급 필요</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <h3 class="tit"><span>03</span>지원자 결정 및 결제</h3>
+                            <img src="/mobile/images/img/img-process03.png" alt="" aria-hidden="true">
+                            <div class="cont">
+                                <p class="eyebrow">지원자 결정 및 결제</p>
+                                <p class="title">컨텐츠 수급 필요</p>
+                                <p class="desc">컨텐츠 수급 필요</p>
+                                <ul class="bullet-list dot-type">
+                                    <li>컨텐츠 수급 필요</li>
+                                    <li>컨텐츠 수급 필요</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <h3 class="tit"><span>04</span>업무 중개 진행</h3>
+                            <img src="/mobile/images/img/img-process04.png" alt="" aria-hidden="true">
+                            <div class="cont">
+                                <p class="eyebrow">업무 중개 진행</p>
+                                <p class="title">컨텐츠 수급 필요</p>
+                                <p class="desc">컨텐츠 수급 필요</p>
+                                <ul class="bullet-list dot-type">
+                                    <li>컨텐츠 수급 필요</li>
+                                    <li>컨텐츠 수급 필요</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <h3 class="tit"><span>05</span>업무 완료 및 정산</h3>
+                            <img src="/mobile/images/img/img-process05.png" alt="" aria-hidden="true">
+                            <div class="cont">
+                                <p class="eyebrow">업무 완료 및 정산</p>
+                                <p class="title">컨텐츠 수급 필요</p>
+                                <p class="desc">컨텐츠 수급 필요</p>
+                                <ul class="bullet-list dot-type">
+                                    <li>컨텐츠 수급 필요</li>
+                                    <li>컨텐츠 수급 필요</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+            <!-- // section04 -->
+            <!-- section05 -->
+            <section class="sect05">
+                <h2 class="sect-title line">로투미에서 상황에 맞게<br><em>변호사에게 업무를 공유하세요</em></h2>
+                <div class="intro-lists">
+                    <ul class="lists">
+                        <li>
+                            <div class="inner">
+                                <span class="thumb bg01" aria-hidden="true"></span>
+                                <p class="tit">회원가입하고 공유업무 등록</p>
+                                <p class="desc">변호사나 법률사무소는 회원가입하고, 공유할 업무를 무료로 등록하여 업무를 성공적으로 공유합니다.</p>
+                                <a href="" class="btn-go"><span>업무 의뢰하기</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <span class="thumb bg02" aria-hidden="true"></span>
+                                <p class="tit">긴급한 업무도 빠르게 공유 등록</p>
+                                <p class="desc">변호사나 법률사무소는 회원가입하고, 공유할 업무를 무료로 등록하여 업무를 성공적으로 공유합니다.</p>
+                                <a href="" class="btn-go"><span>업무 의뢰하기</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <span class="thumb bg03" aria-hidden="true"></span>
+                                <p class="tit">업무 완료 후 이용요금 정산</p>
+                                <p class="desc">공유업무가 완료된 후 공유대금이 지금되므로 안심하고 업무 공유에 안전 장치를 마련하였습니다.</p>
+                                <a href="" class="btn-go"><span>업무 의뢰하기</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section05 -->
+            <!-- section06 -->
+            <section class="sect06">
+                <h2 class="sect-title line">로투미는<br><em>빠르고 편리하고 안전합니다</em></h2>
+                <div class="icon-intro-lists">
+                    <ul class="lists">
+                        <li class="icon01">
+                            <p class="tit">무료등록</p>
+                            <p class="desc">빠르고 편리하게, 무료로 변호사 공유업무 등록</p>
+                        </li>
+                        <li class="icon02">
+                            <p class="tit">신뢰가는 지원자</p>
+                            <p class="desc">믿을 수 있는 지원자, 한눈에 비교하고 선택까지</p>
+                        </li>
+                        <li class="icon03">
+                            <p class="tit">안전보호</p>
+                            <p class="desc">안전한 대금보호, 간편한 업무 공유 플랫폼</p>
+                        </li>
+                        <li class="icon04">
+                            <p class="tit">안심공유</p>
+                            <p class="desc">보호받을 수 있는 안심 업무 공유</p>
+                        </li>
+                        <li class="icon05">
+                            <p class="tit">업무처리</p>
+                            <p class="desc">신뢰할 수 있는 업무 처리</p>
+                        </li>
+                        <li class="icon06">
+                            <p class="tit">담당 매니저</p>
+                            <p class="desc">시작부터 끝까지 함께하는 담당 매니저</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section06 -->
+            <!-- section07 -->
+            <section class="sect07">
+                <h2 class="sect-title line">이미 <em>5,211</em>명의 변호사가<br>이용하고 있습니다.</h2>
+                <div class="name-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="name-lists">
+                                    <!-- 최대 16개 한묶음 -->
+                                    <ul class="lists">
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>이름이긴 변호사</span></li>
+                                    </ul>
+                                    <!-- // 최대 16개 한묶음 -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="name-lists">
+                                    <!-- 최대 16개 한묶음 -->
+                                    <ul class="lists">
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>최고로 변호사</span></li>
+                                        <li><span>이름이긴 변호사</span></li>
+                                    </ul>
+                                    <!-- // 최대 16개 한묶음 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paging"></div>
+                </div>
+            </section>
+            <!-- // section07 -->
+            <!-- section08 -->
+            <section class="sect08">
+                <a href="">
+                    <p class="tit">로투미에서<br>빠르고 안전하게 변호사 업무를<br>공유해 보세요</p>
+                    <span class="go">공유하러가기</span>
+                </a>
+            </section>
+            <!-- // section08 -->
+            <!-- section09 -->
+            <section class="sect09">
+                <div class="notice-wraps">
+                    <h2 class="tit">공지사항</h2>
+                    <ul class="notice-lists">
+                        <li>
+                            <a href="">변호사 업무대행 플랫폼에 오신걸 환영합니다.변호사 업무대행 플랫폼에 오신걸 환영합니다.</a>
+                            <p class="date">2021-05-01</p>
+                        </li>
+                        <li>
+                            <a href="">변호사 업무대행 플랫폼에 오신걸 환영합니다.</a>
+                            <p class="date">2021-05-01</p>
+                        </li>
+                        <li>
+                            <a href="">변호사 업무대행 플랫폼에 오신걸 환영합니다.</a>
+                            <p class="date">2021-05-01</p>
+                        </li>
+                        <li>
+                            <a href="">변호사 업무대행 플랫폼에 오신걸 환영합니다.</a>
+                            <p class="date">2021-05-01</p>
+                        </li>
+                    </ul>
+                    <a href="" class="notice-more"><span class="blind">공지사항 더보기</span></a>
+                </div>
+                <div class="banners">
+                    <a href="">
+                        <img src="/mobile/images/img/img-banner01.jpg" alt="" aria-hidden="true">
+                        <div class="text">
+                            <p class="tit">로투미에서 공유업무를<br>찾아보세요</p>
+                            <span class="go">회원가입하기</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- // section09 -->
         </div>
-        <!-- // main -->
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
     </div>
     <!-- // body -->
+
+    <script>
+        $(function(){
+            const mainVisual = new Swiper('.main-visual .swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                },
+                pagination: {
+                    el : '.main-visual .swiper-control .paging',
+                    type : 'fraction'
+                }
+            });
+            $('.main-visual .btn-play-control').on('click', function(){
+                if ($(this).hasClass('pause')){
+                    $(this).removeClass('pause');
+                    $(this).addClass('play');
+                    $(this).find('span.blind').text('재생');
+                    mainVisual.autoplay.stop();
+                } else if ($(this).hasClass('play')){
+                    $(this).removeClass('play');
+                    $(this).addClass('pause');
+                    $(this).find('span.blind').text('일시정지');
+                    mainVisual.autoplay.start();
+                }
+            });
+
+            const nameSlider = new Swiper('.name-slider .swiper-container', {
+                loop: true,
+                pagination: {
+                    el : '.name-slider .paging'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

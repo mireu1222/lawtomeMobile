@@ -2,14 +2,14 @@
 .flag {
     display:inline-block;
     vertical-align:top;
-    min-width:60px;
-    height:28px;
+    min-width:58px;
+    height:25px;
     padding:0 6px;
     border:1px solid transparent;
-    border-radius:14px;
+    border-radius:13px;
     text-align:center;
     font-size:14px;
-    line-height:26px;
+    line-height:23px;
     // style 
     @each $color, $value, $ratio in $colors {
         &.flag-#{$color} {

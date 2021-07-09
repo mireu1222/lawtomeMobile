@@ -153,6 +153,15 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(dist + '/js'))
 });
 
+gulp.task('scripts-ui', function () {
+    return gulp
+        .src(paths.jsUi, { sourcemaps: true })
+        .pipe(stripDebug()) // consloe.log, alert 제거
+        .pipe(concat('ui.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(dist + '/js'))
+});
+
  
 
  
@@ -179,6 +188,7 @@ gulp.task('browserSync', function () {
     gulp.watch(paths.scss, gulp.series('style')).on('change', browserSync.reload);
     gulp.watch(paths.scssPatials, gulp.series('style')).on('change', browserSync.reload);
     gulp.watch(paths.js, gulp.series('scripts')).on('change', browserSync.reload);
+    gulp.watch(paths.jsUi, gulp.series('scripts-ui')).on('change', browserSync.reload);
     gulp.watch(paths.img, gulp.series('images')).on('change', browserSync.reload);
 });
 
@@ -195,7 +205,7 @@ gulp.task('cleaning', async function () {
     return del.sync("./dist");
 });
 
-gulp.task('building', gulp.series(['html', 'html2', 'style', 'images', 'fonts', 'scripts']));
+gulp.task('building', gulp.series(['html', 'html2', 'style', 'images', 'fonts', 'scripts', 'scripts-ui']));
 
 gulp.task('build', gulp.series('cleaning', gulp.series('building')));
 

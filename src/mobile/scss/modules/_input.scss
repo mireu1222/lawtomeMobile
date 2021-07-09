@@ -29,7 +29,7 @@
     }
     &.datepicker {
         padding-right:60px;
-        background-image:url('/images/icon/icon-cal.png');
+        background-image:url('/mobile/images/icon/icon-cal.png');
         background-repeat:no-repeat;
         background-position:right 19px center;
     }
@@ -98,9 +98,10 @@ $types : chk, rdo, rdo-btn, like-chk;
                 }
                 @if $type == 'like-chk' {
                     padding-left:0;
-                    width:24px;
-                    height:24px;
-                    background:url('/images/bg/bg-star.gif') 0 0 no-repeat;
+                    width:21px;
+                    height:21px;
+                    background:url('/mobile/images/bg/bg-star.gif') 0 0 no-repeat;
+                    background-size:21px auto;
                 }
                 @if $type == 'rdo-btn' {
                     height:50px;

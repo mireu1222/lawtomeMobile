@@ -1,19 +1,14 @@
-<!-- pagination -->
-<nav class="pagination-wrap" aria-label="리스트 페이지 이동">
-    <ul class="pagination justify-content-center">
-        <li class="page-item disabled"><!-- 이전 없을 때 .disabled -->
-            <a class="page-link" href="#" aria-label="이전 페이지">
-                <span aria-hidden="true"><i class="bi bi-chevron-double-left"></i></span>
-            </a>
-        </li>
-        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><!-- 다음 없을 때 .disabled -->
-            <a class="page-link" href="#" aria-label="다음 페이지">
-                <span aria-hidden="true"><i class="bi bi-chevron-double-right"></i></span>
-            </a>
-        </li>
-    </ul>
-</nav>
-<!-- // pagination -->
+<div class="pagination">
+    <a href="#n" class="control-btn pprev"><span class="blind">첫 페이지로</span></a>
+    <a href="#n" class="control-btn prev"><span class="blind">이전 페이지로</span></a>
+    <span class="page-btn-wrap">
+        <span class="now">1</span>
+        <a href="#n">2</a>
+        <a href="#n">3</a>
+        <a href="#n">4</a>
+        <a href="#n">5</a>
+        <!-- 5개까지 노출 -->
+    </span>
+    <a href="#n" class="control-btn next"><span class="blind">다음 페이지로</span></a>
+    <a href="#n" class="control-btn nnext"><span class="blind">마지막 페이지로</span></a>
+</div>

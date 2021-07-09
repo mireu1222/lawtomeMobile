@@ -1,103 +1,7 @@
 /* tab */
-.button-tabs {
-    overflow:hidden;
-    margin-bottom:100px;
-    ul.tabs {
-        display:flex;
-        justify-content:space-between;
-        li {
-            a {
-                display:block;
-                height:44px;
-                padding:0 18px;
-                border:1px solid $border;
-                border-radius:22px;
-                color:$placeholder;
-                font-size:18px;
-                line-height:42px;
-            }
-            &.active a {
-                color:$white;
-                background:$point;
-                border-color:$point;
-            }
-        }
-    }
-    &.type2 {
-        position:relative;
-        margin-bottom:40px;
-        padding-bottom:10px;
-        border-bottom:1px solid $border;
-        ul.tabs {
-            justify-content:flex-start;
-            li {
-                margin-left:10px;
-                &:first-child {
-                    margin-left:0;
-                }
-            }
-        }
-        .link-cont {
-            position:absolute;
-            right:0;
-            bottom:11px;
-            text-decoration:underline;
-        }
-    }
-}
-
 .border-tabs {
-    overflow:hidden;
-    margin-bottom:50px;
-    ul.tabs {
-        position:relative;
-        display:flex;
-        &::before {
-            content:' ';
-            position:absolute;
-            left:0;
-            bottom:0;
-            right:0;
-            height:1px;
-            background:$point;
-        }
-        li {
-            position:relative;
-            flex:1;
-            a {
-                display:block;
-                height:60px;
-                border:1px solid transparent;
-                border-bottom:none;
-                color:$placeholder;
-                font-size:20px;
-                line-height:59px;
-                text-align:center;
-            }
-            &:first-child {
-                a {
-                    border-left:none;
-                }
-            }
-            &:last-child {
-                a {
-                    border-right:none;
-                }
-            }
-            &.active {
-                a {
-                    background:$white;
-                    border-color:$point;
-                    color:$point;
-                    font-weight:500;
-                }
-            }
-        }
-    }
-}
-
-.find-tabs {
     position:relative;
+    overflow:hidden;
     &::before {
         content:' ';
         position:absolute;
@@ -108,24 +12,67 @@
         background:$border;
     }
     ul.tabs {
+        position:relative;
+        padding:0 16px;
+        white-space:nowrap;
         font-size:0;
+        overflow-x:auto;
         li {
             position:relative;
             display:inline-block;
             vertical-align:top;
-            width:50%;
+            margin-left:35px;
+            &:first-child {
+                margin-left:0;
+            }
             a {
                 display:block;
-                padding-bottom:12px;
+                padding-bottom:10px;
                 border-bottom:2px solid transparent;
-                text-align:center;
-                font-size:20px;
-                color:$gray;
+                font-size:16px;
+                color:#999;
             }
             &.active {
                 a {
                     border-color:$point;
                     color:$point;
+                    font-weight:500;
+                }
+            }
+        }
+    }
+}
+
+.button-tabs {
+    overflow:hidden;
+    ul.tabs {
+        padding:0 16px;
+        overflow-x:auto;
+        white-space:nowrap;
+        font-size:0;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-left:15px;
+            &:first-child {
+                margin-left:0;
+            }
+            a {
+                display:block;
+                height:32px;
+                padding:0 15px;
+                border:1px solid $border;
+                border-radius:16px;
+                color:#999;
+                font-size:15px;
+                text-align:center;
+                line-height:30px;
+            }
+            &.active {
+                a {
+                    background:$point;
+                    border-color:$point;
+                    color:#fff;
                     font-weight:500;
                 }
             }

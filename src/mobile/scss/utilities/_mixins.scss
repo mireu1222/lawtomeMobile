@@ -29,28 +29,24 @@
 
 // font
 @mixin font-sm {
+}
+@mixin font {
     font-size:14px;
     line-height:22px;
 }
-@mixin font {
-    font-size:16px;
-    line-height:22px;
-}
 @mixin font-md {
-    font-size:17px;
-    line-height:25px;
+    font-size:16px;
+    line-height:24px;
 }
 @mixin font-lg {
+}
+@mixin font-xl {
     font-size:18px;
     line-height:26px;
 }
-@mixin font-xl {
-    font-size:20px;
-    line-height:28px;
-}
 @mixin font-title {
-    font-size:24px;
-    line-height:32px;
+    font-size:20px;
+    line-height:30px;
 }
 @mixin skew {
     transform: skew(-0.05deg);

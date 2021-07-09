@@ -44,11 +44,11 @@
 // bullet list
 .bullet-list {
     li {
-        margin-top:5px;
+        margin-top:3px;
         padding-left:20px;
-        color:$cont;
-        font-size:15px;
-        line-height:22px;
+        color:#666;
+        @include font;
+        word-break:keep-all;
         &:first-child {
             margin-top:0;
         }
@@ -71,8 +71,8 @@
             padding-left:10px;
             &::before {
                 content:' ';
-                width:4px;
-                height:4px;
+                width:3px;
+                height:3px;
                 margin:9px 6px 0 -10px;
                 border-radius:50%;
                 background:$cont;
@@ -83,13 +83,12 @@
 
 // work list
 .worklist-wrap {
+    padding:0 16px;
     ul.lists {
-        display:flex;
         > li {
-            width:380px;
-            margin-left:30px;
+            margin-top:25px;
             &:first-child {
-                margin-left:0;
+                margin-top:0;
             }
         }
     }
@@ -97,8 +96,8 @@
         display:flex;
         flex-direction:column;
         height:100%;
-        padding:24px 16px 30px; 
-        border:1px solid $border;
+        padding:20px 15px; 
+        box-shadow:$boxshadow;
         .top {
             display:flex;
             align-items:center;
@@ -107,15 +106,15 @@
                 margin-right:auto;
                 font-size:0;
                 .flag {
-                    margin-right:7px;
+                    margin-right:5px;
                 }
             }
             .like-chk-wrap {
-                margin-left:8px;
+                margin-left:10px;
             }
         }
         .end-alert {
-            margin-top:18px;
+            margin-top:25px;
             font-size:0;
             > * {
                 display:inline-block;
@@ -131,37 +130,36 @@
             }
         }
         .head {
-            margin-top:35px;
-            padding-bottom:20px;
+            margin-top:25px;
+            padding-bottom:25px;
             .category {
                 margin-bottom:5px;
-                font-size:18px;
+                font-size:16px;
             }
             .title {
                 display:block;
                 color:$point;
                 @include font-title;
                 font-weight:500;
-                @include textEllipsisClamp(2);
             }
             .info-list {
-                margin-top:10px;
+                margin-top:20px;
                 li {
-                    @include font;
-                    color:$gray;
+                    margin-top:10px;
+                    font-size:15px;
+                    color:#666;
                     @include textEllipsis;
                 }
             }
         }
         .condition-list {
-            margin:0 -16px;
+            margin:0 -15px;
             margin-top:auto;
-            padding:20px 16px;
+            padding:25px 15px;
             background:$disabled;
             li {
                 margin-top:10px;
-                font-size:18px;
-                line-height:20px;
+                font-size:16px;
                 &:first-child {
                     margin-top:0;
                 }
@@ -172,17 +170,18 @@
                     content:' ';
                     display:inline-block;
                     vertical-align:top;
-                    width:20px;
-                    height:20px;
+                    width:15px;
+                    height:15px;
                     margin-right:10px;
                     background-repeat:no-repeat;
                     background-position:center;
+                    background-size:100%;
                 }
                 &.type1::before {
-                    background-image:url('/images/icon/icon-won.png');
+                    background-image:url('/mobile/images/icon/icon-won.png');
                 }
                 &.type2::before {
-                    background-image:url('/images/icon/icon-time.png');
+                    background-image:url('/mobile/images/icon/icon-time.png');
                 }
             }
         }
@@ -190,11 +189,13 @@
             margin-top:20px;
             @include font;
             .tit {
-                margin-bottom:3px;
+                margin-bottom:5px;
                 font-weight:700;
             }
             .desc {
+                color:#666;
                 @include textEllipsisClamp(2);
+                word-break:keep-all;
             }
         }
     }
