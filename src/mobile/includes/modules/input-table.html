@@ -1,15 +1,13 @@
 <div class="tbl-wrap narrow">
-    @@if(context.sub0505){
-        <h3 class="tbl-title">궁금하신 내용에 해당하는 항목을 선택하신 후 문의하시면 기입하신 이메일 또는 연락처로 답변 드리겠습니다.</h3>
-        @@include('./modules/slt-list.html', {
-            size : 'auto',
-            rdo : 'category',
-            slt : [
-                '업무대행관련 문의', '회원관련 문의', '사업제휴', '고객의 소리', '기타'
-            ]
-        })
-        <p class="essen-txt"><span>*</span> 필수 입력 정보입니다.</p>
-    }
+    <h3 class="tbl-title">궁금하신 내용에 해당하는 항목을 선택하신 후 문의하시면 기입하신 이메일 또는 연락처로 답변 드리겠습니다.</h3>
+    @@include('./modules/slt-list.html', {
+        size : 'auto',
+        rdo : 'category',
+        slt : [
+            '업무대행관련 문의', '회원관련 문의', '사업제휴', '고객의 소리', '기타'
+        ]
+    })
+    <p class="essen-txt"><span>*</span> 필수 입력 정보입니다.</p>
     <table class="table row-table">
         <colgroup>
             <col class="col1">

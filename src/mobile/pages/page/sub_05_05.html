@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate05 : '05'
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <form action="">
+                    <div class="form-wrap">
+                        <h2 class="form-title">궁금하신 내용에 해당하는 항목을 선택하신 후 문의하시면, 기입하신 이메일 또는 연락처로 답변 드리겠습니다.</h2>
+                        <div class="select-wrap">
+                            <select aria-label="질문 항목 선택">
+                                <option value="">선택하세요</option>
+                            </select>
+                        </div>
+                        <p class="essen-txt">필수 입력 정보입니다.</p>
+                        <div class="border-box">
+                            <div class="row">
+                                <p class="tit essen">성명<span class="blind">필수입력</span></p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="성명을 입력하세요" aria-label="성명 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit essen">휴대폰번호<span class="blind">필수입력</span></p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="`-`를 제외하고 입력하세요" aria-label="휴대폰번호 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit essen">이메일<span class="blind">필수입력</span></p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="이메일을 입력하세요" aria-label="이메일 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit essen">제목<span class="blind">필수입력</span></p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="제목을 입력하세요" aria-label="제목 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit essen">내용<span class="blind">필수입력</span></p>
+                                <div class="forms">
+                                    <textarea class="form-control" placeholder="내용을 입력하세요" aria-label="내용 입력"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit">파일첨부</p>
+                                <div class="forms">
+                                    <div class="inputfile-wrap">
+                                        <input type="text" class="form-control" placeholder="파일첨부">
+                                        <input type="file" id="file-upload">
+                                        <label for="file-upload" class="btn">파일찾기</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agree-chk-box">
+                            <p class="tit">개인정보수집동의</p>
+                            <div class="agree-cont">
+                                ■ 수집하는 개인정보 항목<br>
+                                회사는 업무문의, 지원문의 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+                                ο 수집항목 : 이름 , 휴대전화번호 , 이메일 , 쿠키 , 접속 IP 정보<br>
+                                ο 개인정보 수집방법 : 홈페이지(www.abc.kr), 서면양식 <br>
+                                ■ 개인정보의 수집 및 이용목적<br>
+                                회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+                                ο 업무에 대한 문의, 지원문의 등 민원처리, 고지사항 전달 <br>
+                                ■ 개인정보의 보유 및 이용기간<br>
+                                원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+                                ο 보존 항목 : 이름 , 휴대전화번호 , 이메일 , 접속 로그 , 쿠키 , 접속 IP <br>
+                                ο 정보보존 기간 : 1년
+                            </div>
+                            <span class="chk-wrap">
+                                <input type="checkbox" id="agree">
+                                <label for="agree">위 내용을 숙지하였으며 동의합니다.</label>
+                            </span>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-lg btn-border-point"><span>취소</span></button>
+                            <button type="button" class="btn btn-lg btn-point"><span>문의 등록</span></button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

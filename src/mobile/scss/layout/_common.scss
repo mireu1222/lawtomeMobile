@@ -15,6 +15,9 @@
         overflow:hidden;
         padding-top:130px;
         padding-bottom:50px;
+        &.popup {
+            padding-top:80px;
+        }
         section.sect {
             padding:0 16px;
         }
@@ -41,15 +44,16 @@
     display:block;
     padding:100px 0;
     text-align:center;
-    color:$gray;
-    font-size:18px;
+    color:#888;
+    font-size:14px;
     font-weight:500;
     &::before {
         content:' ';
         display:block;
-        width:73px;
-        height:72px;
-        margin:0 auto 25px;
-        background:url('/images/@nodata.gif') center no-repeat;
+        width:50px;
+        height:50px;
+        margin:0 auto 15px;
+        background:url('/mobile/images/@nodata.png') center no-repeat;
+        background-size:50px;
     }
 }

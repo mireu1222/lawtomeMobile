@@ -11,19 +11,23 @@
     <div id="wrap">
         <!-- header -->
         @@include('./layout/header.html', {
-            cate05 : '01'
+            cate05 : '04'
         })
         <!-- // header -->
 
         <!-- container -->
         <div id="container" class="container">
-            <section class="sect">
-                @@include('./modules/list-filter.html')
-                @@include('./modules/board-list.html', {
-                    page : 'sub_05_01_view'
-                })
-                @@include('./modules/pagination.html')
-            </section>
+            <!-- 카테고리 -->
+            <div class="button-tabs" data-toggle="class-toggle">
+                <ul class="tabs">
+                    <li class="active"><a href="#n">전체</a></li>
+                    <li><a href="#n">카테고리1</a></li>
+                    <li><a href="#n">카테고리2</a></li>
+                    <li><a href="#n">카테고리3</a></li>
+                </ul>
+            </div>
+            <!-- // 카테고리 -->
+            @@include('./modules/accordion-list.html')
         </div>
         <!-- // container -->
 
@@ -32,5 +36,9 @@
         <!-- // footer -->
     </div>
     <!-- // body -->
+
+    <script>
+        accordion();
+    </script>
 </body>
 </html>

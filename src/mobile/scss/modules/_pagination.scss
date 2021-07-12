@@ -1,6 +1,6 @@
 /* pagination */
 .pagination {
-    margin-top:70px;
+    margin-top:35px;
     font-size:0;
     text-align:center;
     .control-btn, 
@@ -13,18 +13,18 @@
     .control-btn,
     .page-btn-wrap .now,
     .page-btn-wrap a {
-        width:34px;
-        height:34px;
-        font-size:16px;
+        width:25px;
+        height:25px;
+        font-size:13px;
         color:#999;
         border:1px solid transparent;
         border-radius:50%;
-        line-height:32px;
+        line-height:25px;
         background:#fff;
     }
     .control-btn {
         position:relative;
-        margin:0 6px;
+        margin:0 5px;
         border-color:$border;
         &::before,
         &::after {
@@ -32,9 +32,9 @@
             position:absolute;
             top:50%;
             left:50%;
-            width:10px;
-            height:10px;
-            margin-top:-5px;
+            width:8px;
+            height:8px;
+            margin-top:-4px;
             border:1px solid $cont;
             border-bottom:none;
             border-right:none;
@@ -65,15 +65,15 @@
         }
         &.next {
             &::before {
-                margin-left:-8px;
+                margin-left:-6px;
             }
         }
         &.nnext {
             &::before {
-                margin-left:-11px;
+                margin-left:-8px;
             }
             &::after {
-                margin-left:-6px;
+                margin-left:-3px;
             }
         }
         &.prev,
@@ -87,7 +87,7 @@
         margin:0;
         > a,
         > .now {
-            margin:0 6px;
+            margin:0 5px;
         }
         .now {
             color:$point;

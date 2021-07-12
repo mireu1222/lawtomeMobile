@@ -1,176 +1,184 @@
 <header@@if(context.main){ class="main"}>
-    <div class="head-cont">
-        @@if(context.main){
-            <h1><a href="/mobile/"><img src="/mobile/images/logo.png" alt="LawToMe 로고"></a></h1>
-        }
-        @@if(!context.main){
-            <h1>
-                @@if(context.cate01){<span>공유업무 등록</span>}
-                @@if(context.cate02){<span>공유업무 찾기</span>}
-                @@if(context.cate03){<span>변호사 찾기</span>}
-                @@if(context.cate04){<span>이용안내</span>}
-                @@if(context.cate05){<span>지원센터</span>}
-                @@if(context.cate06){<span>커뮤니티</span>}
-                @@if(context.cate07){<span>회사소개</span>}
-            </h1>
-            <a href="" class="btn-back"><span class="blind">이전 페이지로</span></a>
-        }
-        <button type="button" class="btn-menu"><span class="bar"></span><span class="blind">전체메뉴 보기</span></button>
-    </div>
-    @@if(!context.main){
-        <nav class="depth2-tabs">
-            @@if(context.cate01){
-                <ul class="tabs">
-                    <li@@if(context.cate01 === '01'){ class="active"}><a href="/mobile/page/sub_01_01.html">업무무료등록</a></li>
-                    <li@@if(context.cate01 === '02'){ class="active"}><a href="/mobile/page/sub_01_02.html">공유업무 등록 안내</a></li>
-                </ul>
-            }
-            @@if(context.cate02){
-                <ul class="tabs">
-                    <li@@if(context.cate02 === '01'){ class="active"}><a href="/mobile/page/sub_02_01.html">복대리</a></li>
-                    <li@@if(context.cate02 === '02'){ class="active"}><a href="/mobile/page/sub_02_02.html">기록등사</a></li>
-                    <li@@if(context.cate02 === '03'){ class="active"}><a href="/mobile/page/sub_02_03.html">조사참여</a></li>
-                    <li@@if(context.cate02 === '04'){ class="active"}><a href="/mobile/page/sub_02_04.html">접견</a></li>
-                    <li@@if(context.cate02 === '05'){ class="active"}><a href="/mobile/page/sub_02_05.html">서면작성</a></li>
-                    <li@@if(context.cate02 === '06'){ class="active"}><a href="/mobile/page/sub_02_06.html">계약서</a></li>
-                    <li@@if(context.cate02 === '07'){ class="active"}><a href="/mobile/page/sub_02_07.html">증명서 발급</a></li>
-                    <li@@if(context.cate02 === '08'){ class="active"}><a href="/mobile/page/sub_02_08.html">기일, 선고 성취</a></li>
-                    <li@@if(context.cate02 === '09'){ class="active"}><a href="/mobile/page/sub_02_09.html">법률문서 번역</a></li>
-                    <li@@if(context.cate02 === '10'){ class="active"}><a href="/mobile/page/sub_02_10.html">기타</a></li>
-                </ul>
-            }
-            @@if(context.cate03){
-                <ul class="tabs">
-                    <li@@if(context.cate03 === '01'){ class="active"}><a href="/mobile/page/sub_03_01.html">변호사 검색</a></li>
-                    <li@@if(context.cate03 === '02'){ class="active"}><a href="/mobile/page/sub_03_02.html">변호사 회원가입 안내</a></li>
-                </ul>
-            }
-            @@if(context.cate04){
-                <ul class="tabs">
-                    <li@@if(context.cate04 === '01'){ class="active"}><a href="/mobile/page/sub_04_01.html">로투미 이용안내</a></li>
-                    <li@@if(context.cate04 === '02'){ class="active"}><a href="/mobile/page/sub_04_02.html">포인트 안내</a></li>
-                    <li@@if(context.cate04 === '03'){ class="active"}><a href="/mobile/page/sub_04_03.html">예치금 충전 안내</a></li>
-                    <li@@if(context.cate04 === '04'){ class="active"}><a href="/mobile/page/sub_04_04.html">에스크로 안내</a></li>
-                    <li@@if(context.cate04 === '05'){ class="active"}><a href="/mobile/page/sub_04_05.html">위임장 안내</a></li>
-                </ul>
-            }
-            @@if(context.cate05){
-                <ul class="tabs">
-                    <li@@if(context.cate05 === '01'){ class="active"}><a href="/mobile/page/sub_05_01.html">공지사항</a></li>
-                    <li@@if(context.cate05 === '02'){ class="active"}><a href="/mobile/page/sub_05_02.html">뉴스/언론</a></li>
-                    <li@@if(context.cate05 === '03'){ class="active"}><a href="/mobile/page/sub_05_03.html">이벤트</a></li>
-                    <li@@if(context.cate05 === '04'){ class="active"}><a href="/mobile/page/sub_05_04.html">자주찾는질문</a></li>
-                    <li@@if(context.cate05 === '05'){ class="active"}><a href="/mobile/page/sub_05_05.html">온라인 1:1문의</a></li>
-                    <li@@if(context.cate05 === '06'){ class="active"}><a href="/mobile/page/sub_05_06.html">정보게시판</a></li>
-                </ul>
-            }
-            @@if(context.cate06){
-                <ul class="tabs">
-                    <li@@if(context.cate06 === '01'){ class="active"}><a href="/mobile/page/sub_06_01.html">지식&middot;정보 공유</a></li>
-                    <li@@if(context.cate06 === '02'){ class="active"}><a href="/mobile/page/sub_06_02.html">서식&middot;양식 공유</a></li>
-                    <li@@if(context.cate06 === '03'){ class="active"}><a href="/mobile/page/sub_06_03.html">변호사 업무상담</a></li>
-                    <li@@if(context.cate06 === '04'){ class="active"}><a href="/mobile/page/sub_06_04.html">변호사업무 Q&amp;A</a></li>
-                    <li@@if(context.cate06 === '05'){ class="active"}><a href="/mobile/page/sub_06_05.html">소개해 주세요</a></li>
-                </ul>
-            }
-            @@if(context.cate07){
-                <ul class="tabs">
-                    <li@@if(context.cate07 === '01'){ class="active"}><a href="/mobile/page/sub_07_01.html">회사개요</a></li>
-                    <li@@if(context.cate07 === '02'){ class="active"}><a href="/mobile/page/sub_07_02.html">인사말</a></li>
-                    <li@@if(context.cate07 === '03'){ class="active"}><a href="/mobile/page/sub_07_03.html">사업내용</a></li>
-                    <li@@if(context.cate07 === '04'){ class="active"}><a href="/mobile/page/sub_07_04.html">홍보자료</a></li>
-                    <li@@if(context.cate07 === '05'){ class="active"}><a href="/mobile/page/sub_07_05.html">사업연혁</a></li>
-                    <li@@if(context.cate07 === '06'){ class="active"}><a href="/mobile/page/sub_07_06.html">찾아오시는 길</a></li>
-                </ul>
-            }
-        </nav>
+    @@if(context.popup){
+        <div class="head-cont">
+            <h1><span>@@popup.title</span></h1>
+            <a href="javascript:window.close()" class="btn-close"><span class="blind">팝업 닫기</span></a>
+        </div>
     }
-    <div class="menu-all">
-        <ul class="icon-menus">
-            <!-- 로그인 전 -->
-            <li><a href="" class="icon01">로그인</a></li>
-            <li><a href="" class="icon02">회원가입</a></li>
-            <!-- // 로그인 전 -->
-            <!-- 로그인 후 -->
-            <li><a href="" class="icon03">마이페이지</a></li>
-            <li><a href="" class="icon04">나의업무</a></li>
-            <li><a href="" class="icon05">로그아웃</a></li>
-            <!-- // 로그인 후 -->
-        </ul>
-        <nav id="gnb">
-            <ul>
-                <li>
-                    <div class="depth1">공유업무 등록<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_01_01.html">업무무료등록</a></li>
-                        <li><a href="/mobile/page/sub_01_02.html">공유업무 등록 안내</a></li>
+    @@if(!context.popup){
+        <div class="head-cont">
+            @@if(context.main){
+                <h1><a href="/mobile/"><img src="/mobile/images/logo.png" alt="LawToMe 로고"></a></h1>
+            }
+            @@if(!context.main){
+                <h1>
+                    @@if(context.cate01){<span>공유업무 등록</span>}
+                    @@if(context.cate02){<span>공유업무 찾기</span>}
+                    @@if(context.cate03){<span>변호사 찾기</span>}
+                    @@if(context.cate04){<span>이용안내</span>}
+                    @@if(context.cate05){<span>지원센터</span>}
+                    @@if(context.cate06){<span>커뮤니티</span>}
+                    @@if(context.cate07){<span>회사소개</span>}
+                </h1>
+                <a href="" class="btn-back"><span class="blind">이전 페이지로</span></a>
+            }
+            <button type="button" class="btn-menu"><span class="bar"></span><span class="blind">전체메뉴 보기</span></button>
+        </div>
+        @@if(!context.main){
+            <nav class="depth2-tabs">
+                @@if(context.cate01){
+                    <ul class="tabs">
+                        <li@@if(context.cate01 === '01'){ class="active"}><a href="/mobile/page/sub_01_01.html">업무무료등록</a></li>
+                        <li@@if(context.cate01 === '02'){ class="active"}><a href="/mobile/page/sub_01_02.html">공유업무 등록 안내</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">공유업무 찾기<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_02_01.html">복대리</a></li>
-                        <li><a href="/mobile/page/sub_02_02.html">기록등사</a></li>
-                        <li><a href="/mobile/page/sub_02_03.html">조사참여</a></li>
-                        <li><a href="/mobile/page/sub_02_04.html">접견</a></li>
-                        <li><a href="/mobile/page/sub_02_05.html">서면작성</a></li>
-                        <li><a href="/mobile/page/sub_02_06.html">계약서</a></li>
-                        <li><a href="/mobile/page/sub_02_07.html">증명서 발급</a></li>
-                        <li><a href="/mobile/page/sub_02_08.html">기일, 선고 성취</a></li>
-                        <li><a href="/mobile/page/sub_02_09.html">법률문서 번역</a></li>
-                        <li><a href="/mobile/page/sub_02_10.html">기타</a></li>
+                }
+                @@if(context.cate02){
+                    <ul class="tabs">
+                        <li@@if(context.cate02 === '01'){ class="active"}><a href="/mobile/page/sub_02_01.html">복대리</a></li>
+                        <li@@if(context.cate02 === '02'){ class="active"}><a href="/mobile/page/sub_02_02.html">기록등사</a></li>
+                        <li@@if(context.cate02 === '03'){ class="active"}><a href="/mobile/page/sub_02_03.html">조사참여</a></li>
+                        <li@@if(context.cate02 === '04'){ class="active"}><a href="/mobile/page/sub_02_04.html">접견</a></li>
+                        <li@@if(context.cate02 === '05'){ class="active"}><a href="/mobile/page/sub_02_05.html">서면작성</a></li>
+                        <li@@if(context.cate02 === '06'){ class="active"}><a href="/mobile/page/sub_02_06.html">계약서</a></li>
+                        <li@@if(context.cate02 === '07'){ class="active"}><a href="/mobile/page/sub_02_07.html">증명서 발급</a></li>
+                        <li@@if(context.cate02 === '08'){ class="active"}><a href="/mobile/page/sub_02_08.html">기일, 선고 성취</a></li>
+                        <li@@if(context.cate02 === '09'){ class="active"}><a href="/mobile/page/sub_02_09.html">법률문서 번역</a></li>
+                        <li@@if(context.cate02 === '10'){ class="active"}><a href="/mobile/page/sub_02_10.html">기타</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">변호사 찾기<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_03_01.html">변호사 검색</a></li>
-                        <li><a href="/mobile/page/sub_03_02.html">변호사 회원가입 안내</a></li>
+                }
+                @@if(context.cate03){
+                    <ul class="tabs">
+                        <li@@if(context.cate03 === '01'){ class="active"}><a href="/mobile/page/sub_03_01.html">변호사 검색</a></li>
+                        <li@@if(context.cate03 === '02'){ class="active"}><a href="/mobile/page/sub_03_02.html">변호사 회원가입 안내</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">이용안내<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_04_01.html">로투미 이용안내</a></li>
-                        <li><a href="/mobile/page/sub_04_02.html">포인트 안내</a></li>
-                        <li><a href="/mobile/page/sub_04_03.html">예치금 충전 안내</a></li>
-                        <li><a href="/mobile/page/sub_04_04.html">에스크로 안내</a></li>
-                        <li><a href="/mobile/page/sub_04_05.html">위임장 안내</a></li>
+                }
+                @@if(context.cate04){
+                    <ul class="tabs">
+                        <li@@if(context.cate04 === '01'){ class="active"}><a href="/mobile/page/sub_04_01.html">로투미 이용안내</a></li>
+                        <li@@if(context.cate04 === '02'){ class="active"}><a href="/mobile/page/sub_04_02.html">포인트 안내</a></li>
+                        <li@@if(context.cate04 === '03'){ class="active"}><a href="/mobile/page/sub_04_03.html">예치금 충전 안내</a></li>
+                        <li@@if(context.cate04 === '04'){ class="active"}><a href="/mobile/page/sub_04_04.html">에스크로 안내</a></li>
+                        <li@@if(context.cate04 === '05'){ class="active"}><a href="/mobile/page/sub_04_05.html">위임장 안내</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">지원센터<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_05_01.html">공지사항</a></li>
-                        <li><a href="/mobile/page/sub_05_02.html">뉴스/언론</a></li>
-                        <li><a href="/mobile/page/sub_05_03.html">이벤트</a></li>
-                        <li><a href="/mobile/page/sub_05_04.html">자주찾는질문</a></li>
-                        <li><a href="/mobile/page/sub_05_05.html">온라인 1:1문의</a></li>
-                        <li><a href="/mobile/page/sub_05_06.html">정보게시판</a></li>
+                }
+                @@if(context.cate05){
+                    <ul class="tabs">
+                        <li@@if(context.cate05 === '01'){ class="active"}><a href="/mobile/page/sub_05_01.html">공지사항</a></li>
+                        <li@@if(context.cate05 === '02'){ class="active"}><a href="/mobile/page/sub_05_02.html">뉴스/언론</a></li>
+                        <li@@if(context.cate05 === '03'){ class="active"}><a href="/mobile/page/sub_05_03.html">이벤트</a></li>
+                        <li@@if(context.cate05 === '04'){ class="active"}><a href="/mobile/page/sub_05_04.html">자주찾는질문</a></li>
+                        <li@@if(context.cate05 === '05'){ class="active"}><a href="/mobile/page/sub_05_05.html">온라인 1:1문의</a></li>
+                        <li@@if(context.cate05 === '06'){ class="active"}><a href="/mobile/page/sub_05_06.html">정보게시판</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">커뮤니티<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_06_01.html">지식&middot;정보 공유</a></li>
-                        <li><a href="/mobile/page/sub_06_02.html">서식&middot;양식 공유</a></li>
-                        <li><a href="/mobile/page/sub_06_03.html">변호사 업무상담</a></li>
-                        <li><a href="/mobile/page/sub_06_04.html">변호사업무 Q&amp;A</a></li>
-                        <li><a href="/mobile/page/sub_06_05.html">소개해 주세요</a></li>
+                }
+                @@if(context.cate06){
+                    <ul class="tabs">
+                        <li@@if(context.cate06 === '01'){ class="active"}><a href="/mobile/page/sub_06_01.html">지식&middot;정보 공유</a></li>
+                        <li@@if(context.cate06 === '02'){ class="active"}><a href="/mobile/page/sub_06_02.html">서식&middot;양식 공유</a></li>
+                        <li@@if(context.cate06 === '03'){ class="active"}><a href="/mobile/page/sub_06_03.html">변호사 업무상담</a></li>
+                        <li@@if(context.cate06 === '04'){ class="active"}><a href="/mobile/page/sub_06_04.html">변호사업무 Q&amp;A</a></li>
+                        <li@@if(context.cate06 === '05'){ class="active"}><a href="/mobile/page/sub_06_05.html">소개해 주세요</a></li>
                     </ul>
-                </li>
-                <li>
-                    <div class="depth1">회사소개<span class="blind">하위 메뉴 더보기</span></div>
-                    <ul class="depth2">
-                        <li><a href="/mobile/page/sub_07_01.html">회사개요</a></li>
-                        <li><a href="/mobile/page/sub_07_02.html">인사말</a></li>
-                        <li><a href="/mobile/page/sub_07_03.html">사업내용</a></li>
-                        <li><a href="/mobile/page/sub_07_04.html">홍보자료</a></li>
-                        <li><a href="/mobile/page/sub_07_05.html">사업연혁</a></li>
-                        <li><a href="/mobile/page/sub_07_06.html">찾아오시는 길</a></li>
+                }
+                @@if(context.cate07){
+                    <ul class="tabs">
+                        <li@@if(context.cate07 === '01'){ class="active"}><a href="/mobile/page/sub_07_01.html">회사개요</a></li>
+                        <li@@if(context.cate07 === '02'){ class="active"}><a href="/mobile/page/sub_07_02.html">인사말</a></li>
+                        <li@@if(context.cate07 === '03'){ class="active"}><a href="/mobile/page/sub_07_03.html">사업내용</a></li>
+                        <li@@if(context.cate07 === '04'){ class="active"}><a href="/mobile/page/sub_07_04.html">홍보자료</a></li>
+                        <li@@if(context.cate07 === '05'){ class="active"}><a href="/mobile/page/sub_07_05.html">사업연혁</a></li>
+                        <li@@if(context.cate07 === '06'){ class="active"}><a href="/mobile/page/sub_07_06.html">찾아오시는 길</a></li>
                     </ul>
-                </li>
+                }
+            </nav>
+        }
+        <div class="menu-all">
+            <ul class="icon-menus">
+                <!-- 로그인 전 -->
+                <li><a href="" class="icon01">로그인</a></li>
+                <li><a href="" class="icon02">회원가입</a></li>
+                <!-- // 로그인 전 -->
+                <!-- 로그인 후 -->
+                <li><a href="" class="icon03">마이페이지</a></li>
+                <li><a href="" class="icon04">나의업무</a></li>
+                <li><a href="" class="icon05">로그아웃</a></li>
+                <!-- // 로그인 후 -->
             </ul>
-        </nav>
-    </div>
+            <nav id="gnb">
+                <ul>
+                    <li>
+                        <div class="depth1">공유업무 등록<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_01_01.html">업무무료등록</a></li>
+                            <li><a href="/mobile/page/sub_01_02.html">공유업무 등록 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">공유업무 찾기<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_02_01.html">복대리</a></li>
+                            <li><a href="/mobile/page/sub_02_02.html">기록등사</a></li>
+                            <li><a href="/mobile/page/sub_02_03.html">조사참여</a></li>
+                            <li><a href="/mobile/page/sub_02_04.html">접견</a></li>
+                            <li><a href="/mobile/page/sub_02_05.html">서면작성</a></li>
+                            <li><a href="/mobile/page/sub_02_06.html">계약서</a></li>
+                            <li><a href="/mobile/page/sub_02_07.html">증명서 발급</a></li>
+                            <li><a href="/mobile/page/sub_02_08.html">기일, 선고 성취</a></li>
+                            <li><a href="/mobile/page/sub_02_09.html">법률문서 번역</a></li>
+                            <li><a href="/mobile/page/sub_02_10.html">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">변호사 찾기<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_03_01.html">변호사 검색</a></li>
+                            <li><a href="/mobile/page/sub_03_02.html">변호사 회원가입 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">이용안내<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_04_01.html">로투미 이용안내</a></li>
+                            <li><a href="/mobile/page/sub_04_02.html">포인트 안내</a></li>
+                            <li><a href="/mobile/page/sub_04_03.html">예치금 충전 안내</a></li>
+                            <li><a href="/mobile/page/sub_04_04.html">에스크로 안내</a></li>
+                            <li><a href="/mobile/page/sub_04_05.html">위임장 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">지원센터<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_05_01.html">공지사항</a></li>
+                            <li><a href="/mobile/page/sub_05_02.html">뉴스/언론</a></li>
+                            <li><a href="/mobile/page/sub_05_03.html">이벤트</a></li>
+                            <li><a href="/mobile/page/sub_05_04.html">자주찾는질문</a></li>
+                            <li><a href="/mobile/page/sub_05_05.html">온라인 1:1문의</a></li>
+                            <li><a href="/mobile/page/sub_05_06.html">정보게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">커뮤니티<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_06_01.html">지식&middot;정보 공유</a></li>
+                            <li><a href="/mobile/page/sub_06_02.html">서식&middot;양식 공유</a></li>
+                            <li><a href="/mobile/page/sub_06_03.html">변호사 업무상담</a></li>
+                            <li><a href="/mobile/page/sub_06_04.html">변호사업무 Q&amp;A</a></li>
+                            <li><a href="/mobile/page/sub_06_05.html">소개해 주세요</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="depth1">회사소개<span class="blind">하위 메뉴 더보기</span></div>
+                        <ul class="depth2">
+                            <li><a href="/mobile/page/sub_07_01.html">회사개요</a></li>
+                            <li><a href="/mobile/page/sub_07_02.html">인사말</a></li>
+                            <li><a href="/mobile/page/sub_07_03.html">사업내용</a></li>
+                            <li><a href="/mobile/page/sub_07_04.html">홍보자료</a></li>
+                            <li><a href="/mobile/page/sub_07_05.html">사업연혁</a></li>
+                            <li><a href="/mobile/page/sub_07_06.html">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    }
 </header>

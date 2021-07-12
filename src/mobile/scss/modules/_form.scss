@@ -1,25 +1,19 @@
 /* form */
 .form-wrap {
-    &.type2 {
-        .row {
-            .tit {
-                width:120px;
-                font-size:18px;
-            }
-            .forms {
-                width:calc(100% - 120px);
-            }
-        }
-    }
-    &.narrow {
-        border-top:1px solid $basic;
-        padding:0 180px;
-    }
     .form-title {
-        margin-bottom:70px;
-        padding-top:45px;
-        font-size:22px;
-        font-weight:500;
+        margin-bottom:20px;
+        @include font-md;
+        word-break:keep-all;
+    }
+    .essen-txt {
+        margin-top:30px;
+        margin-bottom:10px;
+        font-size:12px;
+        &::before {
+            content:'*';
+            color:$red;
+            margin-right:2px;
+        }
     }
     .row {
         margin-top:30px;
@@ -30,6 +24,13 @@
             margin-bottom:10px;
             font-size:13px;
             font-weight:500;
+            &.essen {
+                &::after {
+                    content:'*';
+                    color:$red;
+                    margin-left:2px;
+                }
+            }
         }
         div.tit {
             display:flex;
@@ -45,14 +46,6 @@
         .forms {
             margin-top:10px;
             font-size:13px;
-            .btn {
-                width:180px;
-                min-width:180px;
-                height:60px;
-                line-height:58px;
-                font-size:18px;
-                font-weight:500;
-            }
             .rdo-wrap {
                 margin-bottom:5px;
                 &:last-child {
@@ -108,160 +101,6 @@
     }
 }
 
-.row-form-wrap {
-    .form-title {
-        display:flex;
-        align-items:flex-end;
-        margin-bottom:50px;
-        .tit {
-            font-size:18px;
-        }
-        .essen-txt {
-            margin-left:auto;
-            color:$cont;
-            font-size:15px;
-            &::before {
-                content:'*';
-                color:$red;
-                margin-right:4px;
-            }
-        }
-    }
-    .row {
-        display:flex;
-        flex-wrap:wrap;
-        margin-top:40px;
-        &:first-child {
-            margin-top:0;
-        }
-        .col {
-            flex:1;
-            margin-left:25px;
-            &:first-child {
-                margin-left:0;
-            }
-            .tit {
-                margin-bottom:15px;
-                font-size:16px;
-                font-weight:500;
-                &.essen {
-                    &::after {
-                        content:'*';
-                        margin-left:2px;
-                        color:$red;
-                    }
-                }
-            }
-            .forms {
-                position:relative;
-                display:flex;
-                margin-bottom:20px;
-                &:last-child {
-                    margin-bottom:0;
-                }
-                .btn.absolute {
-                    position:absolute;
-                    top:50%;
-                    right:6px;
-                    transform:translateY(-50%);
-                    height:45px;
-                    line-height:43px;
-                }
-                > * {
-                    flex:1;
-                }
-                > span.bar {
-                    flex:none;
-                    align-self:center;
-                    width:auto;
-                    margin:0 10px;
-                    color:$cont;
-                }
-                .form-control:last-child {
-                    margin-left:20px;
-                }
-                .form-control:only-child {
-                    margin-left:0;
-                }
-                &.password-type {
-                    position:relative;
-                    .password-view {
-                        position:absolute;
-                        top:50%;
-                        right:10px;
-                        width:40px;
-                        height:40px;
-                        margin-top:-20px;
-                        &.off {
-                            background:url('/images/icon/icon-view-off.png') center no-repeat;
-                        }
-                        &.on {
-                            background:url('/images/icon/icon-view-on.png') center no-repeat;
-                        }
-                    }
-                }
-                &.phone-type {
-                    > * {
-                        flex:none;
-                    }
-                    .absolute-wrap {
-                        flex:1;
-                        position:relative;
-                        .form-control {
-                            width:100%;
-                        }
-                    }
-                    .btn.btn-md {
-                        width:160px;
-                        margin-left:15px;
-                    }
-                    .form-control {
-                        flex:1;
-                        width:auto;
-                    }
-                    .select-wrap {
-                        width:200px;
-                        margin-right:15px;
-                    }
-                }
-            }
-        }
-        .alert-txt {
-            margin-top:10px;
-            width:100%;
-            color:$red;
-            font-size:14px;
-            &:empty {
-                margin-top:0;
-                &::before {
-                    display:none;
-                }
-            }
-            &::before {
-                content:'!';
-                display:inline-block;
-                vertical-align:top;
-                width:14px;
-                height:14px;
-                margin-right:4px;
-                background:$red;
-                border-radius:50%;
-                text-align:center;
-                font-size:12px;
-                line-height:14px;
-                color:#fff;
-            }
-        }
-    }
-    .btn-row {
-        margin-top:60px;
-        text-align:center;
-        .btn {
-            min-width:220px;
-        }
-    }
-}
-
 .write-form {
     .row {
         margin-top:20px;
@@ -276,28 +115,23 @@
 }
 
 /* search */
-.list-filter {
+.search-wrap {
     display:flex;
-    align-items:flex-end;
-    margin-bottom:40px;
-    .search-wrap {
-        display:flex;
-        width:560px;
-        margin-left:auto;
-        .input-wrap {
-            flex:1;
-            input {
-                border-right:none;
-                border-radius:0;
-                background:$white;
-            }
-        }
-        .btn-search {
-            display:block;
-            width:60px;
-            height:60px;
-            background:$point url('/images/icon/icon-search.png') center no-repeat;
-        }
+    margin-bottom:30px;
+    border:1px solid $border;
+    border-radius:$border-radius;
+    .form-control {
+        min-height:48px;
+        height:48px;
+        border:none;
+        background:#fff;
+    }
+    .btn-search {
+        display:block;
+        width:48px;
+        height:48px;
+        background:url('/mobile/images/icon/icon-search.png') center no-repeat;
+        background-size:21px;
     }
 }
 
@@ -335,7 +169,6 @@
 /* file upload */
 .inputfile-wrap {
     position:relative;
-    font-size:0;
     input[type="file"] {
         position:absolute;
         width:1px;
@@ -347,42 +180,39 @@
         clip:rect(0, 0, 0, 0);
     }
     .form-control {
-        display:inline-block;
-        width:calc(100% - 175px);
+        display:block;
+        padding-right:100px;
     }
     label.btn {
-        display:inline-block;
-        width:160px;
-        height:50px;
-        margin-left:15px;
+        position:absolute;
+        top:50%;
+        right:5px;
+        width:90px;
+        height:38px;
+        margin-top:-19px;
         background:#bbb;
+        font-size:14px;
         color:$white;
-        line-height:48px;
+        line-height:36px;
     }
 }
 
 /* 수집동의 */
 .agree-chk-box {
-    width:930px;
-    margin:60px auto 0;
+    margin-top:40px;
     .tit {
         margin-bottom:20px;
-        font-size:20px;
-        font-weight:500;
+        font-size:16px;
     }
     .agree-cont {
-        max-height:283px;
-        padding:20px 30px;
+        max-height:270px;
+        padding:15px;
         border:1px solid $border;
         overflow-y:auto;
-        font-size:16px;
-        line-height:30px;
+        font-size:12px;
+        line-height:20px;
     }
     .chk-wrap {
-        margin-top:30px;
-        input + label {
-            color:$basic;
-            font-size:16px;
-        }
+        margin-top:20px;
     }
 }

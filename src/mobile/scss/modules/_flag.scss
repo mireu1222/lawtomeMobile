@@ -28,12 +28,13 @@
     }
     &.flag-sm {
         min-width:43px;
-        height:22px;
-        line-height:20px;
+        height:18px;
+        line-height:16px;
         border-radius:4px;
+        font-size:12px;
     }
     &.rounded {
-        border-radius:11px;
+        border-radius:10px;
     }
 }
 .text-flag {

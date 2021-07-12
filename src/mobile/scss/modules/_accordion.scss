@@ -2,7 +2,7 @@
 .accordion-wrap {
     position:relative;
     ul.lists {
-        border-top:1px solid $border;
+        border-top:1px solid #333;
         > li {
             border-bottom:1px solid $border;
             .accord-title {
@@ -12,36 +12,36 @@
                     display:block;
                     position:relative;
                     width:100%;
-                    padding:17px 50px 17px 70px;
+                    padding:16px 35px 16px 45px;
                     text-align:left;
-                    @include font-lg;
+                    @include font;
                     word-break:keep-all;
                     &::before {
                         content:'Q';
                         position:absolute;
-                        top:16px;
-                        left:20px;
-                        width:28px;
-                        height:28px;
+                        top:17px;
+                        left:16px;
+                        width:20px;
+                        height:20px;
                         border-radius:50%;
                         background:$point;
                         color:$white;
                         text-align:center;
-                        font-size:16px;
-                        line-height:26px;
+                        font-size:12px;
+                        line-height:20px;
                         font-weight:500;
                     }
                     &::after {
                         content:' ';
                         position:absolute;
                         top:50%;
-                        right:23px;
-                        width:10px;
-                        height:10px;
-                        border:1px solid $gray;
+                        right:18px;
+                        width:8px;
+                        height:8px;
+                        border:1px solid #666;
                         border-top:none;
                         border-left:none;
-                        margin-top:-8px;
+                        margin-top:-6px;
                         transform:rotate(45deg);
                         transition:all 0.2s ease-out;
                     }
@@ -49,33 +49,33 @@
             }
             &.open {
                 .accord-title .btn-toggle::after {
-                    margin-top:-3px;
+                    margin-top:-2px;
                     transform:rotate(225deg);
                 }
             }
             .accord-cont {
                 display:none;
                 position:relative;
-                padding:17px 20px;
-                padding-left:70px;
+                padding:16px 20px;
+                padding-left:45px;
                 border-top:1px solid $border;
                 background:$disabled;
-                color:$basic;
-                @include font-lg;
+                color:#666;
+                @include font;
                 word-break:keep-all;
                 &::before {
                     content:'A';
                     position:absolute;
-                    top:16px;
-                    left:20px;
-                    width:28px;
-                    height:28px;
+                    top:17px;
+                    left:16px;
+                    width:20px;
+                    height:20px;
                     border-radius:50%;
                     background:#bbb;
                     color:$white;
                     text-align:center;
-                    font-size:16px;
-                    line-height:26px;
+                    font-size:12px;
+                    line-height:20px;
                     font-weight:500;
                 }
             }

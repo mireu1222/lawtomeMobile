@@ -209,3 +209,53 @@ function classToggle() {
         }
     });
 }
+
+// accordion
+function accordion() {
+    var wrap = $('.ui-accordion'),
+        list = wrap.find('li'),
+        title = wrap.find('.accord-title'),
+        toggle = title.find('.btn-toggle');
+
+    if(wrap.length <= 0) return;
+
+    // 접근성 대응
+    list.each(function(){
+        var $btn = $(this).find('.accord-title .btn-toggle'),
+            $content = $(this).find('.accord-cont'),
+            id = $(this).index();
+
+        $btn.attr({
+            'id' : 'accord-toggle' + id,
+            'aria-controls' : 'accord-cont' + id
+        });
+        $content.attr({
+            'id' : 'accord-cont' + id,
+            'role' : 'region',
+            'aria-labelledby' : 'accord-toggle' + id
+        })
+    });
+
+    toggle.click(function(){
+        var li = $(this).parent('.accord-title').parent('li'),
+            cont = $(this).parent('.accord-title').siblings('.accord-cont'),
+            blind = $(this).find('.blind');
+
+        if (li.hasClass('open')) {
+            $(this).attr('aria-expanded', 'false');
+            cont.slideUp();
+            li.removeClass('open');
+            blind.text('상세보기');
+        } else {
+            $(this).attr('aria-expanded', 'true');
+            cont.slideDown();
+            li.addClass('open');
+            blind.text('닫기');
+        }
+    });
+}
+
+function popupOpen(url, name) {
+    var options;
+    window.open(url, name, options);
+}
