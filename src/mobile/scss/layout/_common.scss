@@ -13,7 +13,16 @@
 #wrap {
     .container {
         overflow:hidden;
+        padding-top:130px;
         padding-bottom:50px;
+        section.sect {
+            padding:0 16px;
+        }
+        .border-box {
+            padding:20px 15px;
+            border:1px solid $border;
+            border-radius:4px;
+        }
     }
 }
 

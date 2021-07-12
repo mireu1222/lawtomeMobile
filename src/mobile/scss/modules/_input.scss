@@ -2,13 +2,13 @@
 .form-control {
     display:block;
     width:100%;
-    min-height:60px;
-    height:60px;
-    padding:18px 24px;
+    min-height:50px;
+    height:50px;
+    padding:10px;
     border:1px solid $border;
     border-radius:$border-radius;
     background:#f5f5f5;
-    font-size:18px;
+    font-size:15px;
     line-height:normal;
     transition:$input-transition;
     &:focus {
@@ -28,10 +28,11 @@
         opacity:0.5;
     }
     &.datepicker {
-        padding-right:60px;
+        padding-right:37px;
         background-image:url('/mobile/images/icon/icon-cal.png');
         background-repeat:no-repeat;
-        background-position:right 19px center;
+        background-position:right 10px center;
+        background-size:17px;
     }
 }
 textarea.form-control {
@@ -45,11 +46,11 @@ $types : chk, rdo, rdo-btn, like-chk;
     .#{$type}-wrap {
         display:inline-block;
         position:relative;
-        min-height:24px;
+        min-height:18px;
         vertical-align:top;
         &.icon-only {
             input + label {
-                padding-left:22px;
+                padding-left:18px;
             }
         }
         input {
@@ -65,20 +66,20 @@ $types : chk, rdo, rdo-btn, like-chk;
                 display:inline-block;
                 position:relative;
                 cursor:pointer;
-                padding-left:30px;
+                padding-left:24px;
                 color:$cont;
-                font-size:18px;
-                line-height:24px;
+                font-size:14px;
+                line-height:18px;
                 user-select:none;
                 vertical-align:top;
                 @if $type == 'chk' {
                     &::before {
                         content:' ';
                         position:absolute;
-                        top:1px;
+                        top:0;
                         left:0;
-                        width:22px;
-                        height:22px;
+                        width:18px;
+                        height:18px;
                         border:1px solid $border;
                         background:#fff;
                     }
@@ -87,10 +88,10 @@ $types : chk, rdo, rdo-btn, like-chk;
                     &::before {
                         content:' ';
                         position:absolute;
-                        top:1px;
+                        top:0;
                         left:0;
-                        width:22px;
-                        height:22px;
+                        width:18px;
+                        height:18px;
                         border:1px solid $border;
                         background:#fff;
                         border-radius:11px;
@@ -104,13 +105,13 @@ $types : chk, rdo, rdo-btn, like-chk;
                     background-size:21px auto;
                 }
                 @if $type == 'rdo-btn' {
-                    height:50px;
-                    padding:0 20px;
-                    border-radius:25px;
-                    background:$disabled;
-                    color:$cont;
-                    font-size:18px;
-                    line-height:50px;
+                    height:32px;
+                    padding:0 15px;
+                    border:1px solid $border;
+                    border-radius:16px;
+                    color:#999;
+                    font-size:15px;
+                    line-height:30px;
                     text-align:center;
                     white-space:nowrap;
                     em {
@@ -154,19 +155,20 @@ $types : chk, rdo, rdo-btn, like-chk;
                     &::after {
                         content:' ';
                         position:absolute;
-                        top:7px;
-                        left:6px;
-                        width:10px;
-                        height:10px;
-                        border-radius:5px;
+                        top:5px;
+                        left:5px;
+                        width:8px;
+                        height:8px;
+                        border-radius:4px;
                         background:$point;
                     }
                 }
             }
             @if $type == 'rdo-btn' {
                 &:checked + label {
-                    background:#d4e5f3;
-                    color:$basic;
+                    border-color:$point;
+                    background:$point;
+                    color:#fff;
                 }
             }
             @if $type == 'like-chk' {

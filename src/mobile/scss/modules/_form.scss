@@ -22,37 +22,29 @@
         font-weight:500;
     }
     .row {
-        display:flex;
-        align-items:flex-start;
-        margin-top:40px;
+        margin-top:30px;
         &:first-child {
             margin-top:0;
         }
         .tit {
-            width:195px;
-            font-size:20px;
-            line-height:60px;
+            margin-bottom:10px;
+            font-size:13px;
             font-weight:500;
-            &.narrow {
-                line-height:24px;
-            }
         }
         div.tit {
             display:flex;
             align-items:center;
-            height:60px;
             > p {
-                font-size:20px;
-                line-height:24px;
+                font-size:13px;
                 font-weight:500;
             }
             .tooltip-wrap {
-                margin-left:10px;
+                margin-left:5px;
             }
         }
         .forms {
-            width:calc(100% - 195px);
-            font-size:18px;
+            margin-top:10px;
+            font-size:13px;
             .btn {
                 width:180px;
                 min-width:180px;
@@ -61,97 +53,44 @@
                 font-size:18px;
                 font-weight:500;
             }
-            &.date-type {
-                display:flex;
-                align-items:center;
-                .form-control {
-                    width:435px;
-                    margin-right:20px;
+            .rdo-wrap {
+                margin-bottom:5px;
+                &:last-child {
+                    margin-bottom:0;
                 }
-                .select-wrap {
-                    width:260px;
-                }
-                > span {
-                    flex:1;
-                    text-align:center;
-                    color:$placeholder;
-                }
+            }
+            .form-control + .form-control {
+                margin-top:10px;
             }
             &.flex {
                 display:flex;
                 align-items:center;
-                .form-control {
-                    width:270px;
-                    margin-right:20px;
+                > * {
+                    flex:1;
                 }
-                &.size2 {
-                    .col {
-                        flex:1;
-                        margin-left:80px;
-                        &:first-child {
-                            margin-left:0;
-                        }
-                        .form-control,
-                        .select-wrap {
-                            width:100%;
-                            margin:0;
-                        }
-                    }
-                }
-                &.size3 {
-                    .col {
-                        flex:1;
-                        margin-left:35px;
-                        &:first-child {
-                            margin-left:0;
-                        }
-                        .form-control,
-                        .select-wrap {
-                            width:100%;
-                            margin:0;
-                        }
-                    }
-                }
-                &.size4 {
-                    flex-wrap:wrap;
-                    justify-content:space-between;
-                    .col {
-                        width:470px;
-                        &:nth-child(2) ~ .col {
-                            margin-top:20px;
-                        }
-                        .form-control,
-                        .select-wrap {
-                            width:100%;
-                            margin:0;
-                        }
-                    }
-                }
-                .col {
-                    display:flex;
-                    align-items:center;
-                    p {
-                        margin-right:20px;
-                        color:$basic;
-                        white-space:nowrap;
-                        &:last-child {
-                            margin-left:10px;
-                            margin-right:0;
-                        }
-                    }
-                    .rdo-wrap,
-                    .chk-wrap {
-                        margin-right:20px;
-                        input + label {
-                            white-space:nowrap;
-                        }
-                    }
+                > .bar {
+                    flex:unset;
+                    padding:0 5px;
+                    color:#666;
                 }
             }
             &.btn-type {
                 display:flex;
                 .btn {
                     margin-left:20px;
+                }
+            }
+            &.price-type {
+                position:relative;
+                .form-control {
+                    padding-left:30px;
+                }
+                &::before {
+                    content:'￦';
+                    position:absolute;
+                    top:50%;
+                    left:10px;
+                    transform:translateY(-50%);
                 }
             }
             .bullet-list {

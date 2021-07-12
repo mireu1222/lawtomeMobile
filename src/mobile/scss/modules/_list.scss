@@ -11,32 +11,20 @@
     li {
         margin-top:10px;
         &.mix {
-            display:flex;
-            align-items:center;
+            width:100% !important;
             padding-right:0 !important;
             .rdo-wrap input + label {
                 white-space:nowrap;
             }
             .form-control {
-                margin-left:20px;
+                width:100%;
             }
         }
     }
-    &.wide li {
-        min-width:200px;
-        padding-right:20px;
-        &.mix {
-            width:calc(100% - 400px);
-        }
-    }
-    &.auto li {
-        padding-right:60px;
-    }
-    &.col4 li {
-        min-width:25%;
-        padding-right:20px;
-        &.mix {
-            width:100%;
+    &.size2 {
+        li {
+            width:50%;
+            padding-right:6px;
         }
     }
 }
@@ -83,7 +71,6 @@
 
 // work list
 .worklist-wrap {
-    padding:0 16px;
     ul.lists {
         > li {
             margin-top:25px;
@@ -204,21 +191,18 @@
 // lawyer list
 .lawyerlist-wrap {
     ul.lists {
-        display:flex;
         > li {
-            width:380px;
-            margin-left:30px;
+            margin-top:25px;
             &:first-child {
-                margin-left:0;
+                margin-top:0;
             }
         }
     }
     .inner {
         display:flex;
         flex-direction:column;
-        height:100%;
-        padding:24px 16px 30px; 
-        border:1px solid $border;
+        padding:20px 15px; 
+        box-shadow:$boxshadow;
         .top {
             display:flex;
             align-items:center;
@@ -227,23 +211,23 @@
                 margin-right:auto;
                 font-size:0;
                 .flag {
-                    margin-right:7px;
+                    margin-right:5px;
                 }
             }
             .like-chk-wrap {
-                margin-left:8px;
+                margin-left:10px;
             }
         }
         .head {
             display:flex;
             align-items:center;
-            margin-top:35px;
+            margin-top:30px;
             .thumb {
                 display:block;
-                width:92px;
-                min-width:92px;
-                max-width:90px;
-                height:92px;
+                width:80px;
+                min-width:80px;
+                max-width:80px;
+                height:80px;
                 margin-right:20px;
                 border-radius:50%;
                 background-size:cover;
@@ -254,35 +238,32 @@
             .info {
                 flex:1 1 auto;
                 .name {
-                    font-size:24px;
-                    line-height:26px;
+                    @include font-title;
                     font-weight:700;
                 }
                 .company {
-                    margin-top:4px;
-                    font-size:20px;
-                    line-height:24px;
+                    @include font-xl;
                     word-break:keep-all;
                 }
             }
         }
         .belong {
             display:flex;
-            align-items:flex-start;
-            margin-top:25px;
+            align-items:center;
+            margin-top:30px;
             .flag {
-                margin-top:3px;
-                margin-right:7px;
+                margin-right:4px;
             }
             p {
                 flex:1 1 auto;
                 color:$point;
-                @include font-xl;
+                @include font-md;
                 font-weight:500;
+                @include textEllipsis;
             }
         }
         .introduce {
-            margin-top:25px;
+            margin-top:20px;
             color:$cont;
             @include font;
             word-break:keep-all;
@@ -290,8 +271,8 @@
         .spot-info {
             display:flex;
             align-items:flex-start;
-            margin-top:25px;
-            margin-bottom:50px;
+            margin-top:15px;
+            margin-bottom:25px;
             @include font;
             dt {
                 font-weight:500;
@@ -308,12 +289,8 @@
             }
             dd {
                 color:$cont;
+                word-break:keep-all;
             }
-        }
-        .btn.btn-md {
-            display:block;
-            width:180px;
-            margin:auto auto 0;
         }
     }
 }

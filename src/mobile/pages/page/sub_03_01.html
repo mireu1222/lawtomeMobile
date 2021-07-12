@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : '01'
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <!-- 지역 -->
+            <div class="button-tabs" data-toggle="class-toggle">
+                <ul class="tabs">
+                    <li class="active"><a href="#n">전체</a></li>
+                    <li><a href="#n">서울</a></li>
+                    <li><a href="#n">경기</a></li>
+                    <li><a href="#n">인천</a></li>
+                    <li><a href="#n">광주</a></li>
+                    <li><a href="#n">부산</a></li>
+                    <li><a href="#n">대전</a></li>
+                    <li><a href="#n">충청도</a></li>
+                    <li><a href="#n">전라도</a></li>
+                    <li><a href="#n">경상도</a></li>
+                    <li><a href="#n">강원도</a></li>
+                    <li><a href="#n">제주도</a></li>
+                </ul>
+            </div>
+            <!-- // 지역 -->
+            <section class="sect">
+                <div class="lawyerlist-wrap">
+                    <ul class="lists">
+                        @@loop('./modules/lawyer-loop.html', [
+                            {
+                                new : true,
+                                city : '01',
+                                id : 'lawyer01',
+                                checked : true,
+                                name : '최고로 변호사',
+                                company : '법무법인한강시대',
+                                belong : '서울지방법원 안동지원 영주사법원'
+                            }, 
+                            {
+                                new : true,
+                                city : '02',
+                                id : 'lawyer02',
+                                name : '최고로 변호사',
+                                company : '법무법인한강시대',
+                                belong : '서울지방법원 안동지원 영주사법원'
+                            },
+                            {
+                                new : true,
+                                city : '03',
+                                id : 'lawyer03',
+                                name : '최고로 변호사',
+                                company : '법무법인한강시대',
+                                belong : '서울지방법원 안동지원 영주사법원'
+                            }
+                        ])
+                    </ul>
+                </div>
+                <button type="button" class="btn-more"><span>다른 변호사 보기</span></button>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

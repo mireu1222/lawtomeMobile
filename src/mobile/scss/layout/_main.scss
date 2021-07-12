@@ -1,6 +1,7 @@
 /* main */
 #wrap {
     .container.main {
+        padding-top:0;
         padding-bottom:0;
     }
 }
@@ -132,10 +133,6 @@
             }
         }
     }
-    .btn-more {
-        width:calc(100% - 32px);
-        margin:25px 16px 0;
-    }
     // section01
     section.sect01 {
         position:relative;
@@ -225,11 +222,12 @@
     }
     // section03
     section.sect03 {
+        padding:0 16px;
         .border-tabs {
-            margin-bottom:30px;
+            margin:0 -16px 30px;
         }
         .button-tabs {
-            margin-bottom:40px;
+            margin:0 -16px 40px;
         }
     }
     // section04 

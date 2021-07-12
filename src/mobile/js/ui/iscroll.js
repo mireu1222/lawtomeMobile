@@ -911,7 +911,7 @@
             var $item = this.scroller.querySelectorAll('.active'),
                 iow = $($item).outerWidth(),
                 ow = $(document).outerWidth(),
-                pd = parseInt($(this.wrapper).parent('div').css('padding-left')),
+                pd = parseInt($(this.wrapper).parent('').css('padding-left')),
                 calc = (ow / 2) - (iow / 2) - pd;
             if ($item.length) {
                 this.scrollToElement($item[0], time? time:200, -calc);

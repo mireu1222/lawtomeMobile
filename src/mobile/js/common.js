@@ -1,9 +1,12 @@
 $(function () {
     headerEvt();
     targetToggle();
+    $(this).find('.datepicker').datepicker();
+    classToggle();
 });
 
 $(window).on('load', function(){
+    xScroll('nav.depth2-tabs');
 });
 
 function headerEvt() {
@@ -85,6 +88,124 @@ function targetToggle() {
         } else {
             $(this).addClass('open');
             $(target).slideDown();
+        }
+    });
+}
+
+// iscroll outerwidth
+function calcWidth(target) {
+    var $target = $(target);
+
+    $target.each(function(){
+        var child = $(this).children(),
+            width = 0;
+
+        child.each(function(){
+            width += $(this).outerWidth(true);
+        });
+        $(this).css('width', width+32);
+    });
+}
+
+// iscroll
+function xScroll(obj) {
+    var $obj = $(obj),
+        tabs = $obj.find('.tabs');
+
+    if ( $(obj).length <= 0 ) {
+        return
+    } else {
+        $(window).resize(function(){
+            calcWidth(tabs);
+        });
+        calcWidth(tabs);
+        new IScroll(obj , {
+            scrollX : true,
+            scrollY : false,
+            mouseWheel : false,
+            autoCenterScroll : true,
+            bounce : true
+        });
+    }
+}
+
+// input category
+function categoryToggle() {
+    $('[data-toggle="category-collapse"] input').on('change', function(){
+        var self = $(this),
+            my = self.attr('data-visible-target'),
+            myArr = my? my.split(',') : [],
+            targets = $('[data-collapse-num]');
+
+        if (self.is(':checked')) {
+            targets.hide();
+
+            var target = '';
+            $.each(myArr, function(index, value){
+                target = '[data-collapse-num="'+value.trim()+'"]';
+                $(target).show();
+            });
+        } else {
+            return;
+        }
+    });
+
+    $('[data-toggle="category-collapse"] input#cate01').click();
+}
+
+// rdo select writable 
+function writableGroup() {
+    $('[data-toggle="writable"] input[type=radio]').on('change', function(){
+        var self = $(this),
+            wrap = self.parents('[data-toggle="writable"]'),
+            allInput = wrap.find('[data-writable-target]'),
+            myInput = self.closest('.rdo-wrap').siblings('[data-writable-target]');
+
+            console.log(allInput);
+
+        if( self.is(':checked') ){
+            // 전체 disabled
+            $.each(allInput, function(index, value){
+                var type = $(this).data('writable-target');
+                if( type === 'select' ){
+                    $(this).find('select').prop('disabled', true);
+                    $(this).find('div.nice-select').addClass('disabled');
+                } else if( type === 'input' ){
+                    $(this).prop('disabled', true);
+                }
+            })
+            // target writable
+            if (myInput.data('writable-target') === 'select'){
+                myInput.find('select').prop('disabled', false);
+                myInput.find('div.nice-select').removeClass('disabled').addClass('open');
+            } else if (myInput.data('writable-target') === 'input'){
+                myInput.prop('disabled', false);
+                myInput.eq(0).focus();
+            }
+        }
+    });
+}
+
+// class toggle
+function classToggle() {
+    $('[data-toggle="class-toggle"]').find('button, a').click(function(){
+        var li = $(this).closest('li');
+        var lis = li.siblings('li');
+        var wraps = $(this).closest($('[data-toggle="class-toggle"]'));
+        var toggleSelf = wraps.data('toggle-self');
+        var toggleClass = wraps.data('toggle-class');
+        var className = toggleClass === undefined ? 'active' : toggleClass;
+
+        if (toggleSelf){
+            if (li.hasClass(className)){
+                li.removeClass(className);
+            } else {
+                lis.removeClass(className);
+                li.addClass(className);
+            }
+        } else {
+            lis.removeClass(className);
+            li.addClass(className);
         }
     });
 }
