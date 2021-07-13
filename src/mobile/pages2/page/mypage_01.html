@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mypage : '01',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="my-profile">
+                    <div class="my-photo">
+                        <span class="thumb" style="background-image:url('/mobile/images/@noimg.gif')"></span>
+                        <a href="" class="btn-photo"><span class="blind">사진등록</span></a>
+                    </div>
+                    <p class="name">홍길동</p>
+                    <a href="" class="btn btn-md btn-point"><span>프로필 보기</span></a>
+                </div>
+                <div class="work-info-lists">
+                    <ul class="lists">
+                        <li>
+                            <a href="">
+                                <span class="text">지원완료</span>
+                                <span class="count">1</span>
+                            </a>
+                            <span class="flag flag-border">오늘 지원 <em>1</em>건</span>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="text">프로필 열람</span>
+                                <span class="count">21</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="text">업무대행 요청</span>
+                                <span class="count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="text">나를 찜한 회원</span>
+                                <span class="count">7</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="text">내가 찜한 업무대행</span>
+                                <span class="count">17</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="">
+                    <div class="my-border-box">
+                        <h2 class="title">기본정보</h2>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <p class="tit">휴대폰번호</p>
+                                <div class="forms btn-type">
+                                    <input type="text" class="form-control" value="010-1234-5678" placeholder="휴대폰번호를 입력하세요" aria-label="휴대폰번호 입력">
+                                    <button type="button" class="btn btn-point" disabled><span>재인증하기</span></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit">이메일</p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="이메일을 입력하세요" aria-label="이메일 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit">연락 가능 시간 설정</p>
+                                <div class="forms flex">
+                                    <div class="select-wrap">
+                                        <select aria-label="연락 가능 시작 시간 선택">
+                                            <option value="">00:00</option>
+                                        </select>
+                                    </div>
+                                    <span class="bar">~</span>
+                                    <div class="select-wrap">
+                                        <select aria-label="연락 가능 종료 시간 선택">
+                                            <option value="">00:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="forms">
+                                    <input type="text" class="form-control" value="010-1234-5678" placeholder="지정휴대폰번호를 입력하세요" aria-label="연락 가능한 지정휴대폰번호 입력">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-border-box">
+                        <h2 class="title">나의 현재 상태 표시</h2>
+                        <ul class="slt-lists">
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="state01" name="mystate">
+                                    <label for="state01">업무공유 가능</label>
+                                </span>
+                                <div class="state-options">
+                                    <ul>
+                                        <li>
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="option01" name="options">
+                                                <label for="option01">즉시 투입 가능</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="option02" name="options">
+                                                <label for="option02">협의 후 가능</label>
+                                            </span>
+                                        </li>
+                                        <li class="mix">
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="option03" name="options">
+                                                <label for="option03">입력</label>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="직접입력" aria-label="업무대행 가능 날짜 직접 입력">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="state02" name="mystate">
+                                    <label for="state02">휴가 중</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="state03" name="mystate">
+                                    <label for="state03">업무공유 의사 없음</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="my-border-box">
+                        <h2 class="title">내 계좌 관리</h2>
+                        <div class="form-wrap">
+                            <div class="row">
+                                <p class="tit">은행명</p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="은행명을 입력하세요" aria-label="은행명 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit">계좌번호</p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="계좌번호를 입력하세요" aria-label="계좌번호 입력">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="tit">예금주명</p>
+                                <div class="forms">
+                                    <input type="text" class="form-control" placeholder="예금주명을 입력하세요" aria-label="예금주명 입력">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-border-box">
+                        <h2 class="title">알림 설정</h2>
+                        <div class="alert-setting">
+                            <p class="tit">
+                                <span>맞춤견적</span>
+                                <span aria-hidden="true">SMS</span>
+                                <span aria-hidden="true">이메일</span>
+                            </p>
+                            <ul class="lists">
+                                <li>
+                                    <p>지원한 공유업무 공유 요청</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert01-1" name="alert01">
+                                        <label for="alert01-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert01-2" name="alert01">
+                                        <label for="alert01-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <p>의뢰 요청 업무대행 지원</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert02-1" name="alert02">
+                                        <label for="alert02-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert02-2" name="alert02">
+                                        <label for="alert02-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <p>결제 내역 알림</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert03-1" name="alert03">
+                                        <label for="alert03-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert03-2" name="alert03">
+                                        <label for="alert03-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <p>업무대행 완료 알림</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert04-1" name="alert04">
+                                        <label for="alert04-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert04-2" name="alert04">
+                                        <label for="alert04-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <p>수익 입금 알림</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert05-1" name="alert05">
+                                        <label for="alert05-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert05-2" name="alert05">
+                                        <label for="alert05-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="alert-setting">
+                            <p class="tit">
+                                <span>쿠폰혜택</span>
+                                <span aria-hidden="true">SMS</span>
+                                <span aria-hidden="true">이메일</span>
+                            </p>
+                            <ul class="lists">
+                                <li>
+                                    <p>이벤트/쿠폰 등의 할인 혜택 알림</p>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert06-1" name="alert06">
+                                        <label for="alert06-1"><span class="blind">SMS알림받기</span></label>
+                                    </span>
+                                    <span class="chk-switch">
+                                        <input type="checkbox" id="alert06-2" name="alert06">
+                                        <label for="alert06-2"><span class="blind">이메일알림받기</span></label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-border-point"><span>작성취소</span></button>
+                        <button type="button" class="btn btn-lg btn-point"><span>작성완료</span></button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

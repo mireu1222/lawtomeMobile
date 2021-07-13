@@ -1,49 +1,143 @@
 /* member */
 .member-contents {
-    h2.member-title {
-        margin-bottom:60px;
-        text-align:center;
-        font-size:30px;
-        font-weight:500;
+    padding:0 16px;
+    .login-wrap {
+        margin-top:-30px;
+        .logo {
+            margin-bottom:50px;
+            text-align:center;
+            img {
+                width:110px;
+            }
+        }
+        .login-input {
+            .form-control {
+                margin-top:15px;
+                background:#fff;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+        }
+        .login-bottom {
+            display:flex;
+            align-items:center;
+            margin-top:15px;
+            justify-content:space-between;
+            .find-links {
+                font-size:0;
+                li {
+                    display:inline-block;
+                    vertical-align:middle;
+                    &::after {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:middle;
+                        width:1px;
+                        height:10px;
+                        margin:0 10px;
+                        background:#ddd;
+                    }
+                    &:last-child::after {
+                        display:none;
+                    }
+                    a {
+                        display:inline-block;
+                        vertical-align:middle;
+                        font-size:13px;
+                    }
+                }
+            }
+        }
+        .sns-logins {
+            margin-top:40px;
+            .tit {
+                text-align:center;
+                font-size:15px;
+            }
+            .btns {
+                margin-top:30px;
+                font-size:0;
+                text-align:center;
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin:0 15px;
+                    a {
+                        display:block;
+                        width:50px;
+                        height:50px;
+                        border:1px solid $border;
+                        border-radius:50%;
+                        background-size:20px;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        &.sns01 {
+                            background-image:url('/mobile/images/icon/icon-naver.jpg');
+                        }
+                        &.sns02 {
+                            background-image:url('/mobile/images/icon/icon-kakao.jpg');
+                        }
+                    }
+                }
+            }
+        }
+        .joins {
+            margin-top:35px;
+            padding-top:30px;
+            border-top:1px solid $border;
+            .tit {
+                text-align:center;
+                font-size:15px;
+                line-height:23px;
+            }
+            .btn.full {
+                margin-top:25px;
+            }
+        }
     }
     .sns-join-btns {
+        margin-top:-30px;
         text-align:center;
         .desc {
-            font-size:24px;
+            font-size:16px;
+            font-weight:500;
         }
         .btns {
-            width:445px;
-            margin:40px auto 0;
+            margin-top:30px;
             > li {
-                margin-top:20px;
+                margin-top:10px;
                 .btn-sns {
                     display:block;
-                    height:70px;
+                    height:50px;
                     border-radius:$border-radius;
                     text-align:center;
                     color:#fff;
-                    font-size:20px;
-                    line-height:70px;
+                    font-size:15px;
+                    line-height:50px;
                     font-weight:500;
                     &::before {
                         content:' ';
                         display:inline-block;
                         vertical-align:top;
-                        width:40px;
-                        height:70px;
+                        width:30px;
+                        height:50px;
                         margin-right:10px;
+                        background-size:30px;
+                        background-position:center;
+                        background-repeat:no-repeat;
                     }
                     &.sns01 {
                         background:#3dab49;
                         &::before {
-                            background:url('/images/icon/icon-naver2.png') center no-repeat;
+                            background-image:url('/mobile/images/icon/icon-blog2.png');
                         }
                     }
                     &.sns02 {
                         background:#ffe600;
                         color:#371d1d;
                         &::before {
-                            background:url('/images/icon/icon-kakao2.png') center no-repeat;
+                            background-image:url('/mobile/images/icon/icon-kakao2.png');
                         }
                     }
                 }
@@ -51,19 +145,24 @@
         }
     }
     .member-join-wrap {
-        width:750px;
-        margin:50px auto 0;
-        padding-top:40px;
+        margin:35px -16px 0;
+        padding:35px 16px 0;
         border-top:1px solid $border;
         > .tit {
-            margin-bottom:25px;
-            font-size:24px;
+            font-size:16px;
             font-weight:500;
             text-align:center;
         }
+        > .desc {
+            margin-top:10px;
+            margin-bottom:20px;
+            font-size:14px;
+            color:#666;
+            text-align:center;
+        }
         section {
-            margin-top:50px;
-            padding:30px 25px 40px;
+            margin-top:35px;
+            padding:20px 15px;
             border:1px solid $border;
             border-radius:$border-radius;
             &:first-child {
@@ -73,32 +172,30 @@
         .agree-wraps {
             .chk-wrap.all {
                 display:block;
-                padding-bottom:20px;
+                padding:15px;
                 border-bottom:1px solid $border;
             }
             .terms-lists {
+                padding:5px 0;
                 > li {
-                    margin-top:30px;
-                    &:first-child {
-                        margin-top:20px;
-                    }
                     .titles {
                         display:flex;
                         align-items:center;
-                        .text-basic {
+                        padding:10px 15px;
+                        .link-basic {
                             margin-left:auto;
-                            font-size:18px;
+                            font-size:14px;
                         }
                     }
                     .conts {
                         display:none;
-                        max-height:180px;
+                        max-height:130px;
                         overflow-y:auto;
-                        margin:15px -26px 0;
-                        padding:20px 26px;
+                        padding:16px;
                         background:$disabled;
                         color:$cont;
-                        @include font;
+                        font-size:13px;
+                        line-height:20px;
                     }
                 }
             }
@@ -110,16 +207,25 @@
         }
     }
     .find-cont-wrap {
-        width:500px;
-        margin:0 auto;
+        > .tit {
+            font-size:16px;
+            font-weight:500;
+        }
+        > .desc {
+            margin-top:10px;
+            color:#666;
+            @include font;
+        }
+        .border-box {
+            margin-top:20px;
+        }
         .radio-tabs {
-            margin-bottom:30px;
+            margin-bottom:35px;
             font-size:0;
-            text-align:center;
             li {
                 display:inline-block;
                 vertical-align:top;
-                margin-right:40px;
+                margin-right:35px;
             }
         }
         .find-conts {

@@ -283,6 +283,15 @@ header {
             background:$border;
             z-index:-1;
         }
+        &.size2 {
+            ul.tabs {
+                width:100% !important;
+                li {
+                    width:50%;
+                    margin-left:0;
+                }
+            }
+        }
         ul.tabs {
             padding:0 16px;
             font-size:0;
@@ -301,6 +310,7 @@ header {
                     color:#999;
                     font-size:16px;
                     white-space:nowrap;
+                    text-align:center;
                 }
                 &.active {
                     a {

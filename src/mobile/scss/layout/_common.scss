@@ -11,6 +11,7 @@
     }
 }
 #wrap {
+    position:relative;
     .container {
         overflow:hidden;
         padding-top:130px;
@@ -25,6 +26,38 @@
             padding:20px 15px;
             border:1px solid $border;
             border-radius:4px;
+        }
+        .complete-page {
+            margin-top:-30px;
+            padding:0 16px;
+            text-align:center;
+            .tit {
+                font-size:25px;
+                line-height:30px;
+                &::before {
+                    content:' ';
+                    display:block;
+                    width:85px;
+                    height:85px;
+                    margin:0 auto 40px;
+                    background:url('/mobile/images/icon/icon-complete.png') center no-repeat;
+                    background-size:85px;
+                }
+                em {
+                    font-weight:700;
+                }
+            }
+            .desc {
+                margin-top:20px;
+                font-size:18px;
+                line-height:25px;
+                em {
+                    color:$point;
+                }
+            }
+            .btn.full {
+                margin-top:50px;
+            }
         }
     }
 }

@@ -19,10 +19,18 @@
             @@if(context.city === '09'){<span class="flag flag-gray" data-city="09">경상도</span>}
             @@if(context.city === '10'){<span class="flag flag-gray" data-city="10">강원도</span>}
             @@if(context.city === '11'){<span class="flag flag-gray" data-city="11">제주도</span>}
-            <span class="like-chk-wrap">
-                <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
-                <label for="@@id"><span class="blind">관심 업무</span></label>
-            </span>
+            @@if(context.mywork){
+                <a href="" class="btn-talk"><span class="blind">로투미톡</span><span class="count">99+</span></a>
+            }
+            @@if(context.mywork2){
+                <p class="pp-info">지원자 : <em>11</em>명</p>
+            }
+            @@if(!context.mywork && !context.mywork2){
+                <span class="like-chk-wrap">
+                    <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
+                    <label for="@@id"><span class="blind">관심 업무</span></label>
+                </span>
+            }
         </div>
         <div class="end-alert">
             <p>0월 0일 마감</p>
@@ -41,10 +49,12 @@
             @@if(context.work === '09'){<p class="category" data-work-category="09">[법률문서 번역]</p>}
             @@if(context.work === '10'){<p class="category" data-work-category="10">[기타]</p>}
             <a href="@@page" class="title">@@title</a>
-            <ul class="info-list">
-                <li>위임인 : 최고로 변호사</li>
-                <li>소속사무실 : 법무법인한강시대</li>
-            </ul>
+            @@if(!context.mywork){
+                <ul class="info-list">
+                    <li>위임인 : 최고로 변호사</li>
+                    <li>소속사무실 : 법무법인한강시대</li>
+                </ul>
+            }
         </div>
         <ul class="condition-list">
             <li class="type1">희망비용 : <em>000,000</em>원</li>
@@ -54,6 +64,12 @@
             <p class="tit">업무내용</p>
             <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
         </div>
+        @@if(context.mywork){
+            <a href="/mobile/page/mywork_01_vollist.html" class="btn btn-lg btn-border-border btn-pp"><span>지원자 : <em>11</em>명</span></a>
+        }
+        @@if(context.mywork2){
+            <a href="/mobile/page/mywork_02_apply.html" class="btn btn-lg btn-point mt-25"><span>지원하기</span></a>
+        }
     </div>
 </li>
 <!-- // loop -->

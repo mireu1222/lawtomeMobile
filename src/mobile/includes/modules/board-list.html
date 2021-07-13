@@ -1,27 +1,56 @@
-<div class="board-list-wrap">
-    @@if(!context.alert){
+<div class="board-list-wrap"@@if(context.qna){ data-toggle="allChk"}>
+    @@if(context.qna){
+        <div class="board-head">
+            <span class="chk-wrap">
+                <input type="checkbox" id="chk-all" class="chk-all" name="lists">
+                <label for="chk-all">전체선택</label>
+            </span>
+            <div class="btns">
+                <a href="" class="btn btn-sm btn-gray"><span>선택삭제</span></a>
+                <a href="/mobile/page/mypage_03_write.html" class="btn btn-sm btn-point"><span>1:1 문의하기</span></a>
+            </div>
+        </div>
+    }
     <ul class="lists">
+        @@if(!context.qna){
         <!-- loop : 공지글+새글 case -->
         <li>
             <a href="/mobile/page/@@page.html" class="link notice new">
                 <span class="tit">게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
+                <ul class="infos">
+                    @@if(context.qna){
+                        <li><span class="blind">작성자</span>운영자</li>
+                    }
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
             </a>
         </li>
         <!-- // loop : 공지글+새글 case -->
+        }
         <!-- loop : 공지글 case -->
         <li>
             <a href="/mobile/page/@@page.html" class="link notice">
                 <span class="tit">게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
+                <ul class="infos">
+                    @@if(context.qna){
+                        <li><span class="blind">작성자</span>운영자</li>
+                    }
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
             </a>
         </li>
         <!-- // loop : 공지글 case -->
+        @@if(!context.qna){
         <!-- loop : 새글 case -->
         <li>
             <a href="/mobile/page/@@page.html" class="link new">
                 <span class="tit">게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
+                <ul class="infos">
+                    @@if(context.qna){
+                        <li><span class="blind">작성자</span>운영자</li>
+                    }
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
             </a>
         </li>
         <!-- // loop : 새글 case -->
@@ -29,33 +58,63 @@
         <li>
             <a href="/mobile/page/@@page.html" class="link">
                 <span class="tit">게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
+                <ul class="infos">
+                    @@if(context.qna){
+                        <li><span class="blind">작성자</span>운영자</li>
+                    }
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
             </a>
         </li>
         <!-- // loop -->
+        }
+        @@if(context.qna){
+        <!-- loop -->
+        <li class="my">
+            <span class="chk-wrap">
+                <input type="checkbox" id="list01" name="lists">
+                <label for="list01"><span class="blind">게시글 선택</span></label>
+            </span>
+            <a href="/mobile/page/@@page.html" class="link">
+                <span class="tit">질문 제목이 들어감</span>
+                <ul class="infos">
+                    <li><span class="blind">작성자</span>홍길동</li>
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
+            </a>
+        </li>
+        <!-- // loop -->  
+        <!-- loop : 답변 case -->
+        <li class="reply">
+            <a href="/mobile/page/@@page2.html" class="link">
+                <span class="tit">답변 제목이 들어감</span>
+                <ul class="infos">
+                    <li><span class="blind">작성자</span>운영자</li>
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
+            </a>
+        </li>
+        <!-- // loop : 답변 case -->   
+        <!-- loop -->
+        <li class="my">
+            <span class="chk-wrap">
+                <input type="checkbox" id="list02" name="lists">
+                <label for="list02"><span class="blind">게시글 선택</span></label>
+            </span>
+            <a href="/mobile/page/@@page.html" class="link">
+                <span class="tit">질문 제목이 들어감</span>
+                <ul class="infos">
+                    <li><span class="blind">작성자</span>홍길동</li>
+                    <li><span class="blind">작성일</span>2021.01.01</li>
+                </ul>
+            </a>
+        </li>
+        <!-- // loop -->  
+        }
         <!-- nodata -->
         <li>
             <p class="nodata">게시글이 없습니다.</p>
         </li>
         <!-- // nodata -->
     </ul>
-    }
-    @@if(context.alert){
-    <ul class="lists">
-        <li>
-            <a href="/mobile/page/@@page.html" class="link alert">
-                <span class="state unread">미열람</span>
-                <span class="tit">게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
-            </a>
-        </li>
-        <li>
-            <a href="/mobile/page/@@page.html" class="link alert">
-                <span class="state reading">열람</span>
-                <span class="tit">게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감 게시글 제목이 들어감</span>
-                <span class="date">2021-01-01</span>
-            </a>
-        </li>
-    </ul>
-    }
 </div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            member : '회원가입',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <div class="complete-page">
+                <h3 class="tit">로투미 회원가입이<br><em>완료</em>되었습니다!</h3>
+                <p class="desc">회원님의 아이디는 <em>gildong2</em>입니다.<br>이제 로투미의 다양한 서비스를 누리세요!</p>
+                <a href="/mobile/page/login.html" class="btn btn-lg btn-point full"><span>로그인 하기</span></a>
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

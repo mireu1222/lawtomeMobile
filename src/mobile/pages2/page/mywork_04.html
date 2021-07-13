@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mywork : '04',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

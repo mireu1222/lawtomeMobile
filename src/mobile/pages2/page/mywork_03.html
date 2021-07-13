@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mywork : '03',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="worklist-wrap">
+                    <ul class="lists">
+                        @@loop('./modules/work-loop.html', [
+                            {
+                                new : true,
+                                city : '01',
+                                id : 'work01',
+                                checked : true,
+                                work : '01',
+                                page : '#n',
+                                title : '대구지방법원 안동지원 영주사법원',
+                            },
+                            {
+                                new : true,
+                                city : '02',
+                                id : 'work02',
+                                checked : true,
+                                work : '02',
+                                page : '#n',
+                                title : '대구지방법원 안동지원 영주사법원',
+                            },
+                            {
+                                new : true,
+                                city : '03',
+                                id : 'work03',
+                                checked : true,
+                                work : '03',
+                                page : '#n',
+                                title : '대구지방법원 안동지원 영주사법원',
+                            },
+                        ])
+                    </ul>
+                </div>
+                <button type="button" class="btn-more"><span>더보기</span></button>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

@@ -5,8 +5,9 @@
     border:1px solid transparent;
     border-radius:$border-radius;
     background:transparent;
-    font-size:16px;
-    line-height:38px;
+    font-size:14px;
+    line-height:48px;
+    font-weight:500;
     vertical-align:top;
     cursor:pointer;
     transition:$btn-transition;
@@ -57,11 +58,10 @@
             padding:0 $pd;
             font-size:$fontsize;
             line-height:$lineheight;
-            @if $size == 'lg' {
-                font-weight:500;
-            } @else if $size == 'md' {
+            @if $size == 'md' {
                 min-width:120px;
-                font-weight:500;
+            } @else if $size == 'sm' {
+                font-weight:400;
             }
             &.rounded {
                 border-radius:($lineheight / 2 + 1);
@@ -126,23 +126,24 @@
 .btn-talk {
     position:relative;
     display:block;
-    width:64px;
-    height:58px;
-    padding-top:14px;
-    padding-right:14px;
-    background:url('/images/icon/icon-talk.png') 0 bottom no-repeat;
+    width:37px;
+    height:33px;
+    padding-top:8px;
+    padding-right:7px;
+    background:url('/mobile/images/icon/icon-talk.png') 0 bottom no-repeat;
+    background-size:30px;
     .count {
         position:absolute;
         top:0;
         right:0;
-        height:25px;
-        min-width:25px;
-        padding:0 5px;
-        border-radius:13px;
+        min-width:16px;
+        height:16px;
+        padding:0 6px;
+        border-radius:8px;
         background:$point;
         color:#fff;
-        font-size:16px;
-        line-height:24px;
+        font-size:12px;
+        line-height:16px;
         font-weight:500;
         text-align:center;
     }

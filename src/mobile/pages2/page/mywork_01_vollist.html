@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mywork : '01',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="my-work-wrap">
+                    <div class="head">
+                        <p class="category">[복대리]</p>
+                        <p class="title">대구지방법원 안동지원 영주사법원</p>
+                    </div>
+                    <ul class="condition-list">
+                        <li class="type1">희망비용 : <em>000,000</em>원</li>
+                        <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
+                    </ul>
+                    <div class="more">
+                        <p class="tit">업무내용</p>
+                        <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
+                    </div>
+                </div>
+                <div class="tbl-wrap">
+                    <table class="table col-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">아이디</th>
+                                <th scope="col">회원명</th>
+                                <th scope="col">제시금액</th>
+                                <th scope="col">지원일시</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">의뢰</th>
+                                <th scope="col">가우로톡</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td>지원중</td>
+                                <td><a href="/mobile/page/mywork_01_order.html" class="btn btn-sm btn-point"><span>의뢰하기</span></a></td>
+                                <td><a href="" class="btn-talk"><span class="blind">로우미톡</span><span class="count">2</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td class="text-gray">지원취소</td>
+                                <td></td>
+                                <td><a href="" class="btn-talk"><span class="blind">로우미톡</span><span class="count">99</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td class="text-point">확정</td>
+                                <td><a href="" class="btn btn-sm btn-gray"><span>취소</span></a></td>
+                                <td><a href="" class="btn-talk"><span class="blind">로우미톡</span><span class="count">99+</span></a></td>
+                            </tr>
+                            <!-- nodata -->
+                            <tr>
+                                <td colspan="8">
+                                    <p class="nodata">지원자가 없습니다.</p>
+                                </td>
+                            </tr>
+                            <!-- // nodata -->
+                        </tbody>
+                    </table>
+                </div>
+                @@include('./modules/pagination.html')
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

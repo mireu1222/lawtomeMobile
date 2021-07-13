@@ -3,6 +3,7 @@ $(function () {
     targetToggle();
     $(this).find('.datepicker').datepicker();
     classToggle();
+    allChecker();
 });
 
 $(window).on('load', function(){
@@ -258,4 +259,42 @@ function accordion() {
 function popupOpen(url, name) {
     var options;
     window.open(url, name, options);
+}
+
+// checkbox all check
+function allChecker() {
+    var obj = '[data-toggle="allChk"]',
+        $obj = $(obj);
+
+    if ($obj.length <= 0) return;
+    $obj.each(function(){
+        var $input = $(this).find('.chk-all'),
+            name = $input.attr('name');
+
+        $input.on('change', function(){
+            var $name = $(this).attr('name'),
+                $wrapper = $(this).parents(obj),
+                $childs = $wrapper.find('input[name='+ $name +']');
+            
+            if ($(this).prop("checked")) {
+                $childs.prop("checked", true);
+            } else {
+                $childs.prop("checked", false);
+            }
+        });
+        
+        $('input[name=' + name + ']').each(function () {
+            var $this = $(this);
+    
+            $this.on('change', function () {
+                var total = $('input[name=' + name + ']').length;
+                var chked = $('input[name=' + name + ']:checked').not($input).length + 1;
+                if (chked == total) {
+                    $input.prop("checked", true);
+                } else {
+                    $input.prop("checked", false);
+                }
+            });
+        });
+    });
 }

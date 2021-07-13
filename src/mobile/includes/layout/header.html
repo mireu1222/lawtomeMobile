@@ -19,13 +19,17 @@
                     @@if(context.cate05){<span>지원센터</span>}
                     @@if(context.cate06){<span>커뮤니티</span>}
                     @@if(context.cate07){<span>회사소개</span>}
+                    @@if(context.member){<span>@@member</span>}
+                    @@if(context.find){<span>로그인</span>}
+                    @@if(context.mywork){<span>나의 업무</span>}
+                    @@if(context.mypage){<span>마이페이지</span>}
                 </h1>
                 <a href="" class="btn-back"><span class="blind">이전 페이지로</span></a>
             }
             <button type="button" class="btn-menu"><span class="bar"></span><span class="blind">전체메뉴 보기</span></button>
         </div>
-        @@if(!context.main){
-            <nav class="depth2-tabs">
+        @@if(!context.main && !context.member){
+            <nav class="depth2-tabs@@if(context.find){ size2}">
                 @@if(context.cate01){
                     <ul class="tabs">
                         <li@@if(context.cate01 === '01'){ class="active"}><a href="/mobile/page/sub_01_01.html">업무무료등록</a></li>
@@ -90,18 +94,46 @@
                         <li@@if(context.cate07 === '06'){ class="active"}><a href="/mobile/page/sub_07_06.html">찾아오시는 길</a></li>
                     </ul>
                 }
+                @@if(context.find){
+                    <ul class="tabs">
+                        <li@@if(context.find === 'id'){ class="active"}><a href="/mobile/page/find_id.html">아이디 찾기</a></li>
+                        <li@@if(context.find === 'pw'){ class="active"}><a href="/mobile/page/find_pw.html">비밀번호 찾기</a></li>
+                    </ul>
+                }
+                @@if(context.mywork){
+                    <ul class="tabs">
+                        <li@@if(context.mywork === '01'){ class="active"}><a href="/mobile/page/mywork_01.html">공유한 공유업무</a></li>
+                        <li@@if(context.mywork === '02'){ class="active"}><a href="/mobile/page/mywork_02.html">공유 받은 공유업무</a></li>
+                        <li@@if(context.mywork === '03'){ class="active"}><a href="/mobile/page/mywork_03.html">찜한 공유업무</a></li>
+                        <li@@if(context.mywork === '04'){ class="active"}><a href="/mobile/page/mywork_04.html">공유업무 정산</a></li>
+                    </ul>
+                }
+                @@if(context.mypage){
+                    <ul class="tabs">
+                        <li@@if(context.mypage === '01'){ class="active"}><a href="/mobile/page/mypage_01.html">나의 정보/설정</a></li>
+                        <li@@if(context.mypage === '02'){ class="active"}><a href="/mobile/page/mypage_02.html">프로필 관리</a></li>
+                        <li@@if(context.mypage === '03'){ class="active"}><a href="/mobile/page/mypage_03.html">나의 문의내역</a></li>
+                        <li@@if(context.mypage === '04'){ class="active"}><a href="/mobile/page/mypage_04.html">나의 결제내역</a></li>
+                        <li@@if(context.mypage === '05'){ class="active"}><a href="/mobile/page/mypage_05_01.html">보유캐시/충전</a></li>
+                        <li@@if(context.mypage === '06'){ class="active"}><a href="/mobile/page/mypage_06.html">적립금 내역</a></li>
+                        <li@@if(context.mypage === '07'){ class="active"}><a href="/mobile/page/mypage_07.html">쿠폰 관리</a></li>
+                        <li@@if(context.mypage === '08'){ class="active"}><a href="/mobile/page/mypage_08_01.html">광고신청/관리</a></li>
+                        <li@@if(context.mypage === '09'){ class="active"}><a href="/mobile/page/mypage_09.html">수익관리</a></li>
+                        <li@@if(context.mypage === '10'){ class="active"}><a href="/mobile/page/mypage_10.html">비밀번호 변경</a></li>
+                    </ul>
+                }
             </nav>
         }
         <div class="menu-all">
             <ul class="icon-menus">
                 <!-- 로그인 전 -->
-                <li><a href="" class="icon01">로그인</a></li>
-                <li><a href="" class="icon02">회원가입</a></li>
+                <li><a href="/mobile/page/login.html" class="icon01">로그인</a></li>
+                <li><a href="/mobile/page/join.html" class="icon02">회원가입</a></li>
                 <!-- // 로그인 전 -->
                 <!-- 로그인 후 -->
-                <li><a href="" class="icon03">마이페이지</a></li>
-                <li><a href="" class="icon04">나의업무</a></li>
-                <li><a href="" class="icon05">로그아웃</a></li>
+                <li><a href="/mobile/page/mypage_01.html" class="icon03">마이페이지</a></li>
+                <li><a href="/mobile/page/mywork_01.html" class="icon04">나의 업무</a></li>
+                <li><a href="/mobile/page/logout.html" class="icon05">로그아웃</a></li>
                 <!-- // 로그인 후 -->
             </ul>
             <nav id="gnb">

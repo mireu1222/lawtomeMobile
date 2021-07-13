@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mypage : '02',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="my-border-box">
+                    <h2 class="title">자기소개</h2>
+                    <div class="form-wrap">
+                        <div class="row">
+                            <p class="tit">제목</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" placeholder="제목을 입력하세요" aria-label="제목 입력">
+                            </div>
+                            <div class="forms">
+                                <textarea class="form-control" placeholder="내용을 입력하세요" aria-label="내용 입력"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-border-point"><span>작성취소</span></button>
+                    <button type="button" class="btn btn-lg btn-point"><span>작성완료</span></button>
+                </div>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>
