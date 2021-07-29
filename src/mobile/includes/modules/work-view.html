@@ -1,10 +1,6 @@
 <div class="tbl-wrap">
-    <table class="table work-table">
+    <table class="table row-table work">
         <caption>업무내용</caption>
-        <colgroup>
-            <col style="width:263px">
-            <col>
-        </colgroup>
         @@if(context.sub0201){
             <tbody>
                 <tr>
@@ -455,7 +451,7 @@
     </table>
 </div>
 <div class="btn-group">
-    <a href="@@prev" class="btn btn-lg btn-border-point"><span>취소하기</span></a>
+    <a href="/mobile/page/@@prev.html" class="btn btn-lg btn-border-point"><span>취소하기</span></a>
     <!-- <a href="#n" class="btn btn-lg btn-point"><span>지원하기</span></a> -->
-    <button type="button" class="btn btn-lg btn-point" data-toggle="modal" data-target="#modal-apply"><span>지원하기</span></button>
+    <a href="/mobile/page/@@prev_apply.html" class="btn btn-lg btn-point"><span>지원하기</span></a>
 </div>

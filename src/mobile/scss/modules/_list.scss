@@ -301,11 +301,13 @@
             word-break:keep-all;
         }
         .spot-info {
-            display:flex;
-            align-items:flex-start;
             margin-top:15px;
             margin-bottom:25px;
-            @include font;
+            dl {
+                display:flex;
+                align-items:flex-start;
+                @include font;
+            }
             dt {
                 font-weight:500;
                 white-space:nowrap;

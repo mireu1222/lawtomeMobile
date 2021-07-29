@@ -151,7 +151,7 @@ function categoryToggle() {
         }
     });
 
-    $('[data-toggle="category-collapse"] input#cate01').click();
+    $('[data-toggle="category-collapse"] input#cate05').click();
 }
 
 // rdo select writable 
@@ -161,8 +161,6 @@ function writableGroup() {
             wrap = self.parents('[data-toggle="writable"]'),
             allInput = wrap.find('[data-writable-target]'),
             myInput = self.closest('.rdo-wrap').siblings('[data-writable-target]');
-
-            console.log(allInput);
 
         if( self.is(':checked') ){
             // 전체 disabled

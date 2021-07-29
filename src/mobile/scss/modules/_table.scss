@@ -71,16 +71,46 @@
                         border-bottom:1px solid $border;
                         font-size:14px;
                         line-height:22px;
-                        vertical-align:top;
+                        vertical-align:middle;
                         text-align:left;
                     }
                     th {
                         font-size:14px;
                         font-weight:500;
                         background:#f5f5f5;
+                        white-space:nowrap;
                     }
                     td {
                         color:#666;
+                        word-break:keep-all;
+                    }
+                }
+            }
+            &.work {
+                tbody {
+                    th {
+                        background:#e2ecf4;
+                    }
+                    td {
+                        background:#fafafa;
+                        .spc-txt {
+                            font-size:0;
+                            span {
+                                display:inline-block;
+                                vertical-align:top;
+                                margin-right:15px;
+                                color:inherit;
+                                font-size:14px;
+                                line-height:22px;
+                                &:last-child {
+                                    margin-right:0;
+                                }
+                            }
+                            .wt {
+                                color:#333;
+                                font-weight:500;
+                            }
+                        }
                     }
                 }
             }

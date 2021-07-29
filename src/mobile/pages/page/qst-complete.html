@@ -11,15 +11,17 @@
     <div id="wrap">
         <!-- header -->
         @@include('./layout/header.html', {
-            cate05 : '05'
+            member : '1:1문의 완료',
         })
         <!-- // header -->
 
         <!-- container -->
         <div id="container" class="container">
-            <section class="sect">
-                @@include('./modules/question.html')
-            </section>
+            <div class="complete-page">
+                <h3 class="tit">문의가 성공적으로<br><em>접수</em>되었습니다!</h3>
+                <p class="desc">고객님의 문의 접수가<br>성공적으로 완료되었습니다.<br>빠른 답변 드리겠습니다.</p>
+                <a href="/mobile/" class="btn btn-lg btn-point full"><span>홈으로 가기</span></a>
+            </div>
         </div>
         <!-- // container -->
 

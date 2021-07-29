@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            member : '회원가입',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <div class="member-contents">
+                <div class="sns-join-btns">
+                    <p class="desc">SNS 계정으로 간편하게 회원가입 하세요</p>
+                    <ul class="btns">
+                        <li><a href="" class="btn-sns sns01"><span>네이버 간편 가입하기</span></a></li>
+                        <li><a href="" class="btn-sns sns02"><span>카카오톡 간편 가입하기</span></a></li>
+                        <li><a href="/mobile/page/join_input.html" class="btn-sns join"><span>본인인증 회원가입</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

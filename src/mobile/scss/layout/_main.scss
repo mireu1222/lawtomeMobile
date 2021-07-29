@@ -223,6 +223,9 @@
     // section03
     section.sect03 {
         padding:0 16px;
+        .sect-title {
+            padding:0;
+        }
         .border-tabs {
             margin:0 -16px 30px;
         }

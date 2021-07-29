@@ -11,14 +11,17 @@
     <div id="wrap">
         <!-- header -->
         @@include('./layout/header.html', {
-            cate05 : '05'
+            cate02 : '01'
         })
         <!-- // header -->
 
         <!-- container -->
         <div id="container" class="container">
             <section class="sect">
-                @@include('./modules/question.html')
+                @@include('./modules/work-view.html', {
+                    sub0201 : true,
+                    prev : 'sub_02_01'
+                })
             </section>
         </div>
         <!-- // container -->

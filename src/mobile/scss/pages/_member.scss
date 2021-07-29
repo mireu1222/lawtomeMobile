@@ -140,14 +140,19 @@
                             background-image:url('/mobile/images/icon/icon-kakao2.png');
                         }
                     }
+                    &.join {
+                        background:$point;
+                        color:#fff;
+                        &::before {
+                            display:none;
+                        }
+                    }
                 }
             }
         }
     }
     .member-join-wrap {
-        margin:35px -16px 0;
-        padding:35px 16px 0;
-        border-top:1px solid $border;
+        margin-top:-30px;
         > .tit {
             font-size:16px;
             font-weight:500;

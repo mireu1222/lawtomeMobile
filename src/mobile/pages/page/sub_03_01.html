@@ -36,6 +36,9 @@
             </div>
             <!-- // 지역 -->
             <section class="sect">
+                @@include('./modules/list-filter.html', {
+                    type2 : true
+                })
                 <div class="lawyerlist-wrap">
                     <ul class="lists">
                         @@loop('./modules/lawyer-loop.html', [

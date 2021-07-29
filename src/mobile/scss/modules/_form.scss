@@ -25,6 +25,7 @@
             margin-top:0;
         }
         .tit {
+            position:relative;
             margin-bottom:10px;
             font-size:13px;
             font-weight:500;
@@ -34,6 +35,12 @@
                     color:$red;
                     margin-left:2px;
                 }
+            }
+            .btn {
+                position:absolute;
+                bottom:0;
+                right:0;
+                font-size:13px;
             }
         }
         div.tit {
@@ -93,7 +100,8 @@
             }
             &.btn-type {
                 position:relative;
-                .form-control {
+                .form-control,
+                .box {
                     padding-right:110px;
                 }
                 .btn {
@@ -103,7 +111,7 @@
                     width:90px;
                     height:40px;
                     margin-top:-20px;
-                    line-height:32px;
+                    line-height:38px;
                 }
             }
             &.price-type {
