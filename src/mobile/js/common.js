@@ -4,6 +4,7 @@ $(function () {
     $(this).find('.datepicker').datepicker();
     classToggle();
     allChecker();
+    modalToggle();
 });
 
 $(window).on('load', function(){
@@ -294,5 +295,40 @@ function allChecker() {
                 }
             });
         });
+    });
+}
+
+// display toggle
+function displayToggle() {
+    $('[data-toggle="display"] .rdo-wrap').click(function(){
+        var id = $(this).find('input').attr('id');
+
+        $('[data-display-id]').hide();
+        $('[data-display-id="'+id+'"]').show();
+    });
+}
+
+// modal
+function modalToggle() {
+    var modalToggle = $('[data-toggle="modal"]'),
+        modalClose = $('[data-toggle="modal-close"]');
+
+    if (modalToggle.length <= 0) return;
+
+    modalToggle.on('click', function(){
+        var modalTarget = $(this).data('target') || $(this).attr('href');
+            modal = $(modalTarget);
+
+        modal.removeAttr('aria-hidden');
+        modal.attr('aria-modal', true);
+        modal.show();
+    });
+
+    modalClose.on('click', function(){
+        var modal = $(this).parents('.modal');
+
+        modal.hide();
+        modal.removeAttr('aria-modal');
+        modal.attr('aria-hidden', true);
     });
 }

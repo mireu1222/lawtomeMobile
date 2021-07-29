@@ -18,22 +18,7 @@
         <!-- container -->
         <div id="container" class="container">
             <!-- 지역 -->
-            <div class="button-tabs" data-toggle="class-toggle">
-                <ul class="tabs">
-                    <li class="active"><a href="#n">전체</a></li>
-                    <li><a href="#n">서울</a></li>
-                    <li><a href="#n">경기</a></li>
-                    <li><a href="#n">인천</a></li>
-                    <li><a href="#n">광주</a></li>
-                    <li><a href="#n">부산</a></li>
-                    <li><a href="#n">대전</a></li>
-                    <li><a href="#n">충청도</a></li>
-                    <li><a href="#n">전라도</a></li>
-                    <li><a href="#n">경상도</a></li>
-                    <li><a href="#n">강원도</a></li>
-                    <li><a href="#n">제주도</a></li>
-                </ul>
-            </div>
+            @@include('./modules/region-tabs.html')
             <!-- // 지역 -->
             <section class="sect">
                 @@include('./modules/list-filter.html', {

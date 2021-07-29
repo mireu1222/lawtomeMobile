@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mywork : '05',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="my-border-box">
+                    <h2 class="title">나의 현재 상태 표시</h2>
+                    <ul class="slt-lists">
+                        <li>
+                            <span class="rdo-wrap">
+                                <input type="radio" id="state01" name="mystate">
+                                <label for="state01">업무공유 가능</label>
+                            </span>
+                            <div class="state-options">
+                                <ul>
+                                    <li>
+                                        <span class="chk-wrap">
+                                            <input type="checkbox" id="option01" name="options">
+                                            <label for="option01">즉시 투입 가능</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="chk-wrap">
+                                            <input type="checkbox" id="option02" name="options">
+                                            <label for="option02">협의 후 가능</label>
+                                        </span>
+                                    </li>
+                                    <li class="mix">
+                                        <span class="chk-wrap">
+                                            <input type="checkbox" id="option03" name="options">
+                                            <label for="option03">입력</label>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="직접입력" aria-label="업무대행 가능 날짜 직접 입력">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rdo-wrap">
+                                <input type="radio" id="state02" name="mystate">
+                                <label for="state02">휴가 중</label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rdo-wrap">
+                                <input type="radio" id="state03" name="mystate">
+                                <label for="state03">업무공유 의사 없음</label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-border-point"><span>취소</span></button>
+                    <button type="button" class="btn btn-lg btn-point"><span>저장</span></button>
+                </div>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

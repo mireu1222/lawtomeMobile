@@ -24,7 +24,7 @@
                     <form action="">
                         <section>
                             <div class="form-wrap">
-                                <p class="essen-txt" aria-hidden="true">필수 입력 정보입니다.</p>
+                                <p class="essen-txt mb-30" aria-hidden="true">필수 입력 정보입니다.</p>
                                 <div class="row" data-toggle="writable">
                                     <div class="col">
                                         <p class="tit essen">소속<span class="blind">필수입력</span></p>
@@ -97,7 +97,7 @@
                                                 size : 'size2',
                                                 chk : 'area',
                                                 slt : [
-                                                    '서울', '경기', '인천', '대전', '대구', '부산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도'
+                                                    '서울', '경기', '인천', '대전', '대구', '부산', '울산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도'
                                                 ]
                                             })
                                         </div>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="tit">전문분야<a href="" class="btn btn-sm btn-point"><span>전문분야 선택</span></a></p>
+                                        <p class="tit">전문분야<button type="button" class="btn btn-sm btn-point" data-toggle="modal" data-target="#modal-typeselect"><span>전문분야 선택</span></button></p>
                                         <div class="forms">
                                             <div class="box">민사법, 부동산, 건설</div>
                                         </div>
@@ -202,6 +202,11 @@
         <!-- footer -->
         @@include('./layout/footer.html')
         <!-- // footer -->
+
+        <!-- modal -->
+        @@include('./modules/modal.html', {
+            id : 'modal-typeselect'
+        })
     </div>
     <!-- // body -->
 
