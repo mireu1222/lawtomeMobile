@@ -65,7 +65,11 @@
             <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
         </div>
         @@if(context.mywork){
-            <a href="/mobile/page/mywork_01_vollist.html" class="btn btn-lg btn-border-border btn-pp"><span>지원자 : <em>11</em>명</span></a>
+            <div class="btn-wrap">
+                <a href="/mobile/page/mywork_01_vollist.html" class="btn btn-lg btn-border-border btn-pp"><span>지원자 : <em>11</em>명</span></a>
+                <a href="/mobile/page/mywork_01_order.html" class="btn btn-lg btn-point"><span>결제</span></a>
+                <a href="/mobile/page/mywork_01_edit.html" class="btn btn-lg btn-gray"><span>관리</span></a>
+            </div>
         }
         @@if(context.mywork2){
             <a href="/mobile/page/mywork_02_apply.html" class="btn btn-lg btn-point mt-25"><span>지원하기</span></a>

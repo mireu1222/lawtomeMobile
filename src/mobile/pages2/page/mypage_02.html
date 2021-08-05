@@ -30,6 +30,14 @@
                                 <textarea class="form-control" placeholder="내용을 입력하세요" aria-label="내용 입력"></textarea>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="tit">전문분야<button type="button" class="btn btn-sm btn-point" data-toggle="modal" data-target="#modal-typeselect"><span>전문분야 선택</span></button></p>
+                                <div class="forms">
+                                    <div class="box">민사법, 부동산, 건설</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="btn-group">
@@ -43,6 +51,10 @@
         <!-- footer -->
         @@include('./layout/footer.html')
         <!-- // footer -->
+
+        @@include('./modules/modal.html', {
+            id : 'modal-typeselect'
+        })
     </div>
     <!-- // body -->
 </body>

@@ -19,38 +19,51 @@
         <div id="container" class="container">
             <div class="button-tabs">
                 <ul class="tabs">
-                    <li class="active"><a href="/mobile/page/mypage_08_01.html">광고신청</a></li>
-                    <li><a href="/mobile/page/mypage_08_02.html">광고 집행 내역</a></li>
+                    <li class="active"><a href="/mobile/page/mypage_08_01.html">받은 위임장</a></li>
+                    <li><a href="/mobile/page/mypage_08_02.html">보낸 위임장</a></li>
+                    <li><a href="/mobile/page/mypage_08_03.html">위임장 관리</a></li>
                 </ul>
             </div>
             <section class="sect">
-                <div class="my-border-box">
-                    <h2 class="title">상위 노출</h2>
-                    <div class="dl-input-list">
-                        <dl>
-                            <dt>1개월 광고 비용</dt>
-                            <dd><em>99,000</em>원</dd>
-                        </dl>
-                        <dl>
-                            <dt>현재 나의 적립금</dt>
-                            <dd><em>50,000</em>원</dd>
-                        </dl>
-                        <dl class="total">
-                            <dt>광고 예상 금액</dt>
-                            <dd><em>49,000</em>원</dd>
-                        </dl>
+                <div class="search-filter">
+                    <div class="row">
+                        <input type="text" class="form-control datepicker" placeholder="날짜 선택" aria-label="검색 시작 날짜 입력">
+                        <span class="bar">~</span>
+                        <input type="text" class="form-control datepicker" placeholder="날짜 선택" aria-label="검색 종료 날짜 입력">
                     </div>
-                    <div class="adv-info">
-                        <p class="tit">첫 페이지 상위 노출</p>
-                        <p class="desc">1페이지 이내 상단 노출을 기대할 수 있습니다.<br>저렴한 비용으로 꾸준히 상위 노출을 원하시는 분들께 추천드립니다.</p>
-                        <ul class="bullet-list dot-type">
-                            <li>적용플랫폼 : <span>PC/Mobile</span></li>
-                            <li>신청가능 개수 : <span>아이디당 1개</span></li>
-                        </ul>
-                        <p class="alert">* 노출위치 : 1페이지 이내 상단 노출을 기대할 수 있습니다.</p>
-                        <a href="" class="btn btn-md btn-point full mt-30"><span>상위노출 광고 신청하기</span></a>
+                    <div class="row">
+                        <input type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="검색어 입력">
                     </div>
+                    <button type="button" class="btn btn-lg btn-point"><span>검색</span></button>
                 </div>
+                <div class="tbl-wrap">
+                    <table class="table col-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">발행인</th>
+                                <th scope="col">발행일</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td>수원지방법원 출석</td>
+                                <td>김최고변호사</td>
+                                <td>2021.00.00 00:00</td>
+                                <td><a href="" class="link-point">보기</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @@include('./modules/pagination.html')
                 <div class="mypage-notice">
                     <p class="tit">꼭 확인해 주세요!</p>
                     <ul class="bullet-list dot-type">

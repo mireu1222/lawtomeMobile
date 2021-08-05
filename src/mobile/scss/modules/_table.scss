@@ -1,4 +1,9 @@
 /* table */
+.tbl-title {
+    margin-bottom:15px;
+    font-size:18px;
+    font-weight:500;
+}
 .tbl-wrap {
     overflow-x:scroll;
     -webkit-overflow-scrolling:touch;
@@ -128,6 +133,20 @@
             background-size:12px;
             font-size:inherit;
             line-height:inherit;
+        }
+        .input-flex {
+            display:flex;
+            .form-control {
+                width:100px;
+                height:40px;
+                min-height:40px;
+                margin-right:5px;
+                padding:5px 10px;
+            }
+            .btn {
+                height:40px;
+                line-height:38px;
+            }
         }
     }
 }

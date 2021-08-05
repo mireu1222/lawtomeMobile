@@ -65,6 +65,32 @@
                     <div class="my-border-box">
                         <h2 class="title">기본정보</h2>
                         <div class="form-wrap">
+                            <div class="row" data-toggle="writable">
+                                <div class="col">
+                                    <p class="tit essen">소속<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        <span class="rdo-wrap">
+                                            <input type="radio" id="belong01" name="belongs" checked>
+                                            <label for="belong01">개인변호사</label>
+                                        </span>
+                                    </div>
+                                    <div class="forms">
+                                        <span class="rdo-wrap">
+                                            <input type="radio" id="belong02" name="belongs">
+                                            <label for="belong02">법률사무소</label>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="법률사무소를 입력하세요" aria-label="법률사무소 입력" data-writable-target="input" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit essen">변호사등록번호<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        <input type="text" class="form-control" placeholder="변호사등록번호를 입력하세요" aria-label="변호사등록번호 입력">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <p class="tit">휴대폰번호</p>
                                 <div class="forms btn-type">
@@ -96,6 +122,37 @@
                                 <div class="forms">
                                     <input type="text" class="form-control" value="010-1234-5678" placeholder="지정휴대폰번호를 입력하세요" aria-label="연락 가능한 지정휴대폰번호 입력">
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">비밀번호 변경</p>
+                                    <div class="forms password-type">
+                                        <input type="password" class="form-control" placeholder="비밀번호(6~16자의 영문, 숫자, 특수기호)" aria-label="비밀번호(6~16자의 영문, 숫자, 특수기호 포함) 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">비밀번호 확인</p>
+                                    <div class="forms password-type">
+                                        <input type="password" class="form-control" placeholder="비밀번호를 다시 한번 입력하세요" aria-label="비밀번호 확인 재입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit essen">업무가능지역<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        @@include('./modules/slt-list.html', {
+                                            size : 'size2',
+                                            chk : 'area',
+                                            slt : [
+                                                '서울', '경기', '인천', '대전', '대구', '부산', '울산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도'
+                                            ]
+                                        })
+                                    </div>
+                                </div>
+                                <p class="alert-txt">업무가능지역을 하나 이상 선택해 주세요!</p>
                             </div>
                         </div>
                     </div>
@@ -267,7 +324,16 @@
         <!-- footer -->
         @@include('./layout/footer.html')
         <!-- // footer -->
+
+        @@include('./modules/modal.html', {
+            id : 'modal-typeselect'
+        })
     </div>
     <!-- // body -->
+    <script>
+        $(function(){
+            writableGroup();
+        });
+    </script>
 </body>
 </html>

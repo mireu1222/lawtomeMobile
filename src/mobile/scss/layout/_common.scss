@@ -31,6 +31,10 @@
             margin-top:-30px;
             padding:0 16px;
             text-align:center;
+            &.type2 {
+                margin-top:0;
+                padding-top:10px;
+            }
             .tit {
                 font-size:25px;
                 line-height:30px;
