@@ -58,15 +58,15 @@
                 <h2 class="sect-title"><em>분야별</em>로 공유업무 찾기</h2>
                 <div class="category-lists">
                     <ul>
-                        <li><a href="/mobile/page/sub_02_05.html" class="cate5">서면작성</a></li>
-                        <li><a href="/mobile/page/sub_02_06.html" class="cate6">계약서</a></li>
-                        <li><a href="/mobile/page/sub_02_01.html" class="cate1">복대리</a></li>
-                        <li><a href="/mobile/page/sub_02_07.html" class="cate7">공판출석</a></li>
-                        <li><a href="/mobile/page/sub_02_03.html" class="cate3">조사참여</a></li>
-                        <li><a href="/mobile/page/sub_02_04.html" class="cate4">접견</a></li>
-                        <li><a href="/mobile/page/sub_02_02.html" class="cate2">기록등사</a></li>
-                        <li><a href="/mobile/page/sub_02_09.html" class="cate9">법률문서 번역</a></li>
-                        <li><a href="/mobile/page/sub_02_08.html" class="cate8">기일, 선고 청취</a></li>
+                        <li><a href="/mobile/page/sub_02_05.html" class="cate1">서면작성</a></li>
+                        <li><a href="/mobile/page/sub_02_06.html" class="cate2">계약서</a></li>
+                        <li><a href="/mobile/page/sub_02_01.html" class="cate3">복대리</a></li>
+                        <li><a href="/mobile/page/sub_02_07.html" class="cate4">공판출석</a></li>
+                        <li><a href="/mobile/page/sub_02_03.html" class="cate5">조사참여</a></li>
+                        <li><a href="/mobile/page/sub_02_04.html" class="cate6">접견</a></li>
+                        <li><a href="/mobile/page/sub_02_02.html" class="cate7">기록등사</a></li>
+                        <li><a href="/mobile/page/sub_02_09.html" class="cate8">법률문서 번역</a></li>
+                        <li><a href="/mobile/page/sub_02_08.html" class="cate9">기일, 선고 청취</a></li>
                         <li><a href="/mobile/page/sub_02_10.html" class="cate10">기타</a></li>
                     </ul>
                 </div>
@@ -131,37 +131,7 @@
                         <li><a href="#n">제주도</a></li>
                     </ul>
                 </div>
-                <div class="worklist-wrap">
-                    <ul class="lists">
-                        @@loop('./modules/work-loop.html', [
-                            {
-                                new : true,
-                                city : '01',
-                                id : 'work01',
-                                checked : true,
-                                work : '01',
-                                page : '',
-                                title : '서울남부지방법원',
-                            }, 
-                            {
-                                new : true,
-                                city : '02',
-                                id : 'work02',
-                                work : '02',
-                                page : '',
-                                title : '서울동부지방법원 총무과/법원경비 관리대',
-                            },
-                            {
-                                new : true,
-                                city : '03',
-                                id : 'work03',
-                                work : '03',
-                                page : '',
-                                title : '서울동부지방법원 총무과/법원경비 관리대',
-                            }
-                        ])
-                    </ul>
-                </div>
+                @@include('./modules/work-loop2.html')
                 <button type="button" class="btn-more"><span>다른 프로젝트 보기</span></button>
             </section>
             <!-- // section03 -->

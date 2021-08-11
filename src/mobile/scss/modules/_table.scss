@@ -143,6 +143,14 @@
                 margin-right:5px;
                 padding:5px 10px;
             }
+            .select-wrap {
+                width:100px;
+                margin-right:5px;
+                select {
+                    height:40px;
+                    min-height:40px;
+                }
+            }
             .btn {
                 height:40px;
                 line-height:38px;

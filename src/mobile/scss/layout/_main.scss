@@ -163,15 +163,15 @@
                     a {
                         display:block;
                         min-width:50px;
-                        padding-top:20px;
+                        padding-top:10px;
                         padding-bottom:15px;
                         text-align:center;
                         font-size:14px;
                         &::before {
                             content:' ';
                             display:block;
-                            width:41px;
-                            height:41px;
+                            width:56px;
+                            height:56px;
                             margin:0 auto 10px;
                             background-size:100%;
                             background-repeat:no-repeat;

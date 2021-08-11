@@ -3,7 +3,7 @@
     <div class="inner">
         <div class="top">
             <div class="flag-wrap">
-                <span class="flag flag-border-point">D - 1</span>
+                <span class="flag flag-border-point">모집중</span>
                 @@if(context.new){
                     <span class="flag flag-point">NEW</span>
                 }
@@ -31,6 +31,11 @@
                     <label for="@@id"><span class="blind">관심 업무</span></label>
                 </span>
             }
+        </div>
+        <div class="end-alert">
+            <p>0월 0일 마감</p>
+            <span class="dday">D-1</span>
+            <span class="count">00:00</span>
         </div>
         <div class="head">
             @@if(context.work === '01'){<p class="category" data-work-category="01">[복대리]</p>}

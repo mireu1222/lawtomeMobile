@@ -19,37 +19,7 @@
         <div id="container" class="container">
             @@include('./modules/region-tabs.html')
             <section class="sect">
-                <div class="worklist-wrap">
-                    <ul class="lists">
-                        @@loop('./modules/work-loop.html', [
-                                {
-                                    new : true,
-                                    city : '01',
-                                    id : 'work01',
-                                    checked : true,
-                                    work : '03',
-                                    page : 'sub_02_03_view',
-                                    title : '서울남부지방법원',
-                                }, 
-                                {
-                                    new : true,
-                                    city : '02',
-                                    id : 'work02',
-                                    work : '03',
-                                    page : 'sub_02_03_view',
-                                    title : '서울동부지방법원 총무과/법원경비 관리대',
-                                },
-                                {
-                                    new : true,
-                                    city : '03',
-                                    id : 'work03',
-                                    work : '03',
-                                    page : 'sub_02_03_view',
-                                    title : '서울동부지방법원 총무과/법원경비 관리대',
-                                }
-                            ])
-                    </ul>
-                </div>
+                @@include('./modules/work-loop2.html')
                 <button type="button" class="btn-more"><span>다른 프로젝트 보기</span></button>
             </section>
         </div>

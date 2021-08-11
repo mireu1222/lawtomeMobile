@@ -1,0 +1,51 @@
+<!-- loop -->
+<li>
+    <a href="" class="inner">
+        <div class="top">
+            <div class="flag-wrap">
+                <span class="flag flag-border-point">D - 1</span>
+                @@if(context.new){
+                    <span class="flag flag-point">NEW</span>
+                }
+            </div>
+            @@if(context.city === '01'){<span class="flag flag-gray" data-city="01">서울</span>}
+            @@if(context.city === '02'){<span class="flag flag-gray" data-city="02">경기</span>}
+            @@if(context.city === '03'){<span class="flag flag-gray" data-city="03">인천</span>}
+            @@if(context.city === '04'){<span class="flag flag-gray" data-city="04">광주</span>}
+            @@if(context.city === '05'){<span class="flag flag-gray" data-city="05">부산</span>}
+            @@if(context.city === '06'){<span class="flag flag-gray" data-city="06">대전</span>}
+            @@if(context.city === '07'){<span class="flag flag-gray" data-city="07">충청도</span>}
+            @@if(context.city === '08'){<span class="flag flag-gray" data-city="08">전라도</span>}
+            @@if(context.city === '09'){<span class="flag flag-gray" data-city="09">경상도</span>}
+            @@if(context.city === '10'){<span class="flag flag-gray" data-city="10">강원도</span>}
+            @@if(context.city === '11'){<span class="flag flag-gray" data-city="11">제주도</span>}
+            @@if(!context.mywork && !context.mywork2){
+                <span class="like-chk-wrap">
+                    <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
+                    <label for="@@id"><span class="blind">관심 업무</span></label>
+                </span>
+            }
+        </div>
+        <div class="body">
+            <div class="left">
+                @@if(context.work === '01'){<p class="category cate1" data-work-category="01">복대리</p>}
+                @@if(context.work === '02'){<p class="category cate2" data-work-category="02">기록등사</p>}
+                @@if(context.work === '03'){<p class="category cate3" data-work-category="03">조사참여</p>}
+                @@if(context.work === '04'){<p class="category cate4" data-work-category="04">접견</p>}
+                @@if(context.work === '05'){<p class="category cate5" data-work-category="05">서면작성</p>}
+                @@if(context.work === '06'){<p class="category cate6" data-work-category="06">계약서</p>}
+                @@if(context.work === '07'){<p class="category cate7" data-work-category="07">공판출석</p>}
+                @@if(context.work === '08'){<p class="category cate8" data-work-category="08">기일, 선고 성취</p>}
+                @@if(context.work === '09'){<p class="category cate9" data-work-category="09">법률문서 번역</p>}
+                @@if(context.work === '10'){<p class="category cate10" data-work-category="10">기타</p>}
+            </div>
+            <div class="right">
+                <p class="title"><span class="blind">업무명</span>@@title</p>
+                <p><span class="blind">업무비용</span>000,000원</p>
+                <p>신청마감 : 2021.00.00</p>
+                <p>처리일시 : 2021.00.00</p>
+            </div>
+        </div>
+    </a>
+</li>
+<!-- // loop -->
