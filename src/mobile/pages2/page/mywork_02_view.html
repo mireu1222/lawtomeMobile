@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <!-- body -->
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            mywork : '02',
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container">
+            <section class="sect">
+                <div class="lawyerlist-wrap mb-20">
+                    <div class="inner">
+                        <div class="head">
+                            <span class="thumb" style="background-image:url('/mobile/images/@noimg.gif')" aria-hidden="true"></span>
+                            <div class="info">
+                                <p class="name">최고로 변호사</p>
+                                <p class="company">법무법인한강시대</p>
+                            </div>
+                        </div>
+                        <div class="belong">
+                            <span class="flag flag-sm flag-point">소속</span>
+                            <p>서울지방법원 안동지원 영주사법원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-work-wrap">
+                    <div class="head">
+                        <p class="category">[복대리]</p>
+                        <p class="title">대구지방법원 안동지원 영주사법원</p>
+                    </div>
+                    <ul class="condition-list">
+                        <li class="type1">희망비용 : <em>000,000</em>원</li>
+                        <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
+                    </ul>
+                    <div class="more">
+                        <p class="tit">업무내용</p>
+                        <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
+                    </div>
+                </div>
+                <div class="border-box mt-30">
+                    <div class="form-wrap">
+                        <h2 class="form-title type2">업무진행내역</h2>
+                        <div class="row">
+                            <p class="tit">제목</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" title="제목 입력">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">작성자</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" title="작성자 입력">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">등록일</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" title="등록일 입력">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">내용</p>
+                            <div class="forms">
+                                <textarea class="form-control" title="내용 입력"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">상태</p>
+                            <div class="forms">
+                                @@include('./modules/slt-list.html', {
+                                    size : 'size2',
+                                    rdo : 'state',
+                                    slt : [
+                                        '접수', '진행', '보류', '취소', '완료'
+                                    ]
+                                })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">첨부파일</p>
+                            <div class="forms">
+                                <div class="inputfile-wrap">
+                                    <input type="file" id="file-upload">
+                                    <input type="text" class="form-control" readonly>
+                                    <label for="file-upload" class="btn"><span>파일선택</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-border-point"><span>취소</span></button>
+                        <button type="button" class="btn btn-lg btn-point"><span>저장</span></button>
+                    </div>
+                </div>
+                <div class="border-box mt-30">
+                    <div class="tbl-wrap">
+                        <h3 class="tbl-title">상담진행내역</h3>
+                        <table class="table row-table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제목</th>
+                                    <td>제목</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">작성자</th>
+                                    <td>작성자</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">등록일</th>
+                                    <td>2021.00.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">내용</th>
+                                    <td>내용</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">상태</th>
+                                    <td>
+                                        <span class="flag flag-cont">접수</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">첨부파일</th>
+                                    <td>
+                                        <a href="" class="file-name">첨부파일.jpg</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-group mt-15">
+                            <button type="button" class="btn btn-md btn-border-gray"><span>수정</span></button>
+                            <button type="button" class="btn btn-md btn-border-gray"><span>삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

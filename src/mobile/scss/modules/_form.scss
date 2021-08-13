@@ -5,6 +5,10 @@
         @include font-md;
         font-weight:500;
         word-break:keep-all;
+        &.type2 {
+            font-size:18px;
+            line-height:1;
+        }
     }
     .essen-txt {
         margin-top:30px;

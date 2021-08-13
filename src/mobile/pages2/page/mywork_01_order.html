@@ -32,6 +32,69 @@
                         <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
                     </div>
                 </div>
+                <div class="pay-info">
+                    <div class="flex">
+                        <p class="tit">결제금액</p>
+                        <div class="cont">
+                            <input type="text" class="form-control" value="000,000">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <p>※ 반드시 수탁변호사와 합의된 금액으로 결제해 주세요!</p>
+                </div>
+                <div class="my-pay">
+                    <p class="title">보유캐시 결제</p>
+                    <div class="cont">
+                        <p class="tit">사용</p>
+                        <input type="text" class="form-control" value="00,000">
+                        <span>원(보유:000,000원)</span>
+                        <button type="button" class="btn btn-sm btn-border-border"><span>전액사용</span></button>
+                    </div>
+                    <p class="title">보유적립금 결제</p>
+                    <div class="cont">
+                        <p class="tit">사용</p>
+                        <input type="text" class="form-control" value="00,000">
+                        <span>원(보유:000,000포인트)</span>
+                        <button type="button" class="btn btn-sm btn-border-border"><span>전액사용</span></button>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <div class="box">
+                        <p class="tit">결제금액</p>
+                        <p class="num">
+                            <em>0,000,000</em>원
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p class="tit">차감금액</p>
+                        <p class="num">
+                            <em>000</em>원
+                        </p>
+                    </div>
+                    <div class="box total">
+                        <p class="tit">결제예정금액</p>
+                        <p class="num">
+                            <em>0,000,000</em>원
+                        </p>
+                    </div>
+                </div>
+                <div class="form-wrap mt-25">
+                    <div class="row">
+                        <p class="tit">결제수단</p>
+                        <div class="forms">
+                            @@include('./modules/slt-list.html', {
+                                size : 'space',
+                                rdo : 'slt',
+                                slt : [
+                                    '신용카드', '휴대폰', '실시간계좌이체'
+                                ]
+                            })
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-point"><span>결제하기</span></button>
+                </div>
             </section>
         </div>
         <!-- // container -->

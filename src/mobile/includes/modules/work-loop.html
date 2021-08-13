@@ -7,6 +7,9 @@
                 @@if(context.new){
                     <span class="flag flag-point">NEW</span>
                 }
+                @@if(context.mywork2){
+                    <span class="flag flag-point">위임장완료</span>
+                }
             </div>
             @@if(context.city === '01'){<span class="flag flag-gray" data-city="01">서울</span>}
             @@if(context.city === '02'){<span class="flag flag-gray" data-city="02">경기</span>}
@@ -19,12 +22,7 @@
             @@if(context.city === '09'){<span class="flag flag-gray" data-city="09">경상도</span>}
             @@if(context.city === '10'){<span class="flag flag-gray" data-city="10">강원도</span>}
             @@if(context.city === '11'){<span class="flag flag-gray" data-city="11">제주도</span>}
-            @@if(context.mywork){
-                <a href="" class="btn-talk"><span class="blind">로투미톡</span><span class="count">99+</span></a>
-            }
-            @@if(context.mywork2){
-                <p class="pp-info">지원자 : <em>11</em>명</p>
-            }
+            <a href="" class="btn-talk"><span class="blind">로투미톡</span><span class="count">99+</span></a>
             @@if(!context.mywork && !context.mywork2){
                 <span class="like-chk-wrap">
                     <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
@@ -44,30 +42,32 @@
             @@if(context.work === '09'){<p class="category" data-work-category="09">[법률문서 번역]</p>}
             @@if(context.work === '10'){<p class="category" data-work-category="10">[기타]</p>}
             <a href="/mobile/page/@@page.html" class="title">@@title</a>
-            @@if(!context.mywork){
-                <ul class="info-list">
-                    <li>위임인 : 최고로 변호사</li>
-                    <li>소속사무실 : 법무법인한강시대</li>
-                </ul>
-            }
         </div>
         <ul class="condition-list">
             <li class="type1">희망비용 : <em>000,000</em>원</li>
-            <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
+            @@if(!context.mywork2){
+                <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
+            }
+            @@if(context.mywork2){
+                <li class="type2">업무마감 : <em>2021.00.00 00:00</em></li>
+            }
         </ul>
         <div class="more">
             <p class="tit">업무내용</p>
             <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
         </div>
-        @@if(context.mywork){
+        <a href="/mobile/page/mywork_01_vollist.html" class="btn btn-lg btn-border-border btn-pp mt-25"><span>지원자 : <em>11</em>명</span></a>
+        @@if(!context.mywork2){
             <div class="btn-wrap">
-                <a href="/mobile/page/mywork_01_vollist.html" class="btn btn-lg btn-border-border btn-pp"><span>지원자 : <em>11</em>명</span></a>
                 <a href="/mobile/page/mywork_01_order.html" class="btn btn-lg btn-point"><span>결제</span></a>
                 <a href="/mobile/page/mywork_01_edit.html" class="btn btn-lg btn-gray"><span>관리</span></a>
             </div>
         }
         @@if(context.mywork2){
-            <a href="/mobile/page/mywork_02_apply.html" class="btn btn-lg btn-point mt-25"><span>지원하기</span></a>
+            <div class="btn-wrap">
+                <a href="" class="btn btn-lg btn-point"><span>위임장</span></a>
+                <a href="/mobile/page/mywork_02_view.html" class="btn btn-lg btn-gray"><span>상세보기</span></a>
+            </div>
         }
     </div>
 </li>

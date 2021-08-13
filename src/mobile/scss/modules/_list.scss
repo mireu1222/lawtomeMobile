@@ -27,6 +27,11 @@
             padding-right:6px;
         }
     }
+    &.space {
+        ul {
+            justify-content:space-between;
+        }
+    }
 }
 
 // bullet list
@@ -201,8 +206,8 @@
             display:flex;
             margin-top:25px;
             .btn {
-                width:20%;
-                margin-left:5px;
+                flex:1;
+                margin-left:10px;
                 &:first-child {
                     margin-left:0;
                 }
@@ -350,6 +355,9 @@
             display:flex;
             align-items:center;
             margin-top:30px;
+            &:first-child {
+                margin-top:0;
+            }
             .thumb {
                 display:block;
                 width:80px;
